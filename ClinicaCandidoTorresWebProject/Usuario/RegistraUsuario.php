@@ -24,8 +24,9 @@ $loginUsuario = $usuario->getLogin();
 $senhaUsuario = $usuario->getSenha();
 $tipo = $usuario->getTipoUsuario();
 
-require_once ('../BancoDeDados/Conexao_Banco_ClinicaTorres.php.inc');
 // Author Hugo S.
+require_once ('../BancoDeDados/Conexao_Banco_ClinicaTorres.php.inc');
+include_once("../Usuario/UsuarioDAO.php");
 
 $link = mysqli_connect("localhost","root","","clinica_candido_torres_database");
 // Validação de utilização de login-> Procura no banco de dados se este login não está sendo utilizado.
@@ -38,17 +39,13 @@ if (mysqli_num_rows($validaLogin) == 1) {
 } else{
     echo "Dados digitados corretamente, aguarde enquanto os salvamos...<br>";
     
-    // Inserindo os dados de acordo com o objeto.
-    $sql_Usuario = "insert into USUARIO (NOME,LOGIN,SENHA,TIPOUSUARIO) values ('$nomeUsuario','$loginUsuario','$senhaUsuario','$tipo')";
-
-    //Teste de sucesso do comando de inserção.
-    if ($conexao->query($sql_Usuario) === TRUE) {
-        echo "Usuário cadastrado com sucesso!";
-    } else {
-        echo "Erro: ". $sql_Usuario . "<br>" . $conexao->error;
-    }
+    $usuarioDAO = new usuarioDAO();
+    
+    $campos = "nome, login, senha, tipoUsuario";
+    $parametros = array("$usuario->getNome()","$usuario->getLogin()","$usuario->getSenha()","$usuario->getTipoUsuario()");
+    $rs = $usuarioDAO->inserir($campos,$parametros);
+    var_dump($rs);
 }
 
 $conexao->close();
-?>
 
