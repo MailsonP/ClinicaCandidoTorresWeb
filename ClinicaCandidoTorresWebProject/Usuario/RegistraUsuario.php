@@ -42,10 +42,9 @@ if (mysqli_num_rows($validaLogin) == 1) {
     $usuarioDAO = new usuarioDAO();
     
     $campos = "nome, login, senha, tipoUsuario";
-    $parametros = array("$usuario->getNome()","$usuario->getLogin()","$usuario->getSenha()","$usuario->getTipoUsuario()");
+    $parametros = array("$nomeUsuario","$loginUsuario","$senhaUsuario","$tipo");
     $rs = $usuarioDAO->inserir($campos,$parametros);
     var_dump($rs);
 }
 
 $conexao->close();
-

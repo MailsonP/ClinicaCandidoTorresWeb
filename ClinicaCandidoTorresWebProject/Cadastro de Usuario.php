@@ -9,7 +9,7 @@
             
         <fieldset>
             <legend>Cadastro de Usuario</legend>   
-            <form action="Usuario/Usuario.php" method="POST">
+            <form action="Usuario/RegistraUsuario.php" method="POST">
             
                 <p> Nome: </p>
                 <input type="text" name="nome">
@@ -31,4 +31,3 @@
       </div>
     </body>
 </html>
-

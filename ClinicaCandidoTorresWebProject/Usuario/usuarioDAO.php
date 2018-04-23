@@ -1,5 +1,7 @@
 <?php
 include_once ("usuariosVO.php");
+include_once("database.php");
+
 class usuarioDAO extends database{
     //Criando os métodos padrões de OO da classe
     public function __construct(){}
@@ -50,4 +52,3 @@ class usuarioDAO extends database{
         return $t;
     }
 }
-

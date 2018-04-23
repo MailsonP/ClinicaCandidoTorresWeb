@@ -1,6 +1,3 @@
-<?php
-
-// Author - Hugo S.
 include '../BancoDeDados/Conexao_Banco_ClinicaTorres.php.inc';
 include_once("../Usuario/UsuarioDAO.php");
 $usuariosDAO = new usuariosDAO();
@@ -12,4 +9,3 @@ $parametros = array("$usuario->getNome()","$usuario->getLogin()","$usuario->getS
 $where = "IDUSUARIO = ?";
 $rs = $usuariosDAO->update($fields,$params,$where);
 var_dump($rs);
-

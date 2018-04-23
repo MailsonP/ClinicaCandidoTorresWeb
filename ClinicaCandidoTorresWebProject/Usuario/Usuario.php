@@ -40,6 +40,5 @@ class Usuario {
     
     function getTipoUsuario(){
         return $this->tipoUsuario;
-    }
-    
+    } 
 }
