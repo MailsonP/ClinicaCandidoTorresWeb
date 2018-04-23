@@ -10,5 +10,3 @@
 if($conexao->connect_error) {
     die("Falha ao realizar a conexão: ".$conexao->connect_error);
 }
-
-?>
