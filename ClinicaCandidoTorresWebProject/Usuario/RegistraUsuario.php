@@ -29,7 +29,7 @@ require_once ('../BancoDeDados/Conexao_Banco_ClinicaTorres.php.inc');
 
 $link = mysqli_connect("localhost","root","","clinica_candido_torres_database");
 // Validação de utilização de login-> Procura no banco de dados se este login não está sendo utilizado.
-$validaLogin = mysqli_query($link,"SELECT IDUSUARIO FROM USUARIO WHERE LOGIN = $loginUsuario") or die(mysql_error());
+$validaLogin = mysqli_query($link,"SELECT IDUSUARIO FROM USUARIO WHERE LOGIN = $loginUsuario") or die(mysqli_error($link));
 
 // Verifica se a variável encontrou algum erro na procura do login e caso os dados não apresentem erros irá realizar a inserção dos dados.
 if (mysqli_num_rows($validaLogin) == 1) {
