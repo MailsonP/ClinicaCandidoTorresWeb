@@ -24,7 +24,7 @@
                 </select>
                 <br>
                 <br>
-                <button type="button">Cadastrar</button> 
+                <button type="button">Cadastrar</button>
             </form>
         </fieldset>
       </div>

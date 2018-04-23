@@ -24,20 +24,30 @@ $usuario->getLogin();
 $usuario->getSenha();
 $usuario->getTipoUsuario();
 
-//Fazer o Metodo de Salvamento Aqui...
+include '..BancoDeDados/Conexao_Banco_ClinicaTorres.inc';
+// Author Hugo S.
 
+// Validação de utilização de login-> Procura no banco de dados se este login não está sendo utilizado.
+$validaLogin = mysqli_query("SELECT IDUSUARIO FROM USUARIO WHERE LOGIN = $usuario->getLogin()")or die(mysql_error());
 
+// Verifica se a variável encontrou algum erro na procura do login e caso os dados não apresentem erros irá realizar a inserção dos dados.
+if (mysqli_num_rows($validaLogin) == 1) {
+    echo "Este Login já está sendo utilizado em nosso sistema.<br>, Por favor, rever o mesmo e tentar novamente!.<br>";
+    $erro = 1;
+} else{
+    echo "Dados digitados corretamente, aguarde enquanto os salvamos...<br>";
+    
+    // Inserindo os dados de acordo com o objeto.
+    $sql_Usuario = "INSERT INTO USUARIO VALUES ('NULL','$usuario->getNome()','$usuario->getLogin();','$usuario->getSenha()','$usuario->getTipoUsuario()');";
 
+    //Teste de sucesso do comando de inserção.
+    if ($conexao->query($sql_Usuario) === TRUE) {
+        echo "Usuário cadastrado com sucesso!";
+    } else {
+        echo "Erro: ". $sql_Usuario . "<br>" . $conexao->error;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
+$conexao->close();
 ?>
 
