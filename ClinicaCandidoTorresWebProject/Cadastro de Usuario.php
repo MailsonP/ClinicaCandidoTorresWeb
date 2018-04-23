@@ -9,7 +9,7 @@
             
         <fieldset>
             <legend>Cadastro de Usuario</legend>   
-            <form action="#" method="POST">
+            <form action="Usuario/RegistraUsuario.php" method="POST">
             
                 <p> Nome: </p>
                 <input type="text" name="nome">
@@ -24,7 +24,7 @@
                 </select>
                 <br>
                 <br>
-                <button type="button">Cadastrar</button>
+                <button type="submit">Cadastrar</button>
             </form>
         </fieldset>
       </div>

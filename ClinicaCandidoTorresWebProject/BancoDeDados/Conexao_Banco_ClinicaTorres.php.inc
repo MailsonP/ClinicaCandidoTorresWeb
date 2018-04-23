@@ -7,7 +7,7 @@ $conexao = mysqli_connect("127.0.0.1", "root", "", "clinica_candido_torres_datab
 mysqli_set_charset($conexao, 'utf8');
 
 // Mensagem de Erro, em caso de falha na conexão.
-if($conexão->connect_error) {
+if($conexao->connect_error) {
     die("Falha ao realizar a conexão: ".$conexao->connect_error);
 }
 

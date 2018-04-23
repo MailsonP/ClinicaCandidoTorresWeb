@@ -16,19 +16,20 @@ $usuario = new Usuario();
 $usuario->setNome($nome);
 $usuario->setLogin($login);
 $usuario->setSenha($senha);
-$usuario->setTipoUsuario($tipoUsuario);
+$usuario->setTipoUsuario($tipo_usuario);
 
 //Recuperar Valores se Precisar.
-$usuario->getNome();
-$usuario->getLogin();
+$nomeUsuario = $usuario->getNome();
+$loginUsuario = $usuario->getLogin();
 $usuario->getSenha();
 $usuario->getTipoUsuario();
 
-include '..BancoDeDados/Conexao_Banco_ClinicaTorres.inc';
+require_once ('../BancoDeDados/Conexao_Banco_ClinicaTorres.php.inc');
 // Author Hugo S.
 
+$link = mysqli_connect("localhost","root","","clinica_candido_torres_database");
 // Validação de utilização de login-> Procura no banco de dados se este login não está sendo utilizado.
-$validaLogin = mysqli_query("SELECT IDUSUARIO FROM USUARIO WHERE LOGIN = $usuario->getLogin()")or die(mysql_error());
+$validaLogin = mysqli_query($link,"SELECT IDUSUARIO FROM USUARIO WHERE LOGIN = $loginUsuario") or die(mysql_error());
 
 // Verifica se a variável encontrou algum erro na procura do login e caso os dados não apresentem erros irá realizar a inserção dos dados.
 if (mysqli_num_rows($validaLogin) == 1) {
