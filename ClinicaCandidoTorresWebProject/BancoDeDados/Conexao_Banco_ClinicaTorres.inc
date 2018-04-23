@@ -1,4 +1,5 @@
 <?php
+//Author - Hugo S.
 
 //Criando a conexão ao banco de dados
 $conexao = mysqli_connect("127.0.0.1", "root", "", "clinica_candido_torres_database");
