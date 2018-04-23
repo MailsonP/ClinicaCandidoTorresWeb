@@ -14,7 +14,7 @@ class Usuario {
         $this->nome = $nome;
     }
     
-     function setLogin($login){
+    function setLogin($login){
         $this->login = $login;
     }
     

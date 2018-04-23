@@ -1,6 +1,6 @@
 <html lang="pt-br">
     <head>
-        <title>Cadastro Usuario</title>
+        <title>CADASTRO DE USUARIOS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -9,7 +9,7 @@
             
         <fieldset>
             <legend>Cadastro de Usuario</legend>   
-            <form action="Usuario/RegistraUsuario.php" method="POST">
+            <form action="Usuario/Usuario.php" method="POST">
             
                 <p> Nome: </p>
                 <input type="text" name="nome">
