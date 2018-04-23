@@ -26,7 +26,7 @@
           </tr>
           <?php while ($dado = $resultado->fetch_array()) { ?>
           <tr>
-              <td><?php echo $dado["IDUSUARIO"]; ?> </td>
+            <td><?php echo $dado["IDUSUARIO"]; ?> </td>
             <td><?php echo $dado["NOME"]; ?>  </td>
             <td><?php echo $dado["LOGIN"]; ?>  </td>
             <td><?php echo $dado["TIPOUSUARIO"]; ?>  </td>
