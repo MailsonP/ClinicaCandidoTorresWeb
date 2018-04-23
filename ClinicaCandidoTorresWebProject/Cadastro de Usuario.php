@@ -19,8 +19,9 @@
                 <input type="password" name="senha" >
                 <p> Tipo de Usuario: </p>
                 <select name="tipoUsuario">
-                <option value="adm"> Administrador </option>
-                <option value="user"> Usuario </option>        
+                <option value="Administrador"> Administrador </option>
+                <option value="Recepcionista"> Recepcionista </option>
+                 <option value="Medico"> Medico </option>
                 </select>
                 <br>
                 <br>
