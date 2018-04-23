@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Cadastro Pacientes</title>
+        <title>Cadastro de Pacientes</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
