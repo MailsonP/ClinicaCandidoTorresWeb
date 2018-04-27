@@ -28,7 +28,7 @@ $usuario->retornaTudo($usuario);
             <td><?php echo $dado->NOME  ?>  </td>
             <td><?php echo $dado->LOGIN  ?>  </td>
             <td><?php echo $dado->TIPOUSUARIO  ?>  </td>
-            <td><a href="edita&Usuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>">Editar |</a> 
+            <td><a href="formAtualizaUsuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>">Editar |</a> 
                 <a href="RemoveUsuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>">Excluir</a></td>
           </tr> 
           <?php } ?>
