@@ -27,7 +27,7 @@ abstract class ConexaoDB {
     mysqli_select_db($this->conexao, $this->nomeBanco) or die ($this->trataErro(__FILE__,__FUNCTION__, mysqli_errno(), mysqli_error(),TRUE));
     mysqli_set_charset($this->conexao, 'utf8'); //Deixa o banco padrão utf8
     
-    echo 'Conexao Feita com Sucesso';
+    //echo 'Conexao Feita com Sucesso';
    }
    
    //Metodo que tratara todos os erros de Conexao
