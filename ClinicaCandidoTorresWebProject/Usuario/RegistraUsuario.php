@@ -1,6 +1,6 @@
 <?php
 
-require_once './Usuario.php';
+require_once '../usuario/Usuario.php';
 
 $metodo = $_POST;
 
@@ -19,10 +19,10 @@ $usuario->setValor("SENHA", $senha);
 $usuario->setValor("TIPOUSUARIO", $tipo);
 
 if ($usuario->inserir($usuario)){
-    echo 'Dados salvos com Sucesso!';
+    echo  "<script>alert('usuário cadastrado com sucesso!');window.location = 'TelaCadastroUsuario.php';</script>";
    
 }else{
-    echo 'Houve um erro ao tentar salvar os Dados no banco';
+    echo  "<script>alert('Este Login já está sendo utilizado em nosso sistema :/');window.history.back(1);</script>";
 }
 
 }

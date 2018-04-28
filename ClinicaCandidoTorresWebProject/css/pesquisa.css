@@ -1,0 +1,38 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-image:url(../img/fundo.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+} 
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#externa-cadastro {
+	position: relative;
+	width:100%;
+	height:200px;
+	background:#E4EE91;
+}
+
+.cadastro {
+	overflow: scroll;
+	font-family: 'Raleway', sans-serif;
+	border-radius: 5px;
+	left:50%;
+	top:50%;
+	margin-left:-200px;
+	margin-top:-175px;
+	position:absolute;
+	width:400px;
+	height:350px;
+	background:#00beaa;
+	color:#fff;
+	box-shadow: 1px 1px 2px #181818;
+}
+
+

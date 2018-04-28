@@ -12,8 +12,16 @@ if(isset($Metodo["usuario"])){
     $usuario->valorpk = $id;
     
     if ($usuario->deletar($usuario)){
-        echo 'Dado removido com Sucesso!';
+        echo "
+		<script>
+			alert('Usuário deletado com sucesso!')
+			location.href='TelaUsuarioTable.php';
+		</script>";
     }else{
-        echo 'Não foi possivel executar a query de remoção!';
+        echo "
+		<script>
+			alert('Não foi possivel deletar o usuario.');
+			location.href='TelaUsuarioTable.php';
+		</script>";
     }
 }

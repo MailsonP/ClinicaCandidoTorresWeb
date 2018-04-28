@@ -1,0 +1,140 @@
+.container-login {
+  position: fixed;
+  width: 350px;
+  height: 400px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #00beaa;
+  margin: auto;
+  box-shadow: 1px 1px 2px #161616;
+  z-index: 1000;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: none;
+}
+
+.container-login img {
+  width: 120px;
+  height: 120px;
+  margin-left: 20px;
+  border-radius: 50%;
+  margin-top: -60px;
+  margin-bottom: 30px;
+}
+
+.container-login input[type="text"],
+.container-login input[type="password"]{
+ font-family: "raleway", sans-serif;
+ border-radius: 20px;
+ margin-top: 20px;
+ height: 35px;
+ width: 250px;
+ font-size: 18px;
+ color: #004840;
+ padding-left: 40px;
+ border: none;
+}
+
+.container-login ::placeholder{
+   color: rgba(243, 243, 243, .5);
+}
+
+.container-login .form-input::before{
+ content: "\f007";
+ font-family: "FontAwesome";
+ padding-left: 10px;
+ padding-top: 26px;
+ position: absolute;
+ font-size: 25px;
+ color: #00beaa;
+}
+
+.container-login .form-input:nth-child(2)::before{
+ content: "\f023";
+}
+
+.container-login .btn-login{
+  cursor: pointer;
+  font-family: "raleway", sans-serif;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  background-color: #004840;
+  color: #fff;
+}
+
+.container-login .btn-login:hover{
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  background: rgba(255,255,255,0.5);
+}
+
+.container-login input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.container-login a{
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  color: #004840;
+  font-family: "raleway", sans-serif;
+}
+
+.container-login a:hover{
+  color: #fff;
+}
+
+.container-login .bot-fecha-container-login{
+  font-size: 20px;
+  cursor: pointer;
+  color: #f3f3f3;
+  font-family: "raleway", sans-serif;
+  float: right;
+  margin-top: 6px;
+  margin-right: 6px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+ .container-login h3:hover{
+  color: #18cbf0;
+}
+
+.container-login button :hover {
+  color: #004840;
+}
+
+.container-login input[type="submit"]:active{
+  position: relative;
+  top: 1px;
+  box-shadow: none;
+}
+
+
+@media (max-width: 375px){
+  .container-login {
+    width: 90%;
+    height: 300px;
+    margin: auto;
+  }
+
+  .container-login input[type="text"],
+  .container-login input[type="password"]{
+    width: 70%;
+  }
+
+  .container-login img {
+    margin: -60px auto 0 auto;
+  }
+
+  .container-login .btn-login{
+    margin-top: 30px;
+  }
+}
