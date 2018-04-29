@@ -79,7 +79,7 @@
                     <option value="Medico"> Médico </option>    
                     </select>
                 
-                <button type="submit">Cadastrar</button>
+                <button type="submit" name="salvar">Cadastrar</button>
             </form>
         </fieldset>
     </div>

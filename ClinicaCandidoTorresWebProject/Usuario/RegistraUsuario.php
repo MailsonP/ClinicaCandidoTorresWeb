@@ -8,7 +8,7 @@ $metodo = $_POST;
 if(isset($metodo["nome"])){
 $nome = $metodo["nome"];
 $login =$metodo["login"];
-$senha = $metodo["senha"];
+$senha = md5($metodo["senha"]);
 $tipo =$metodo["tipoUsuario"];
 
 //Setando os valores no Objeto
@@ -19,13 +19,12 @@ $usuario->setValor("SENHA", $senha);
 $usuario->setValor("TIPOUSUARIO", $tipo);
 
 if ($usuario->inserir($usuario)){
-    echo  "<script>alert('usuário cadastrado com sucesso!');window.location = 'TelaCadastroUsuario.php';</script>";
+    echo  "<script>alert('usuário cadastrado com sucesso!');window.location = '../TelaCadastroUsuario.php';</script>";
    
 }else{
     echo  "<script>alert('Este Login já está sendo utilizado em nosso sistema :/');window.history.back(1);</script>";
 }
 
 }
-
 
 ?>
