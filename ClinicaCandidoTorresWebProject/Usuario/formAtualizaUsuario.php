@@ -4,14 +4,22 @@ require_once '../util/daoGenerico.php';
 require_once './Usuario.php';
 
 $usuario = new Usuario();
-$usuario->retornaCampos($usuario);
 
-while ($dado = $usuario->retornaDados("object")){ 
+//Recuperando o id do URL
+$Metodo = $_GET;
+if(isset($Metodo["usuario"])){
+    $id = $Metodo["usuario"];
+    
+$usuario->valorpk=$id;
+$usuario->pesquisarID($usuario);
+}
+
+while ($dado = $usuario->retornaDados("object")) { 
 
 ?>
 <html lang="pt-br">
     <head>
-        <title>CADASTRO DE USUARIOS</title>
+        <title>Atualizar Usuario</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -21,7 +29,6 @@ while ($dado = $usuario->retornaDados("object")){
         <fieldset>
             <legend>Atualização de Usuario</legend>   
             <form action="#" method="POST">
-            
                 <p> Nome: </p>
                 <input type="text" name="nome" value=<?php echo $dado->NOME ?>>
                 <p> Login</p>
@@ -44,13 +51,9 @@ while ($dado = $usuario->retornaDados("object")){
 </html>
 <?php } ?>
 
-<?php 
-$valorId = $_GET;
-if (isset($valorId["usuario"])){
-    $id = $valorId["usuario"];
-}
+<?php
 
- $txtTitulo = $_POST;
+$txtTitulo = $_POST;
 //Recuperando valores do campo
 if(isset($txtTitulo["nome"])){
 $nome = $txtTitulo["nome"];
@@ -58,7 +61,6 @@ $login =$txtTitulo["login"];
 $senha = $txtTitulo["senha"];
 $tipo =$txtTitulo["tipoUsuario"];
 
-$usuario = new Usuario();
 $usuario->setValor("NOME", $nome);
 $usuario->setValor("LOGIN", $login);
 $usuario->setValor("SENHA", $senha);
@@ -67,10 +69,11 @@ $usuario->setValor("TIPOUSUARIO", $tipo);
 $usuario->valorpk = $id;
 
 if ($usuario->atualizar($usuario)){
-    echo 'Dados atualizados com Sucesso!';
+    echo  "<script>alert('usuário atualizado com sucesso!');window.location = './TelaUsuarioTable.php';</script>";
 }else{
     echo 'Houve um erro ao tentar atualizar os dados os Dados no banco';
 }
 
 }
+
 ?>

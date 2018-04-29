@@ -61,6 +61,16 @@ class daoGenerico extends ConexaoDB {
            return $this->executaSQL($sql);
     }
     
+     public function pesquisarID($objeto){
+        $sql = " SELECT * FROM ".$objeto->tabela;
+      
+        $sql .= "  WHERE ".$objeto->campopk."=";
+        $sql .= is_numeric($objeto->valorpk) ? $objeto->valorpk : "'".$objeto->valorpk."'";
+         
+        //echo $sql;
+        return $this->executaSQL($sql);
+    }
+    
     public function retornaTudo($objeto){
        $sql = "SELECT * FROM ".$objeto->tabela;
        if($objeto->extra_select!=null){

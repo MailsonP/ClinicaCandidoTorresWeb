@@ -77,7 +77,7 @@ $usuario->retornaTudo($usuario);
             <td><?php echo $dado->NOME  ?>  </td>
             <td><?php echo $dado->LOGIN  ?>  </td>
             <td><?php echo $dado->TIPOUSUARIO  ?>  </td>
-            <td class="column5"><a href="edita&Usuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>">Editar</a> 
+            <td class="column5"><a href="formAtualizaUsuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>">Editar</a> 
                 <a href="" id="separador">|</a>
                 <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->NOME; ?> ?')) 
                     location.href='RemoveUsuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>';">Excluir</a>
