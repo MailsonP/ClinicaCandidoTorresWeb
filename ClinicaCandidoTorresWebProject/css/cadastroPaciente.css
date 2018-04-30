@@ -1,3 +1,7 @@
+html, body{
+    overflow-y: auto !important;
+}
+
 .mid{
 	background-color: #00beaa;
 	padding: 10px;

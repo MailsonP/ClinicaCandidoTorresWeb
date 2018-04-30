@@ -78,7 +78,7 @@ $usuario->retornaTudo($usuario);
             <td><?php echo $dado->TIPOUSUARIO ?></td>
             <td class="column5"><a href="../Telas/TelaAtualizarUsuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>">Editar</a> 
                 <a href="" id="separador">|</a>
-                <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->NOME; ?> ?')) 
+                <a href="javascript: if(confirm('Deseja realmente deletar o paciente <?php echo $dado->NOME; ?> ?')) 
                     location.href='RemoveUsuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>';">Excluir</a>
                 </td>
           </tr> 

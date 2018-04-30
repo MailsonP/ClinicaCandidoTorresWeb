@@ -9,8 +9,8 @@ require_once '../Paciente/Paciente.php';
 
 //PEGANDO O ID DO USUARIO A SER DELETADO
 $pegarId = $_GET;
-if(isset($pegarId["paciente"])){
-    $id = $pegarId["paciente"];
+if(isset($pegarId["Idpaciente"])){
+    $id = $pegarId["Idpaciente"];
     
     $paciente = new Paciente();
     $paciente->valorpk = $id;
@@ -18,13 +18,13 @@ if(isset($pegarId["paciente"])){
     if ($paciente->deletar($paciente)){
         echo "
 		<script>
-			alert('Paciente deletado com sucesso!')
+			alert('Paciente deletado com sucesso!!')
 			location.href='TelaPacienteTable.php';
 		</script>";
     }else{
         echo "
 		<script>
-			alert('Não foi possivel deletar o paciente.');
+			alert('Não foi possivel deletar o paciente!!.');
 			location.href='TelaPacienteTable.php';
 		</script>";
     }
