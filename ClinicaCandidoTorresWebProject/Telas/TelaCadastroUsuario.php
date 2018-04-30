@@ -31,17 +31,6 @@
                     <li><a href="#">Especialização</a></li>
                 </ul>
             </li>
-                <li>
-                <a href="#">Consulta</a>
-                <ul>
-                    <li><a href="../Usuario/TelaUsuarioTable.php">Usuário</a></li>
-                    <li><a href="#">Médico</a></li>
-                    <li><a href="../Paciente/TelaPacienteTable.php">Paciente</a></li>
-                    <li><a href="#">Funcionário</a></li>
-                    <li><a href="#">Cidade</a></li>
-                    <li><a href="#">Especialização</a></li>
-                </ul>
-            </li>
             <li><a href="#">Relatório</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
