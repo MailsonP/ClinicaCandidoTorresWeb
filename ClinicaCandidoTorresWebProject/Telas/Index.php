@@ -5,18 +5,18 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Clinica Cândido Torres</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="js/jquery-3.2.1.js"></script>
-	<script src="js/login.js"></script>
+	<script src="../js/jquery-3.2.1.js"></script>
+	<script src="../js/login.js"></script>
 </head>
 <body ondragstart="return false;">
 	<header id="topo">
 	<input type="checkbox" id="bt_menu">
 	<label for="bt_menu">&#9776;</label>
-	<div id="right"><img src="img/cct.png"></div>
+	<div id="right"><img src="../img/cct.png"></div>
 	<nav class="menu">
 		<ul>
 			<li><a href="index.php">Inicio</a></li>
@@ -47,8 +47,8 @@
 	</nav>
 	</header>
 	<div class="container-login">
-    <img src="img/logo.png">
-    <form>
+    <img src="../img/logo.png">
+    <form action="../Login/autenticarUsuario.php" method="POST">
       <div class="form-input">
         <input type="text" name="username" placeholder="Usuário">
       </div>
