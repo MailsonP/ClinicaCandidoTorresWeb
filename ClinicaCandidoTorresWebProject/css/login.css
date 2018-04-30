@@ -14,10 +14,12 @@
 .container-login img {
   width: 120px;
   height: 120px;
-  margin-left: 20px;
+  display: block;
+  position:relative;
+  left:50%;
+  top:-15%;
+  transform: translate(-50%);
   border-radius: 50%;
-  margin-top: -60px;
-  margin-bottom: 30px;
 }
 
 .container-login input[type="text"],
@@ -127,13 +129,24 @@
   .container-login input[type="text"],
   .container-login input[type="password"]{
     width: 70%;
-  }
-
-  .container-login img {
-    margin: -60px auto 0 auto;
+    margin-left: -40px; 
+    margin-top: -40px;
+    margin-bottom: 25px;
+    
   }
 
   .container-login .btn-login{
-    margin-top: 30px;
+      position: relative;
+      top: -90px;
+  }
+  
+  .container-login a{
+      position: relative;
+      top: -100px;
+  }
+  
+  .container-login .form-input::before{
+      position: relative;
+      top: 3px;
   }
 }
