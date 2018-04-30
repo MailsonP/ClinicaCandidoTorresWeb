@@ -19,12 +19,12 @@
 	<div id="right"><img src="../img/cct.png"></div>
 	<nav class="menu">
 		<ul>
-			<li><a href="index.php">Inicio</a></li>
+			<li><a href="Index.php">Inicio</a></li>
 			<li><a href="#">Cadastro</a>
 				<ul>
 					<li><a href="TelaCadastroUsuario.php">Usuário</a></li>
 					<li><a href="#">Médico</a></li>
-					<li><a href="#">Paciente</a></li>
+					<li><a href="TelaCadastroPaciente">Paciente</a></li>
 					<li><a href="#">Funcionário</a></li>
 					<li><a href="#">Cidade</a></li>
 					<li><a href="#">Especialização</a></li>
