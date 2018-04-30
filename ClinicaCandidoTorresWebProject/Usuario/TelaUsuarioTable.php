@@ -6,7 +6,6 @@ $usuario = new Usuario();
 $usuario->retornaTudo($usuario);
 
 ?>
-
 <html lang="pt-br">
     <head>
     <meta charset="utf-8">
@@ -73,10 +72,10 @@ $usuario->retornaTudo($usuario);
         <tbody>
             <?php while ($dado = $usuario->retornaDados("object"))  { ?>
           <tr class="tabela">
-            <td><?php echo $dado->IDUSUARIO ?> </td>
-            <td><?php echo $dado->NOME  ?>  </td>
-            <td><?php echo $dado->LOGIN  ?>  </td>
-            <td><?php echo $dado->TIPOUSUARIO  ?>  </td>
+            <td><?php echo $dado->IDUSUARIO ?></td>
+            <td><?php echo $dado->NOME ?></td>
+            <td><?php echo $dado->LOGIN ?></td>
+            <td><?php echo $dado->TIPOUSUARIO ?></td>
             <td class="column5"><a href="formAtualizaUsuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>">Editar</a> 
                 <a href="" id="separador">|</a>
                 <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->NOME; ?> ?')) 

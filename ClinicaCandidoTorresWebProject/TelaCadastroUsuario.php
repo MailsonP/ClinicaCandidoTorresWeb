@@ -25,7 +25,7 @@
                 <ul>
                     <li><a href="TelaCadastroUsuario.php">Usuário</a></li>
                     <li><a href="#">Médico</a></li>
-                    <li><a href="#">Paciente</a></li>
+                    <li><a href="../Paciente/CadastroPacientes.php">Paciente</a></li>
                     <li><a href="#">Funcionário</a></li>
                     <li><a href="#">Cidade</a></li>
                     <li><a href="#">Especialização</a></li>
@@ -36,7 +36,7 @@
                 <ul>
                     <li><a href="usuario/TelaUsuarioTable.php">Usuário</a></li>
                     <li><a href="#">Médico</a></li>
-                    <li><a href="#">Paciente</a></li>
+                    <li><a href="../Paciente/TelaPacienteTable.php">Paciente</a></li>
                     <li><a href="#">Funcionário</a></li>
                     <li><a href="#">Cidade</a></li>
                     <li><a href="#">Especialização</a></li>
