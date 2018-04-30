@@ -1,6 +1,7 @@
 <?php
 
 require_once '../usuario/Usuario.php';
+session_start();
 
 $metodo = $_POST;
 
@@ -19,10 +20,10 @@ $usuario->setValor("SENHA", $senha);
 $usuario->setValor("TIPOUSUARIO", $tipo);
 
 if ($usuario->inserir($usuario)){
-    echo  "<script>alert('usuário cadastrado com sucesso!');window.location = '../TelaCadastroUsuario.php';</script>";
+    echo  "<script>alert('Usuário cadastrado com sucesso!');window.location = '../Telas/TelaCadastroUsuario.php';</script>";
    
 }else{
-    echo  "<script>alert('Este Login já está sendo utilizado em nosso sistema :/');window.history.back(1);</script>";
+    echo  "<script>alert('Erro ao tentar cadastrar o usuario no Sistema!:/');window.history.back(1);</script>";
 }
 
 }

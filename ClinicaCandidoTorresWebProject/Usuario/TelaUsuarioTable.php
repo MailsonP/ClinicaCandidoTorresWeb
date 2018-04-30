@@ -32,7 +32,7 @@ $usuario->retornaTudo($usuario);
             <li><a href="../index.php">Inicio</a></li>
             <li><a href="#">Cadastro</a>
                 <ul>
-                    <li><a href="../TelaCadastroUsuario.php">Usuário</a></li>
+                    <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
                     <li><a href="#">Médico</a></li>
                     <li><a href="#">Paciente</a></li>
                     <li><a href="#">Funcionário</a></li>
@@ -76,7 +76,7 @@ $usuario->retornaTudo($usuario);
             <td><?php echo $dado->NOME ?></td>
             <td><?php echo $dado->LOGIN ?></td>
             <td><?php echo $dado->TIPOUSUARIO ?></td>
-            <td class="column5"><a href="formAtualizaUsuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>">Editar</a> 
+            <td class="column5"><a href="../Telas/TelaAtualizarUsuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>">Editar</a> 
                 <a href="" id="separador">|</a>
                 <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->NOME; ?> ?')) 
                     location.href='RemoveUsuario.php?usuario=<?php echo $dado->IDUSUARIO; ?>';">Excluir</a>
