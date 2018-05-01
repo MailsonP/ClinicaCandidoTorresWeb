@@ -9,7 +9,7 @@
             
         <fieldset>
             <legend>Cadastro de Usuario</legend>   
-            <form action="*" method="POST">
+            <form action="../Medico/InserirMedico.php" method="POST">
             
                 <p> Nome: </p>
                 <input type="text" name="nome">
