@@ -24,7 +24,7 @@
                 <p> Especialidade: </p>
                 <input type="text" name="especialidade">
                 <p> Função:</p>
-                <input type="text" name="função">
+                <input type="text" name="funcao">
                 <p> Tipo de Atendimento:</p>
                 <input type="text" name="tipodeatendimento">
                
