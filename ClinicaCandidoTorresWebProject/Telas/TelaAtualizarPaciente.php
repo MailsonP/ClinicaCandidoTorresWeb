@@ -47,7 +47,7 @@ while ($dado = $paciente->retornaDados("object")) {
             <li><a href="#">Cadastro</a>
                 <ul>
                     <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="#">Médico</a></li>
+                    <li><a href="../Telas/TelaCadastroMedico">Médico</a></li>
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
         </ul>

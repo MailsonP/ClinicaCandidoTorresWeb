@@ -42,9 +42,9 @@ $dado = $usuario->retornaDados("object");
             <li><a href="Index.php">Inicio</a></li>
             <li><a href="#">Cadastro</a>
                 <ul>
-                    <li><a href="TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="#">Médico</a></li>
-                    <li><a href="#">Paciente</a></li>
+                    <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
+                    <li><a href="../Telas/TelaCadastroMedico">Médico</a></li>
+                    <li><a href="../Telas/TelaCadastroPaciente">Paciente</a></li>
                 </ul>
         </ul>
     </nav>

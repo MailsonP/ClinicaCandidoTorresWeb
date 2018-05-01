@@ -24,7 +24,7 @@
             <li><a href="#">Cadastro</a>
                 <ul>
                     <li><a href="TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="#">Médico</a></li>
+                    <li><a href="../Telas/TelaCadastroMedico">Médico</a></li>
                     <li><a href="TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
             </li>

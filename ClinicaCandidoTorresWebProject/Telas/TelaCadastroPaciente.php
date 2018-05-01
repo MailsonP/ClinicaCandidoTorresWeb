@@ -23,11 +23,11 @@
     <label for="bt_menu">&#9776;</label>
     <nav class="menu">
         <ul>
-            <li><a href="Index.php">Inicio</a></li>
+            <li><a href="../Telas/Index.php">Inicio</a></li>
             <li><a href="#">Cadastro</a>
                 <ul>
-                    <li><a href="TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="#">Médico</a></li>
+                    <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
+                    <li><a href="../Telas/TelaCadastroMedico">Médico</a></li>
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
         </ul>
