@@ -14,6 +14,8 @@
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="estilo.css" rel="stylesheet">
 
+    
+
   </head>
   <body>
     <header id="topo">
@@ -181,5 +183,12 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/jquery.mask.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      $('#dataNasc').mask('00/00/0000');
+    });
+    </script>
   </body>
 </html>
