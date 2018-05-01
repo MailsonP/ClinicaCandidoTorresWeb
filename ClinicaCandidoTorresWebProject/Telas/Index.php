@@ -25,13 +25,8 @@
 					<li><a href="TelaCadastroUsuario.php">Usuário</a></li>
 					<li><a href="#">Médico</a></li>
 					<li><a href="TelaCadastroPaciente">Paciente</a></li>
-					<li><a href="#">Funcionário</a></li>
-					<li><a href="#">Cidade</a></li>
-					<li><a href="#">Especialização</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Relatório</a></li>
-			<li><a href="#">Contato</a></li>
 		</ul>
 	</nav>
 	</header>
@@ -47,9 +42,6 @@
         <input type="submit" name="submit" value="LOGIN" class="btn-login">
     </form>
      <a href="#">Esqueceu sua senha?</a>
-  </div>
-  <div class="centro">
-  	<div class="conteudo"></div>
   </div>
 <footer>
   	<h1>Copyright &copy 2018 - Fábrica de Software</h1>

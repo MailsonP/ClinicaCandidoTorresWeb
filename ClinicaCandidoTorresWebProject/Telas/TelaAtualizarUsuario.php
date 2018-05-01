@@ -45,12 +45,7 @@ $dado = $usuario->retornaDados("object");
                     <li><a href="TelaCadastroUsuario.php">Usuário</a></li>
                     <li><a href="#">Médico</a></li>
                     <li><a href="#">Paciente</a></li>
-                    <li><a href="#">Funcionário</a></li>
-                    <li><a href="#">Cidade</a></li>
-                    <li><a href="#">Especialização</a></li>
                 </ul>
-            <li><a href="#">Relatório</a></li>
-            <li><a href="#">Contato</a></li>
         </ul>
     </nav>
     </header>
@@ -85,7 +80,6 @@ $dado = $usuario->retornaDados("object");
                     <option value="Recepcionista"> Recepcionista </option>
                     <option value="Medico"> Médico </option>    
                     </select>
-                /
                 <button type="submit" name="atualizar">Atualizar</button>
             </form>
         </fieldset>
