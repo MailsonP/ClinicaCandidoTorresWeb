@@ -188,6 +188,11 @@
     <script type="text/javascript">
       $(document).ready(function(){
       $('#dataNasc').mask('00/00/0000');
+      $('#cpf').mask('000.000.000-00');
+      $('#rg').mask('0000000000-0');
+      $('#celular').mask('(00) 00000-0000');
+      $('#telefone').mask('(00) 0000-0000');
+      $('#CEP').mask('00000-000');
     });
     </script>
   </body>

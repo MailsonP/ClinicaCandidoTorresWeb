@@ -131,8 +131,16 @@ footer h1:active{
 
 @media (max-width: 1000px){
 
+	#right{
+		display: none;
+	}
+
 	#topo .opcoes-direita .btn{
 		display: none;
+	}
+
+	.container-login{
+		z-index: 0 !important;
 	}
 
 	label[for="bt_menu"]{
@@ -149,6 +157,7 @@ footer h1:active{
 	}
 
 	.menu>ul{
+		z-index: 1;
 		width: 100%;
 		margin-left: -100%;
 		top: 50px;
