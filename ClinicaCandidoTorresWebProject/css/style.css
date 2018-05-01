@@ -137,9 +137,10 @@ footer h1:active{
 	label[for="bt_menu"]{
 		display: block;
 		margin-left: 2px;
-		width: 50px;
-		height: 50px;
+		max-width: 50px;
+		max-height: 50px;
 	}
+
 
 	#bt_menu:checked ~ .menu>ul{
 		margin-left: 0;
