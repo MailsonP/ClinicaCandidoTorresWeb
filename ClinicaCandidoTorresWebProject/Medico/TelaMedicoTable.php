@@ -33,7 +33,7 @@ $medico->retornaTudo($medico);
             <td> <?php echo $dado->EMAIL ?> </td>
             <td> <?php echo $dado->CONSELHO ?> </td>
             <td> <?php echo $dado->ESPECIALIDADE ?> </td>
-            <td><a href="formAtualizar.php?usuario=<?php  ?>">Editar |</a> 
+            <td><a href="../Telas/TelaAtualizarMedico.php?medico=<?php echo $dado->IDMEDICO?>">Editar |</a> 
                 <a href="RemoverMedico.php?medico=<?php echo $dado->IDMEDICO  ?> ">Excluir |</a></td>
             </tr>
               <?php } ?>
