@@ -110,24 +110,36 @@
               </div>
 
               <div class="row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-5">
                   <label for="profissao">Profissão:</label>
                   <input type="text" class="form-control" name="txtProfissao" id="profissao">
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                   <label for="cidade">Cidade:</label>
                   <input type="text" class="form-control" name="txtCidade" id="cidade">
                 </div>
 
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-3">
                   <label for="estado">Estado:</label>
                   <input type="text" class="form-control" name="txtEstado" id="estado">
                 </div>
+              </div>
 
-                <div class="form-group col-md-3">
-                  <label for="cep">CEP:</label>
-                  <input type="text" class="form-control" name="txtCEP" id="cep">
+              <div class="row">
+                <div class="form-group col-md-4">
+                  <label for="telefone">Telefone:</label>
+                  <input type="text" class="form-control" name="txtTelefone" id="telefone">
+                </div>
+
+                <div class="form-group col-md-4">
+                  <label for="celular">Celular:</label>
+                  <input type="text" class="form-control" name="txtCelular" id="celular">
+                </div>
+
+                <div class="form-group col-md-4">
+                  <label for="CEP">CEP:</label>
+                  <input type="text" class="form-control" name="txtCEP" id="CEP">
                 </div>
               </div>
 
