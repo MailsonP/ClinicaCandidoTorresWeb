@@ -27,13 +27,7 @@
                     <li><a href="TelaCadastroUsuario.php">Usuário</a></li>
                     <li><a href="#">Médico</a></li>
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
-                    <li><a href="#">Funcionário</a></li>
-                    <li><a href="#">Cidade</a></li>
-                    <li><a href="#">Especialização</a></li>
                 </ul>
-            </li>
-            <li><a href="#">Relatório</a></li>
-            <li><a href="#">Contato</a></li>
         </ul>
     </nav>
     </header>
@@ -74,12 +68,12 @@
                 <input type="text" class="form-control" name="txtRG" id="rg">
               </div>
 
-              <div class="form-group col-md-5">
+              <div class="form-group col-md-4">
                 <label for="email">Email:</label>
                 <input type="text" class="form-control" name="txtEmail" id="email">
               </div>
 
-              <div class="form-group col-md-1">
+              <div class="form-group col-md-2">
                 <label for="sexo">Sexo:</label>
                 <select class="form-control" name="cxSexo" id="sexo">
                                 <option value="null">-----</option>
@@ -159,7 +153,9 @@
                 </div>
               </div>
 
-                    <button type="submit" class="btn btn-default btn-lg btn-cadastra" value="Cadastrar" name="btnSalvar">Cadastrar</button>
+                    <button type="submit" value="Cadastrar" name="btnSalvar">Cadastrar</button>
+                    <button type="button"><a href="../Paciente/TelaPacienteTable">Buscar</a></button>
+
 
                 </form>
 
