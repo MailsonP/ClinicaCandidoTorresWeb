@@ -7,6 +7,7 @@
 require_once '../util/daoGenerico.php';
 require_once '../Paciente/Paciente.php';
 
+
 $paciente = new Paciente();
 
 //RECUPERANDO ID PASSADO PELA URL

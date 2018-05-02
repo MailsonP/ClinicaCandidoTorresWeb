@@ -17,7 +17,7 @@ class ValidarLogin extends ConexaoDB {
         if($resultado_id){
             return $resultado_id;
         }else{
-            echo "Houve um erro de conexao ao banco de Dados.!";
+           echo "<script>alert('Erro ao tentar fazer Login!');window.location = '../Telas/Index.php';</script>";
         }
         
     }

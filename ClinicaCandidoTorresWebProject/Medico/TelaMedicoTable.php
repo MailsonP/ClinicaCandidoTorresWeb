@@ -1,6 +1,7 @@
 <?php
 require_once '../Medico/Medico.php';
 
+
 $medico = new Medico();
 $medico->retornaTudo($medico);
 

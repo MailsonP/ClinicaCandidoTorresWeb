@@ -1,7 +1,7 @@
 <?php
+session_start();
 
 require_once '../usuario/Usuario.php';
-session_start();
 
 $metodo = $_POST;
 

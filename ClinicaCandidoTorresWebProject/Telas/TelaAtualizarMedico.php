@@ -1,6 +1,8 @@
 <?php
 require_once '../util/daoGenerico.php';
 require_once '../Medico/Medico.php';
+
+
 $medico = new Medico();
 $metodo = $_GET;
 if(isset($metodo["medico"])){

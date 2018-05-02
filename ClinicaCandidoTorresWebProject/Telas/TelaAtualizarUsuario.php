@@ -3,6 +3,7 @@
 require_once '../util/daoGenerico.php';
 require_once '../Usuario/Usuario.php';
 
+
 $usuario = new Usuario();
 
 $metodo = $_GET;

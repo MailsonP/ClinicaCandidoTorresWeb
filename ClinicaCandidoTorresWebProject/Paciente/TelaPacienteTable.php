@@ -6,6 +6,7 @@
  */
 require_once '../Paciente/Paciente.php';
 
+
 $paciente = new Paciente();
 $paciente->retornaTudo($paciente);
 
