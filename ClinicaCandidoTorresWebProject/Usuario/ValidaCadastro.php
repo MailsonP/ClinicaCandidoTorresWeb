@@ -11,7 +11,7 @@ class ValidaCadastro extends ConexaoDB {
         
         if (isset($login))
             
-        $sql = " SELECT LOGIN FROM usuario WHERE LOGIN = '$login'";
+        $sql = " SELECT * FROM usuario WHERE LOGIN = '$login'";
         
         $resultado = mysqli_query($this->conexao, $sql);
         
