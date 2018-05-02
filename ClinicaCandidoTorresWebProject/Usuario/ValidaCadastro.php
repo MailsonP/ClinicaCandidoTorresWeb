@@ -1,25 +1,24 @@
 <?php
 
-    include_once '../util/daoGenerico.php';
-    include_once '../BancoDeDados/Conexao_Banco_ClinicaTorres.php.inc';
+include_once '../util/daoGenerico.php';
+include_once '../BancoDeDados/Conexao_Banco_ClinicaTorres.php.inc';
 
-class ValidaCadastro extends ConexaoDB {
-    
-    function validarCadastro($login){
-        
+class PesquisarPorNome extends ConexaoDB {
+         
+    public function Pesquisar($nome){
+           
         $dao = new daoGenerico();
         
-        if (isset($login))
-            
-        $sql = " SELECT * FROM usuario WHERE LOGIN = '$login'";
+        $sql = "SELECT NOME FROM usuario LIKE '%$nome%'";
         
-        $resultado = mysqli_query($this->conexao, $sql);
+        $resultado_pesquisa = mysqli_query($this->conexao, $sql);
         
-        if($resultado){
-            return $resultado;
+        if($resultado_pesquisa){
+            return $resultado_pesquisa;
         }else{
-            echo 'Ocorreu um erro tentar validar o Cadastro.!';
+            echo "<script>alert('Erro ao tentar buscar usuario no banco!');window.location = '../Telas/TelaCadastroUsuario.php';</script>";
         }
+        
     }
+    
 }
-       
