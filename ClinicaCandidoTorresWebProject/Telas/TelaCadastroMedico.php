@@ -28,7 +28,7 @@ protect();
     <nav class="menu">
         <ul>
             <li><a href="../Telas/Index.php">Inicio</a></li>
-            <li><a href="#">Cadastro</a>
+            <li><a href="../Login/Sair.php">Cadastro</a>
                 <ul>
                     <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
                     <li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>

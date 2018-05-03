@@ -50,7 +50,7 @@ $dado = $usuario->retornaDados("object");
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
             </li>
-            <li><a href="#">Sair</a></li>
+            <li><a href="../Login/Sair.php">Sair</a></li>
         </ul>
     </nav>
     </header>

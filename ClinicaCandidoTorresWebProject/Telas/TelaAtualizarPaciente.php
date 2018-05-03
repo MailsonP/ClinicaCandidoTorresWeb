@@ -54,7 +54,7 @@ while ($dado = $paciente->retornaDados("object")) {
                     <li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
-            <li><a href="#">Sair</a></li>
+            <li><a href="../Login/Sair.php">Sair</a></li>
         </ul>
     </nav>
     </header>
