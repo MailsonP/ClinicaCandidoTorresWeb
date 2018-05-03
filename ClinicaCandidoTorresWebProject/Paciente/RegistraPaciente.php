@@ -55,12 +55,16 @@ if (isset($metodo["txtNome"])) {
     $paciente->setValor("ESTADO", $estado);
     $paciente->setValor("COMPLEMENTO", $complemento);
     $paciente->setValor("CEP", $cep);
+
+
     
-if ($paciente->inserir($paciente)){
-    echo  "<script>alert('Paciente cadastrado com sucesso!!');window.location = '../Telas/TelaCadastroPaciente.php';</script>";
+if($nome == "" OR $numeroProntuario =="" OR $sexo == "null" OR $datanasc == "" OR $cpf == "" OR $rg == "" OR $tipoAtendimento == "" OR $celular == "" OR $estadocivil == "null" OR $endereco == "" OR $bairro == "" OR $numero == "" OR $cidade == "" OR $estado == "" OR $cep == ""){
+
+echo  "<script>alert('Você esqueceu de preencher algum campo obrigatório !');</script>";
+} else if ($paciente->inserir($paciente)){
+echo  "<script>alert('Paciente cadastrado com sucesso!!');window.location = '../Telas/TelaCadastroPaciente.php';</script>";
    
-}else{
-    echo  "<script>alert('Você esqueceu de preencher algum campo obrigatório :/');window.history.back(1);</script>";
 }
-}
+
+
 
