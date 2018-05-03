@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	 <meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Clinica Cândido Torres</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
