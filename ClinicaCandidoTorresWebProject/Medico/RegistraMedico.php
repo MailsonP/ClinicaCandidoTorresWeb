@@ -25,8 +25,8 @@ if(isset($Metodo["nome"])){
     $medico->setValor("TIPODEATENDIMENTO", $tipodeatendimento);
     
     if($medico ->inserir($medico)){
-        echo("Dado Cadastrado com Sucesso!!");
+         echo  "<script>alert('Médico cadastrado com sucesso !');window.location = '../Telas/TelaCadastroMedico.php';</script>";
     }else{
-        echo("Erro ao tentar Inserir os valores no Banco!!");
-    }
+        echo  "<script>alert('Você esqueceu de preencher algum campo obrigatório :/');window.history.back(1);</script>";
+}
 }

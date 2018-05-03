@@ -26,7 +26,7 @@ if(isset($metodo2["nome"])){
     
     $medico->setValor("NOME", $nome);
     $medico->setValor("TELEFONE", $telefone);
-    $medico->setValor("EMAIL", $telefone);
+    $medico->setValor("EMAIL", $email);
     $medico->setValor("DTANASCIMENTO", $dtanascimento);
     $medico->setValor("CONSELHO", $conselho);
     $medico->setValor("ESPECIALIDADE", $especialidade);
@@ -36,9 +36,9 @@ if(isset($metodo2["nome"])){
     $medico->valorpk = $id;
     
     if($medico->atualizar($medico)){
-        echo "Dado Atualizado com Sucesso!!";
+        echo  "<script>alert('Médico atualizado com sucesso !');window.location = '../Medico/TelaMedicoTable.php';</script>";
     }else{
-        echo "Erro ao Atualizar os Dados!!";
+        echo "<script>alert('Não foi modificado nada ainda.');</script>";
     }
     
     

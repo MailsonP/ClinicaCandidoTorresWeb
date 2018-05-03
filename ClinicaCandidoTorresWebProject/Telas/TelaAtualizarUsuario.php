@@ -25,7 +25,7 @@ $dado = $usuario->retornaDados("object");
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Clinica Cândido Torres</title>
+    <title>Atualizar Usuário</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/login.css">
@@ -42,12 +42,12 @@ $dado = $usuario->retornaDados("object");
     <label for="bt_menu">&#9776;</label>
     <nav class="menu">
         <ul>
-            <li><a href="Index.php">Inicio</a></li>
+            <li><a href="../Telas/Index.php">Inicio</a></li>
             <li><a href="#">Cadastro</a>
                 <ul>
                     <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="../Telas/TelaCadastroMedico">Médico</a></li>
-                    <li><a href="../Telas/TelaCadastroPaciente">Paciente</a></li>
+                    <li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>
+                    <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
         </ul>
     </nav>
@@ -83,7 +83,8 @@ $dado = $usuario->retornaDados("object");
                     <option value="Recepcionista"> Recepcionista </option>
                     <option value="Medico"> Médico </option>    
                     </select>
-                <button type="submit" name="atualizar">Atualizar</button>
+                <button type="submit" name="atualizar" class="bt-att">Salvar</button>
+                <button type="button" class="bt-voltar"><a href="../Usuario/TelaUsuarioTable">Voltar</a></button>
             </form>
         </fieldset>
     </div>

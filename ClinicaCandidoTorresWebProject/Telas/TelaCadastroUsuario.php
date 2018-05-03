@@ -31,9 +31,9 @@ protect();
             <li><a href="../Telas/Index.php">Inicio</a></li>
             <li><a href="#">Cadastro</a>
                 <ul>
-                    <li><a href="TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="../Telas/TelaCadastroMedico">Médico</a></li>
-                    <li><a href="TelaCadastroPaciente.php">Paciente</a></li>
+                    <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
+                    <li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>
+                    <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
             </li>
         </ul>
@@ -71,8 +71,8 @@ protect();
                     <option value="Medico"> Médico </option>    
                     </select>
                 
-                <button type="submit" name="salvar">Salvar</button>
-                <button type="button"><a href="../Usuario/TelaUsuarioTable">Buscar</a></button>
+                <button type="submit" name="salvar" class="bt-salvar">Salvar</button>
+                <button type="button" class="bt-buscar"><a href="../Usuario/TelaUsuarioTable">Buscar</a></button>
             </form>
         </fieldset>
     </div>

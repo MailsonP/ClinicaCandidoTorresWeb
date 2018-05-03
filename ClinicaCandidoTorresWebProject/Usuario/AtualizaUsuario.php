@@ -30,7 +30,7 @@ $usuario->valorpk = $id;
 if ($usuario->atualizar($usuario)){
     echo  "<script>alert('Usuário atualizado com sucesso!');window.location = './TelaUsuarioTable.php';</script>";
 }else{
-    echo 'Houve um erro ao tentar atualizar os dados os Dados no banco';
+    echo "<script>alert('Não foi modificado nada ainda.');</script>";
 }
 
 }

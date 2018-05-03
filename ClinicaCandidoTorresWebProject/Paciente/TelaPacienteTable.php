@@ -39,8 +39,8 @@ $paciente->retornaTudo($paciente);
             <li><a href="../Telas/index.php">Inicio</a></li>
             <li><a href="#">Cadastro</a>
                 <ul>
-                    <li><a href="../TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="#">Médico</a></li>
+                    <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
+                    <li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
         </ul>
@@ -57,7 +57,7 @@ $paciente->retornaTudo($paciente);
             <th class="column3">Num Prontuario</th>
             <th class="column4">Sexo</th>
             <th class="column5">Tipo Atendimento</th>
-            <th class="column6">Opcões</th>
+            <th class="column6">Ação</th>
      
           </tr>
         </thead>
@@ -69,7 +69,7 @@ $paciente->retornaTudo($paciente);
             <td><?php echo $dado->NUMEROPRONTUARIO ?></td>
             <td><?php echo $dado->SEXO ?></td>
             <td><?php echo $dado->TIPOATENDIMENTO ?></td>
-            <td class="column5"><a href="../Telas/TelaAtualizarPaciente.php?Idpaciente=<?php echo $dado->IDPACIENTE;?>">Editar</a> 
+            <td class="column6"><a href="../Telas/TelaAtualizarPaciente.php?Idpaciente=<?php echo $dado->IDPACIENTE;?>">Editar</a> 
                 <a href="" id="separador">|</a>
                 <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->NOME; ?> ?')) 
                     location.href='RemovePaciente.php?Idpaciente=<?php echo $dado->IDPACIENTE; ?>';">Excluir</a>

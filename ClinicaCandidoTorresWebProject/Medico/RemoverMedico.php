@@ -10,8 +10,16 @@ if(isset($metodo["medico"])){
    $medico = new Medico();
    $medico->valorpk = $id;
 if($medico->deletar($medico)){
-    echo "Medico deletado com Sucesso!!";
+    echo "
+		<script>
+			alert('Médico deletado com sucesso!')
+			location.href='TelaMedicoTable.php';
+		</script>";
 }else{
-    echo "Erro ao deletar Medico";
+    echo "
+		<script>
+			alert('Não foi possivel deletar o médico.');
+			location.href='TelaMedicoTable.php';
+		</script>";
 }   
 }

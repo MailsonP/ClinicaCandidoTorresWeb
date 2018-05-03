@@ -13,7 +13,7 @@ protect();
     <title>Cadastro Paciente</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/cadastroPaciente">
+    <link rel="stylesheet" type="text/css" href="../css/CadastraAtualiza.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:600" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,7 +33,7 @@ protect();
             <li><a href="#">Cadastro</a>
                 <ul>
                     <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="../Telas/TelaCadastroMedico">Médico</a></li>
+                    <li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
         </ul>
@@ -173,8 +173,8 @@ protect();
                 </div>
               </div>
 
-                    <button type="submit" value="Cadastrar" name="btnSalvar">Cadastrar</button>
-                    <button type="button"><a href="../Paciente/TelaPacienteTable">Buscar</a></button>
+                    <button type="submit" value="Cadastrar" name="btnSalvar" class="bt-salvar">Salvar</button>
+                    <button type="button" class="bt-buscar"><a href="../Paciente/TelaPacienteTable">Buscar</a></button>
 
 
                 </form>

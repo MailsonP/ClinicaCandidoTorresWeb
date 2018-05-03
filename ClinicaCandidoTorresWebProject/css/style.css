@@ -107,6 +107,7 @@ footer {
   min-height: 60px;
   float: left;
   position:absolute;
+  left: 0;
   bottom:0;
   box-shadow: 0 0 3px #000;
 }

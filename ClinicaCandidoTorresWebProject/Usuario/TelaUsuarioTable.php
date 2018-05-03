@@ -23,8 +23,6 @@ $usuario->retornaTudo($usuario);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Pesquisar Usuário</title>
     <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/login.js"></script>
-    <script src="./fixedHeader.js"></script>
     </head>
     <body ondragstart="return false;">
         <header id="topo">
@@ -32,12 +30,12 @@ $usuario->retornaTudo($usuario);
     <label for="bt_menu">&#9776;</label>
     <nav class="menu">
         <ul>
-            <li><a href="../index.php">Inicio</a></li>
+            <li><a href="../Telas/index.php">Inicio</a></li>
             <li><a href="#">Cadastro</a>
                 <ul>
                     <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="#">Médico</a></li>
-                    <li><a href="#">Paciente</a></li>
+                    <li><a href="../Telas/TelaCadastroMedico">Médico</a></li>
+                    <li><a href="../Telas/TelaCadastroPaciente">Paciente</a></li>
                 </ul>
             </li>
         </ul>
