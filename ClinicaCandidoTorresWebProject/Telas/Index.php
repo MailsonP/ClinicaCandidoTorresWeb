@@ -31,22 +31,10 @@ session_start();
 					<li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
 				</ul>
 			</li>
+			<li><a href="#">Sair</a></li>
 		</ul>
 	</nav>
 	</header>
-	<div class="container-login">
-    <img src="../img/logo.png">
-    <form action="../Login/autenticarUsuario.php" method="POST">
-      <div class="form-input">
-        <input type="text" name="username" placeholder="Usuário">
-      </div>
-      <div class="form-input">
-        <input type="password" name="password" placeholder="Senha">
-      </div>
-        <input type="submit" name="submit" value="LOGIN" class="btn-login">
-    </form>
-     <a href="#">Esqueceu sua senha?</a>
-  </div>
 <footer>
   	<h1>Copyright &copy 2018 - Fábrica de Software</h1>
 </footer>
