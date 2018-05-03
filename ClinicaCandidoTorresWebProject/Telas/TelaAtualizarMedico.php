@@ -105,7 +105,7 @@ $dado = $medico->retornaDados("object");
                 </div>
 
                 <button type="submit" class="bt-salvar">Salvar</button>
-                <button type="button" class="bt-buscar"><a href="../Medico/TelaMedicoTable">Voltar</a></button>
+                <button type="button" class="bt-buscar"><a href="../Medico/TelaMedicoTable.php">Voltar</a></button>
             </form>
                     
             </div>

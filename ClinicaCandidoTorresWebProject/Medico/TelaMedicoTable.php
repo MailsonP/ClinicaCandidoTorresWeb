@@ -38,6 +38,8 @@ $medico->retornaTudo($medico);
                     <li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
+            </li>
+            <li><a href="../Login/Sair.php">Sair</a></li>
         </ul>
     </nav>
     </header>

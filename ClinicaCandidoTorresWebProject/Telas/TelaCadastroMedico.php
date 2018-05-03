@@ -35,7 +35,7 @@ protect();
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
             </li>
-            <li><a href="#">Sair</a></li>
+            <li><a href="../Login/Sair.php">Sair</a></li>
         </ul>
     </nav>
     </header>
@@ -95,7 +95,7 @@ protect();
                 </div>
 
                 <button type="submit" class="bt-salvar">Salvar</button>
-                <button type="button" class="bt-buscar"><a href="../Medico/TelaMedicoTable">Buscar</a></button>
+                <button type="button" class="bt-buscar"><a href="../Medico/TelaMedicoTable.php">Buscar</a></button>
             </form>
                     
             </div>
