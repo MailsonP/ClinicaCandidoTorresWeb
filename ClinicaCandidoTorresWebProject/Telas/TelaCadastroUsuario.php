@@ -73,7 +73,7 @@ protect();
                     </select>
                 
                 <button type="submit" name="salvar" class="bt-salvar">Salvar</button>
-                <button type="button" class="bt-buscar"><a href="../Usuario/TelaUsuarioTable">Buscar</a></button>
+                <button type="button" class="bt-buscar"><a href="../Usuario/TelaUsuarioTable.php">Buscar</a></button>
             </form>
         </fieldset>
     </div>
