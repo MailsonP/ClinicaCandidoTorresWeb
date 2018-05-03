@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once '../util/daoGenerico.php';
 require_once './Usuario.php';
 

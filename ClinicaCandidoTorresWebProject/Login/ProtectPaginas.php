@@ -4,11 +4,8 @@ if(!function_exists("protect")){
     
     function protect(){
         
-        if(!isset($_SESSION))
-            session_start();
-        
-        if(!isset($_SESSION["usuario"])){
-            header("Location: ../Telas/Index.php");
+        if(!isset($_SESSION["login"])){
+        header("Location: ./Index.php");
         }
     }
     

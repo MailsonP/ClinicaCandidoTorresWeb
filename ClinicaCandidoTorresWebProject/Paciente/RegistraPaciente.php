@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once '../Paciente/Paciente.php';
 /**
  * Description of Paciente

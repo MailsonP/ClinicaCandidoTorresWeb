@@ -1,8 +1,10 @@
 <?php
-
+session_start();
 require_once '../util/daoGenerico.php';
 require_once '../Usuario/Usuario.php';
 
+include_once '../Login/ProtectPaginas.php';
+protect();
 
 $usuario = new Usuario();
 

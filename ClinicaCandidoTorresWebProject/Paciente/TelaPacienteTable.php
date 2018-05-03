@@ -4,8 +4,11 @@
  *
  * @author Felipe
  */
+session_start();
 require_once '../Paciente/Paciente.php';
 
+include_once '../Login/ProtectPaginas.php';
+protect();
 
 $paciente = new Paciente();
 $paciente->retornaTudo($paciente);

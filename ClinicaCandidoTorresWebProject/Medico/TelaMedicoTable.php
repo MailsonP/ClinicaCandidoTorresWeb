@@ -1,6 +1,9 @@
 <?php
+session_start();
 require_once '../Medico/Medico.php';
 
+include_once '../Login/ProtectPaginas.php';
+protect();
 
 $medico = new Medico();
 $medico->retornaTudo($medico);

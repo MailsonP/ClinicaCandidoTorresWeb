@@ -1,8 +1,7 @@
 <?php
-
-include_once '../Medico/Medico.php';
 session_start();
 
+include_once '../Medico/Medico.php';
 
 $Metodo = $_POST;
 if(isset($Metodo["nome"])){    

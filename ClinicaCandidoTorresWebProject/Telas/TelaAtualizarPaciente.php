@@ -4,9 +4,12 @@
  *
  * @author Felipe
  */
+session_start();
 require_once '../util/daoGenerico.php';
 require_once '../Paciente/Paciente.php';
 
+include_once '../Login/ProtectPaginas.php';
+protect();
 
 $paciente = new Paciente();
 

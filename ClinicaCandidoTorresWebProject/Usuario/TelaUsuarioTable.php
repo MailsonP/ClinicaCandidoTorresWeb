@@ -1,7 +1,9 @@
 <?php
-
+session_start();
 require_once './Usuario.php';
 
+include_once '../Login/ProtectPaginas.php';
+protect();
 
 $usuario = new Usuario();
 $usuario->retornaTudo($usuario);

@@ -23,9 +23,13 @@ $dados_usuario = mysqli_fetch_array($resultado);
 
 if(isset($dados_usuario['LOGIN'])){
 
-   $_SESSION["ID_USUARIO"] = $dados_usuario["IDUSUARIO"];
-   $_SESSION["NOME_USUARIO"] = $dados_usuario["NOME"];
-   $_SESSION["LOGIN_USUARIO"] = $dados_usuario["LOGIN"];
+   $_SESSION["id"] = $dados_usuario["IDUSUARIO"];
+   $_SESSION["nome"] = $dados_usuario["NOME"];
+   $_SESSION["login"] = $dados_usuario["LOGIN"];
+   
+        
+
+   
    
     echo "<script>window.location = '../Telas/Index.php';</script>";
 }else{

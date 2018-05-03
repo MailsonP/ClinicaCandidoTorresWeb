@@ -1,6 +1,10 @@
 <?php
+session_start();
 require_once '../util/daoGenerico.php';
 require_once '../Medico/Medico.php';
+
+include_once '../Login/ProtectPaginas.php';
+protect();
 
 
 $medico = new Medico();

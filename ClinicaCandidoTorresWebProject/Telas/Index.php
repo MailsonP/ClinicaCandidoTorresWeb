@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+<?php
+session_start();
+?>﻿
+
+<!DOCTYPE html>
 <html>
 <head>
 	 <meta charset="utf-8">
@@ -17,7 +21,7 @@
 	<input type="checkbox" id="bt_menu">
 	<label for="bt_menu">&#9776;</label>
 	<div id="right"><img src="../img/cct.png"></div>
-	<nav class="menu">
+	<nav class="menu" id="menu">
 		<ul>
 			<li><a href="../Telas/Index.php">Inicio</a></li>
 			<li><a href="#">Cadastro</a>

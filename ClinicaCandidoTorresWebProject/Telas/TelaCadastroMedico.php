@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+include_once '../Login/ProtectPaginas.php';
+protect();
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
