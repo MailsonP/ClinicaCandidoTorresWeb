@@ -56,7 +56,7 @@ $dado = $medico->retornaDados("object");
             <div class="col-sm-12">
                 <h2 class="titulo-h2">Atualizar Médico</h2>
                 
-            <form action="../Medico/AtualizaMedico.php" method="POST">
+            <form action="../Medico/AtualizaMedico.php?medico=<?php echo $dado->IDMEDICO ?>"" method="POST">
                 <div class="row">
                     <div class="form-group col-sm-6">
                         <label for="nome">Nome:</label>
