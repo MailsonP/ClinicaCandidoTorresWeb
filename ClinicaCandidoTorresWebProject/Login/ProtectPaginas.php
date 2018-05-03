@@ -5,7 +5,7 @@ if(!function_exists("protect")){
     function protect(){
         
         if(!isset($_SESSION["login"])){
-        header("Location: ./Index.php");
+        header("Location: ./Home.php");
         }
     }
     

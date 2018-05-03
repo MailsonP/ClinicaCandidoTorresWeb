@@ -28,7 +28,7 @@ if(isset($dados_usuario['LOGIN'])){
    $_SESSION["login"] = $dados_usuario["LOGIN"];
    
    
-    echo "<script>window.location = '../Telas/Index.php';</script>";
+    echo "<script>window.location = '../Telas/Home.php';</script>";
     
 }else{
      echo  "<script>alert('Login ou senha Incorretos!');window.location = '../Telas/Index.php';</script>";

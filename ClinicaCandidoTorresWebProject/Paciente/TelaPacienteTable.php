@@ -36,7 +36,7 @@ $paciente->retornaTudo($paciente);
     <label for="bt_menu">&#9776;</label>
     <nav class="menu">
         <ul>
-            <li><a href="../Telas/index.php">Inicio</a></li>
+            <li><a href="../Telas/Home.php">Inicio</a></li>
             <li><a href="#">Cadastro</a>
                 <ul>
                     <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
