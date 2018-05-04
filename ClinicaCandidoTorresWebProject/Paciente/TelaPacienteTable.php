@@ -67,10 +67,10 @@ $paciente->retornaTudo($paciente);
             <?php while ($dado = $paciente->retornaDados("object")){ ?>
           <tr class="tabela">
             <td><?php echo $dado->IDPACIENTE ?></td>
-            <td><?php echo $dado->NOME ?></td>
-            <td><?php echo $dado->NUMEROPRONTUARIO ?></td>
-            <td><?php echo $dado->SEXO ?></td>
-            <td><?php echo $dado->TIPOATENDIMENTO ?></td>
+            <td class="up"><?php echo $dado->NOME ?></td>
+            <td class="up"><?php echo $dado->NUMEROPRONTUARIO ?></td>
+            <td class="up"><?php echo $dado->SEXO ?></td>
+            <td class="up"><?php echo $dado->TIPOATENDIMENTO ?></td>
             <td class="column6"><a href="../Telas/TelaAtualizarPaciente.php?Idpaciente=<?php echo $dado->IDPACIENTE;?>">Editar</a> 
                 <a href="" id="separador">|</a>
                 <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->NOME; ?> ?')) 

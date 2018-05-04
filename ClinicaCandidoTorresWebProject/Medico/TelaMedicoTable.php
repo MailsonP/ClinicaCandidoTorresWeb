@@ -62,9 +62,9 @@ $medico->retornaTudo($medico);
              <?php while ($dado = $medico -> retornaDados("object")){ ?>
         <tr class="tabela">
             <td> <?php echo $dado->IDMEDICO ?> </td>
-            <td> <?php echo $dado->NOME ?> </td>
-            <td> <?php echo $dado->CONSELHO ?> </td>        
-            <td> <?php echo $dado->ESPECIALIDADE ?> </td>
+            <td class="up"> <?php echo $dado->NOME ?> </td>
+            <td class="up"> <?php echo $dado->CONSELHO ?> </td>        
+            <td class="up"> <?php echo $dado->ESPECIALIDADE ?> </td>
             <td> <?php echo $dado->TELEFONE ?> </td>
             <td><a href="../Telas/TelaAtualizarMedico.php?medico=<?php echo $dado->IDMEDICO?>">Editar</a> 
                 <a href="" id="separador">|</a>
