@@ -68,4 +68,6 @@ html, body{
   background: rgba(248,157,99,0.9);
 }
 
-
+.up{
+	text-transform: uppercase;
+}

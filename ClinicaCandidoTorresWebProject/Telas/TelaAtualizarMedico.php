@@ -60,7 +60,7 @@ $dado = $medico->retornaDados("object");
                 <div class="row">
                     <div class="form-group col-sm-6">
                         <label for="nome">Nome:</label>
-                        <input type="text" class="form-control" value="<?php echo $dado->NOME ?>" name="nome" id="nome">
+                        <input type="text" class="form-control up" value="<?php echo $dado->NOME ?>" name="nome" id="nome">
                     </div>
 
                     <div class="form-group col-sm-3">
@@ -89,18 +89,18 @@ $dado = $medico->retornaDados("object");
                 <div class="row"> 
                     <div class="form-group col-sm-4">
                         <label for="tipoDeAtendimento">Tipo de Atendimento:</label>
-                        <input type="text" class="form-control" value="<?php echo $dado->TIPODEATENDIMENTO ?>" name="tipodeatendimento" id="tipoDeAtendimento">
+                        <input type="text" class="form-control up" value="<?php echo $dado->TIPODEATENDIMENTO ?>" name="tipodeatendimento" id="tipoDeAtendimento">
                         
                     </div>
 
                     <div class="form-group col-sm-4">
                         <label for="funcaoId">Função:</label>
-                        <input type="text" class="form-control" value="<?php echo $dado->FUNCAO ?>" name="funcao" id="funcaoId">
+                        <input type="text" class="form-control up" value="<?php echo $dado->FUNCAO ?>" name="funcao" id="funcaoId">
                     </div>
 
                     <div class="form-group col-sm-4">
                         <label for="especialidadeId">Especialidade:</label>
-                        <input type="text" class="form-control" value="<?php echo $dado->ESPECIALIDADE ?>" name="especialidade" id="especialidadeId" >
+                        <input type="text" class="form-control up" value="<?php echo $dado->ESPECIALIDADE ?>" name="especialidade" id="especialidadeId" >
                     </div>
                 </div>
 

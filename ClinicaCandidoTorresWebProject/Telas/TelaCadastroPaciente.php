@@ -53,7 +53,7 @@ protect();
             <div class="row">
                     <div class="form-group col-md-6" >
               <label for="nome">Nome:</label>
-              <input type="text" class="form-control" name="txtNome" id="nome" required>
+              <input type="text" class="form-control up" name="txtNome" id="nome" required>
                     </div>
           
             <div class="form-group col-md-3">
@@ -96,17 +96,17 @@ protect();
               <div class="row">
                 <div class="form-group col-md-4">
                   <label for="atendimento">Tipo Atendimento:</label>
-                  <input type="text" class="form-control" name="txtAtendimento" id="atendimento" required>
+                  <input type="text" class="form-control up" name="txtAtendimento" id="atendimento" required>
                 </div>
 
                 <div class="form-group col-md-3">
                 <label for="acomp">Acompanhante:</label>
-                <input type="text" class="form-control" name="txtAcompanhante" id="acomp" >
+                <input type="text" class="form-control up" name="txtAcompanhante" id="acomp" >
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="indica">Indicação:</label>
-                <input type="text" class="form-control" name="txtIndicacao" id="indica"> 
+                <input type="text" class="form-control up" name="txtIndicacao" id="indica"> 
                 </div>
           
                 <div class="form-group col-md-2">
@@ -124,17 +124,17 @@ protect();
               <div class="row">
                 <div class="form-group col-md-5">
                   <label for="profissao">Profissão:</label>
-                  <input type="text" class="form-control" name="txtProfissao" id="profissao" required>
+                  <input type="text" class="form-control up" name="txtProfissao" id="profissao" required>
                 </div>
 
                 <div class="form-group col-md-4">
                   <label for="cidade">Cidade:</label>
-                  <input type="text" class="form-control" name="txtCidade" id="cidade" required>
+                  <input type="text" class="form-control up" name="txtCidade" id="cidade" required>
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="estado">Estado:</label>
-                  <input type="text" class="form-control" name="txtEstado" id="estado" required>
+                  <input type="text" class="form-control up" name="txtEstado" id="estado" required>
                 </div>
               </div>
 
@@ -158,12 +158,12 @@ protect();
               <div class="row">
                 <div class="form-group col-md-3">
                   <label for="bairro">Bairro:</label>
-                  <input type="text" class="form-control" name="txtBairro" id="bairro" required>
+                  <input type="text" class="form-control up" name="txtBairro" id="bairro" required>
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="endereco">Endereço:</label>
-                  <input type="text" class="form-control" name="txtEndereco" id="endereco" required>
+                  <input type="text" class="form-control up" name="txtEndereco" id="endereco" required>
                 </div>
 
                 <div class="form-group col-md-3">
@@ -173,7 +173,7 @@ protect();
 
                 <div class="form-group col-md-3">
                   <label for="complemento">Complemento:</label>
-                  <input type="text" class="form-control" name="txtComplemento" id="complemento">
+                  <input type="text" class="form-control up" name="txtComplemento" id="complemento">
                 </div>
               </div>
 

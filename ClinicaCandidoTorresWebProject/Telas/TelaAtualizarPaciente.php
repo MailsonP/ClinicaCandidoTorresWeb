@@ -70,7 +70,7 @@ while ($dado = $paciente->retornaDados("object")) {
             <div class="row">
                     <div class="form-group col-md-6" >
               <label for="nome">Nome:</label>
-              <input type="text" class="form-control" name="txtNome" value="<?php echo $dado->NOME?>" id="nome" required>
+              <input type="text" class="form-control up" name="txtNome" value="<?php echo $dado->NOME?>" id="nome" required>
                     </div>
           
             <div class="form-group col-md-3">
@@ -113,17 +113,17 @@ while ($dado = $paciente->retornaDados("object")) {
               <div class="row">
                 <div class="form-group col-md-4">
                   <label for="atendimento">Tipo Atendimento:</label>
-                  <input type="text" class="form-control" name="txtAtendimento" value="<?php echo $dado->TIPOATENDIMENTO ?>" id="atendimento" required>
+                  <input type="text" class="form-control up" name="txtAtendimento" value="<?php echo $dado->TIPOATENDIMENTO ?>" id="atendimento" required>
                 </div>
 
                 <div class="form-group col-md-3">
                 <label for="acomp">Acompanhante:</label>
-                <input type="text" class="form-control" name="txtAcompanhante" value="<?php echo $dado->ACOMPANHANTE ?>" id="acomp">
+                <input type="text" class="form-control up" name="txtAcompanhante" value="<?php echo $dado->ACOMPANHANTE ?>" id="acomp">
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="indica">Indicação:</label>
-                <input type="text" class="form-control" name="txtIndicacao" value="<?php echo $dado->INDICACAO ?>" id="indica"> 
+                <input type="text" class="form-control up" name="txtIndicacao" value="<?php echo $dado->INDICACAO ?>" id="indica"> 
                 </div>
           
                 <div class="form-group col-md-2">
@@ -141,17 +141,17 @@ while ($dado = $paciente->retornaDados("object")) {
               <div class="row">
                 <div class="form-group col-md-5">
                   <label for="profissao">Profissão:</label>
-                  <input type="text" class="form-control" name="txtProfissao" value="<?php echo $dado->PROFISSAO ?>" id="profissao" required>
+                  <input type="text" class="form-control up" name="txtProfissao" value="<?php echo $dado->PROFISSAO ?>" id="profissao" required>
                 </div>
 
                 <div class="form-group col-md-4">
                   <label for="cidade">Cidade:</label>
-                  <input type="text" class="form-control" name="txtCidade" value="<?php echo $dado->CIDADE ?>" id="cidade" required>
+                  <input type="text" class="form-control up" name="txtCidade" value="<?php echo $dado->CIDADE ?>" id="cidade" required>
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="estado">Estado:</label>
-                  <input type="text" class="form-control" name="txtEstado" value="<?php echo $dado->ESTADO ?>" id="estado" required>
+                  <input type="text" class="form-control up" name="txtEstado" value="<?php echo $dado->ESTADO ?>" id="estado" required>
                 </div>
               </div>
 
@@ -175,12 +175,12 @@ while ($dado = $paciente->retornaDados("object")) {
               <div class="row">
                 <div class="form-group col-md-3">
                   <label for="bairro">Bairro:</label>
-                  <input type="text" class="form-control" name="txtBairro" value="<?php echo $dado->BAIRRO ?>" id="bairro" required>
+                  <input type="text" class="form-control up" name="txtBairro" value="<?php echo $dado->BAIRRO ?>" id="bairro" required>
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="endereco">Endereço:</label>
-                  <input type="text" class="form-control" name="txtEndereco" value="<?php echo $dado->ENDERECO ?>" id="endereco"  required>
+                  <input type="text" class="form-control up" name="txtEndereco" value="<?php echo $dado->ENDERECO ?>" id="endereco"  required>
                 </div>
 
                 <div class="form-group col-md-3">
@@ -190,7 +190,7 @@ while ($dado = $paciente->retornaDados("object")) {
 
                 <div class="form-group col-md-3">
                   <label for="complemento">Complemento:</label>
-                  <input type="text" class="form-control" name="txtComplemento" value="<?php echo $dado->COMPLEMENTO ?>" id="complemento">
+                  <input type="text" class="form-control up" name="txtComplemento" value="<?php echo $dado->COMPLEMENTO ?>" id="complemento">
                 </div>
               </div>
 
