@@ -53,29 +53,29 @@ protect();
             <div class="row">
                     <div class="form-group col-md-6" >
               <label for="nome">Nome:</label>
-              <input type="text" class="form-control" name="txtNome" id="nome">
+              <input type="text" class="form-control" name="txtNome" id="nome" required>
                     </div>
           
             <div class="form-group col-md-3">
               <label for="dataNasc">Data de Nasc:</label>
-                <input type="text" class="form-control" name="txtDataNasc" id="dataNasc">
+                <input type="text" class="form-control" name="txtDataNasc" id="dataNasc" required>
             </div>
 
                     <div class="form-group col-md-3">
                         <label>Número do Prontuário:</label>
-                <input type="text" class="form-control" name="txtNum" id="numPront">
+                <input type="text" class="form-control" name="txtNum" id="numPront" required>
                     </div>
             </div>
 
             <div class="row">
               <div class="form-group col-md-3">
                 <label for="cpf">CPF:</label>
-                <input type="text" class="form-control" name="txtCPF" id="cpf">
+                <input type="text" class="form-control" name="txtCPF" id="cpf" required>
               </div>
 
               <div class="form-group col-md-3">
                 <label>RG:</label>
-                <input type="text" class="form-control" name="txtRG" id="rg">
+                <input type="text" class="form-control" name="txtRG" id="rg"  required>
               </div>
 
               <div class="form-group col-md-4">
@@ -85,8 +85,8 @@ protect();
 
               <div class="form-group col-md-2">
                 <label for="sexo">Sexo:</label>
-                <select class="form-control" name="cxSexo" id="sexo">
-                                <option value="null">-----</option>
+                <select class="form-control" name="cxSexo" id="sexo" required>
+                                <option value="">-----</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Feminino">Feminino</option>
                 </select>
@@ -96,12 +96,12 @@ protect();
               <div class="row">
                 <div class="form-group col-md-4">
                   <label for="atendimento">Tipo Atendimento:</label>
-                  <input type="text" class="form-control" name="txtAtendimento" id="atendimento">
+                  <input type="text" class="form-control" name="txtAtendimento" id="atendimento" required>
                 </div>
 
                 <div class="form-group col-md-3">
                 <label for="acomp">Acompanhante:</label>
-                <input type="text" class="form-control" name="txtAcompanhante" id="acomp">
+                <input type="text" class="form-control" name="txtAcompanhante" id="acomp" >
                 </div>
 
                 <div class="form-group col-md-3">
@@ -111,10 +111,12 @@ protect();
           
                 <div class="form-group col-md-2">
                   <label for="eCivil">Estado Civil:</label>
-                  <select class="form-control" name="cxEstadoCivil" id="eCivil">
-                                <option value="null">-----</option>
+                  <select class="form-control" name="cxEstadoCivil" id="eCivil" required>
+                                <option value="">-----</option>
                                 <option value="Casado">Casado</option>
                                 <option value="Solteiro">Solteiro</option>
+                                <option value="Solteiro">Divorciado</option>
+                                <option value="Solteiro">Outro</option>
                   </select>
                 </div>
               </div>
@@ -122,51 +124,51 @@ protect();
               <div class="row">
                 <div class="form-group col-md-5">
                   <label for="profissao">Profissão:</label>
-                  <input type="text" class="form-control" name="txtProfissao" id="profissao">
+                  <input type="text" class="form-control" name="txtProfissao" id="profissao" required>
                 </div>
 
                 <div class="form-group col-md-4">
                   <label for="cidade">Cidade:</label>
-                  <input type="text" class="form-control" name="txtCidade" id="cidade">
+                  <input type="text" class="form-control" name="txtCidade" id="cidade" required>
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="estado">Estado:</label>
-                  <input type="text" class="form-control" name="txtEstado" id="estado">
+                  <input type="text" class="form-control" name="txtEstado" id="estado" required>
                 </div>
               </div>
 
               <div class="row">
                 <div class="form-group col-md-4">
                   <label for="telefone">Telefone:</label>
-                  <input type="text" class="form-control" name="txtTelefone" id="telefone">
+                  <input type="text" class="form-control" name="txtTelefone" id="telefone" >
                 </div>
 
                 <div class="form-group col-md-4">
                   <label for="celular">Celular:</label>
-                  <input type="text" class="form-control" name="txtCelular" id="celular">
+                  <input type="text" class="form-control" name="txtCelular" id="celular" required>
                 </div>
 
                 <div class="form-group col-md-4">
                   <label for="CEP">CEP:</label>
-                  <input type="text" class="form-control" name="txtCEP" id="CEP">
+                  <input type="text" class="form-control" name="txtCEP" id="CEP" required>
                 </div>
               </div>
 
               <div class="row">
                 <div class="form-group col-md-3">
                   <label for="bairro">Bairro:</label>
-                  <input type="text" class="form-control" name="txtBairro" id="bairro">
+                  <input type="text" class="form-control" name="txtBairro" id="bairro" required>
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="endereco">Endereço:</label>
-                  <input type="text" class="form-control" name="txtEndereco" id="endereco">
+                  <input type="text" class="form-control" name="txtEndereco" id="endereco" required>
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="numero">Numero:</label>
-                  <input type="text" class="form-control" name="txtNumero" id="numero">  
+                  <input type="text" class="form-control" name="txtNumero" id="numero" required>  
                 </div>
 
                 <div class="form-group col-md-3">
