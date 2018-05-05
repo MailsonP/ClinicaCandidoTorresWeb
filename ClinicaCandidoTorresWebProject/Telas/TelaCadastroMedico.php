@@ -50,24 +50,24 @@ protect();
                 <div class="row">
                     <div class="form-group col-sm-6">
                         <label for="nome">Nome:</label>
-                        <input type="text" class="form-control up" name="nome">
+                        <input type="text" class="form-control up" name="nome" required>
                     </div>
 
                     <div class="form-group col-sm-3">
                         <label for="DataNasc">Data de Nascimento</label>
-                        <input type="text" class="form-control" name="dtanascimento" id="DataNasc">
+                        <input type="text" class="form-control" name="dtanascimento" id="DataNasc" required>
                     </div>
 
                      <div class="form-group col-sm-3">
                         <label for="conselhoId" >Conselho:</label>
-                        <input type= "text" class="form-control" name= "conselho" id="conselhoId">
+                        <input type= "text" class="form-control" name= "conselho" id="conselhoId" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="form-group col-sm-5">
                         <label for="telefoneId">Telefone:</label>
-                        <input type="text" class="form-control" name="telefone" id="telefoneId">
+                        <input type="text" class="form-control" name="telefone" id="telefoneId" required>
                     </div>
 
                     <div class="form-group col-sm-7">
@@ -79,18 +79,18 @@ protect();
                 <div class="row"> 
                     <div class="form-group col-sm-4">
                         <label for="tipoDeAtendimento">Tipo de Atendimento:</label>
-                        <input type="text" class="form-control up" name="tipodeatendimento" id="tipoDeAtendimento">
+                        <input type="text" class="form-control up" name="tipodeatendimento" id="tipoDeAtendimento" required>
                         
                     </div>
 
                     <div class="form-group col-sm-4">
                         <label for="funcaoId">Função:</label>
-                        <input type="text" class="form-control up" name="funcao" id="funcaoId">
+                        <input type="text" class="form-control up" name="funcao" id="funcaoId" required>
                     </div>
 
                     <div class="form-group col-sm-4">
                         <label for="especialidadeId">Especialidade:</label>
-                        <input type="text" class="form-control up" name="especialidade" id="especialidadeId" >
+                        <input type="text" class="form-control up" name="especialidade" id="especialidadeId" required >
                     </div>
                 </div>
 
