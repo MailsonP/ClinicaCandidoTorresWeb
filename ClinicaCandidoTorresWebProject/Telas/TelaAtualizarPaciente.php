@@ -39,6 +39,7 @@ while ($dado = $paciente->retornaDados("object")) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="estilo.css" rel="stylesheet">
+        <script src="../js/ValidaCpf.js"></script>
     </head>
     <body>
 
@@ -65,7 +66,7 @@ while ($dado = $paciente->retornaDados("object")) {
         <div class="row">
             <div class="col-sm-12">
                 <h2 class="titulo-h2">Atualizar Paciente</h2>
-                <form action="" method="POST">
+                <form action="" method="POST" onsubmit="return VerificaCPF();">
 
             <div class="row">
                     <div class="form-group col-md-6" >
@@ -87,7 +88,8 @@ while ($dado = $paciente->retornaDados("object")) {
             <div class="row">
               <div class="form-group col-md-3">
                 <label for="cpf">CPF:</label>
-                <input type="text" class="form-control" name="txtCPF" value="<?php echo $dado->CPF ?>" id="cpf" required>
+                <input type="text" class="form-control" name="txtCPF" value="<?php echo $dado->CPF ?>" id="cpf"  onblur="return VerificaCPF();"  required>
+                <span id="error" style="color: red;font-style: italic;"></span>
               </div>
 
               <div class="form-group col-md-3">
@@ -133,7 +135,8 @@ while ($dado = $paciente->retornaDados("object")) {
                                 <option value="Casado">Casado</option>
                                 <option value="Solteiro">Solteiro</option>
                                 <option value="Divorciado">Divorciado</option>
-                                <option value="Outro">Outro</option>
+                                <option value="Viuvo">Viúvo</option>
+                                <option value="Separado">Separado</option>
                   </select>
                 </div>
               </div>

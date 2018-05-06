@@ -16,9 +16,9 @@ class Paciente extends baseBD {
                 "NOME" => NULL,
                 "NUMEROPRONTUARIO" => NULL, "SEXO" => NULL, "DATANASC" => NULL, "CPF" => NULL, "RG" => NULL,
                 "EMAIL" => NULL, "PROFISSAO" => NULL, "TIPOATENDIMENTO" => NULL, "ACOMPANHANTE" => NULL,
-                "ESTRANGEIRO" => NULL, "TELEFONE" => NULL, "CELULAR" => NULL, "INDICACAO" => NULL,
-                "ESTADOCIVIL" => NULL,  "ENDERECO" => NULL,"BAIRRO" => NULL,"NUMERO" => NULL,
-                "CIDADE" => NULL, "ESTADO" => NULL, "COMPLEMENTO" => NULL, "CEP" => NULL
+                "TELEFONE" => NULL, "CELULAR" => NULL, "INDICACAO" => NULL,"ESTADOCIVIL" => NULL,  
+                "ENDERECO" => NULL,"BAIRRO" => NULL,"NUMERO" => NULL,"CIDADE" => NULL, "ESTADO" => NULL,
+                "COMPLEMENTO" => NULL, "CEP" => NULL
             );
         } else {
             $this->campos_valores = $campos;

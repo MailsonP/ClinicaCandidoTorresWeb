@@ -19,8 +19,7 @@ protect();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="estilo.css" rel="stylesheet">
-
-    
+    <script src="../js/ValidaCpf.js"></script>
 
   </head>
   <body>
@@ -48,7 +47,7 @@ protect();
         <div class="row">
             <div class="col-sm-12">
                 <h2 class="titulo-h2">Cadastro Paciente</h2>
-                <form action="../Paciente/RegistraPaciente.php" method="POST">
+            <form action="../Paciente/RegistraPaciente.php" method="POST" onsubmit="return VerificaCPF();">
 
             <div class="row">
                     <div class="form-group col-md-6" >
@@ -70,7 +69,8 @@ protect();
             <div class="row">
               <div class="form-group col-md-3">
                 <label for="cpf">CPF:</label>
-                <input type="text" class="form-control" name="txtCPF" id="cpf" required>
+                <input type="text" class="form-control" name="txtCPF" id="cpf" onblur="return VerificaCPF();" required>
+                <span id="error" style="color: red;font-style: italic;"></span>
               </div>
 
               <div class="form-group col-md-3">
@@ -80,7 +80,7 @@ protect();
 
               <div class="form-group col-md-4">
                 <label for="email">Email:</label>
-                <input type="text" class="form-control" name="txtEmail" id="email">
+                <input type="text" class="form-control" name="txtEmail" id="email" required>
               </div>
 
               <div class="form-group col-md-2">
@@ -115,12 +115,12 @@ protect();
                                 <option value="">-----</option>
                                 <option value="Casado">Casado</option>
                                 <option value="Solteiro">Solteiro</option>
-                                <option value="Solteiro">Divorciado</option>
-                                <option value="Solteiro">Outro</option>
+                                <option value="Divorciado">Divorciado</option>
+                                <option value="Viuvo">Viúvo</option>
+                                <option value="Separado">Separado</option>
                   </select>
                 </div>
               </div>
-
               <div class="row">
                 <div class="form-group col-md-5">
                   <label for="profissao">Profissão:</label>
@@ -141,7 +141,7 @@ protect();
               <div class="row">
                 <div class="form-group col-md-4">
                   <label for="telefone">Telefone:</label>
-                  <input type="text" class="form-control" name="txtTelefone" id="telefone" >
+                  <input type="text" class="form-control" name="txtTelefone" id="telefone">
                 </div>
 
                 <div class="form-group col-md-4">
@@ -177,8 +177,8 @@ protect();
                 </div>
               </div>
 
-                    <button type="submit" value="Cadastrar" name="btnSalvar" class="bt-salvar">Salvar</button>
-                    <button type="button" class="bt-buscar"><a href="../Paciente/TelaPacienteTable.php">Buscar</a></button>
+          <button type="submit" value="Cadastrar" name="btnSalvar" class="bt-salvar">Salvar</button>
+          <button type="button" class="bt-buscar"><a href="../Paciente/TelaPacienteTable.php">Buscar</a></button>
 
 
                 </form>
