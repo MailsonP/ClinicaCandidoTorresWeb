@@ -178,7 +178,7 @@ protect();
               </div>
 
           <button type="submit" value="Cadastrar" name="btnSalvar" class="bt-salvar">Salvar</button>
-          <button type="button" class="bt-buscar"><a href="../Paciente/TelaPacienteTable.php">Buscar</a></button>
+          <a href="../Paciente/TelaPacienteTable.php"><button type="button" class="bt-buscar">Buscar</button></a>
 
 
                 </form>

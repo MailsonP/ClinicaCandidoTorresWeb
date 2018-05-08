@@ -95,7 +95,7 @@ protect();
                 </div>
 
                 <button type="submit" class="bt-salvar">Salvar</button>
-                <button type="button" class="bt-buscar"><a href="../Medico/TelaMedicoTable.php">Buscar</a></button>
+                <a href="../Medico/TelaMedicoTable.php"><button type="button" class="bt-buscar">Buscar</button></a>
             </form>
                     
             </div>
