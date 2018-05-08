@@ -26,7 +26,7 @@ protect();
 	<div id="right"><img src="../img/cct.png"></div>
 	<nav class="menu" id="menu">
 		<ul>
-			<li><a href="../Telas/Index.php">Inicio</a></li>
+			<li><a href="../Telas/Home.php">Inicio</a></li>
 			<li><a href="#">Cadastro</a>
 				<ul>
 					<li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
@@ -34,7 +34,7 @@ protect();
 					<li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
 				</ul>
 			</li>
-                        <li><a href="../Login/Sair.php">Sair</a></li>
+                    <li><a href="../Login/Sair.php">Sair</a></li>
 		</ul>
 	</nav>
 	</header>
