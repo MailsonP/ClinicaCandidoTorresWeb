@@ -14,6 +14,11 @@ body,html{
     background-attachment: fixed;
 }
 
+label{
+	font-family: 'Raleway', sans-serif !important;
+	font-size: 15px !important;
+}
+
 #right{
 	position: absolute;
 	top: -3px;

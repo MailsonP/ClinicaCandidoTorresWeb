@@ -14,7 +14,7 @@ protect();
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/CadastraAtualiza.css">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nunito:600" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -54,7 +54,7 @@ protect();
                     </div>
 
                     <div class="form-group col-sm-3">
-                        <label for="DataNasc">Data de Nascimento</label>
+                        <label for="DataNasc">Data de Nascimento:</label>
                         <input type="text" class="form-control" name="dtanascimento" id="DataNasc" required>
                     </div>
 
