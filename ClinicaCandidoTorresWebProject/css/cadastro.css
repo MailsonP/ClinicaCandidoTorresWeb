@@ -55,6 +55,8 @@
 }
 
 .conteudo legend{
+	margin: auto 18% auto 18%;
+	text-align: center;
 	font-family: 'Nunito', sans-serif;
 	font-weight: 600;
 	font-size: 20px;
