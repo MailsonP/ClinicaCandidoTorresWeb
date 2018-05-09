@@ -1,9 +1,18 @@
 <?php
 session_start();
+
 require_once './Usuario.php';
 
 include_once '../Login/ProtectPaginas.php';
 protect();
+
+if(isset($_SESSION["tipoUsuario"])){
+    $tipo_user = $_SESSION["tipoUsuario"];
+    
+    if ($tipo_user != "Administrador"){
+        header("Location: ../Telas/Home.php");
+    }
+}
 
 $usuario = new Usuario();
 $usuario->retornaTudo($usuario);

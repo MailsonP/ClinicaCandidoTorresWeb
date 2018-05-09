@@ -4,6 +4,10 @@ session_start();
 include_once '../Login/ProtectPaginas.php';
 protect();
 
+if(isset($_SESSION["tipoUsuario"])){
+    $tipo_user = $_SESSION["tipoUsuario"];
+}
+
 ?>﻿
 <!DOCTYPE html>
 <html>
@@ -18,6 +22,22 @@ protect();
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="../js/jquery-3.2.1.js"></script>
 	<script src="../js/login.js"></script>
+        
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+              
+              var tipo_user = "<?php echo $tipo_user ?>";
+              
+              if(tipo_user != "Administrador"){
+                   document.getElementById("opcaoUser").style.display = "none";
+              }
+                               
+            });
+        
+        </script>
+        
 </head>
 <body ondragstart="return false;">
 	<header id="topo">
@@ -29,7 +49,7 @@ protect();
 			<li><a href="../Telas/Home.php">Inicio</a></li>
 			<li><a href="#">Cadastro</a>
 				<ul>
-					<li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
+                                    <div id="opcaoUser"><li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li></div>
 					<li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>
 					<li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
 				</ul>

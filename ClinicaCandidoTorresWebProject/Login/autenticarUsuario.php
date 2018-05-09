@@ -26,6 +26,7 @@ if(isset($dados_usuario['LOGIN'])){
    $_SESSION["id"] = $dados_usuario["IDUSUARIO"];
    $_SESSION["nome"] = $dados_usuario["NOME"];
    $_SESSION["login"] = $dados_usuario["LOGIN"];
+   $_SESSION["tipoUsuario"] = $dados_usuario["TIPOUSUARIO"];
    
    
     echo "<script>window.location = '../Telas/Home.php';</script>";
