@@ -86,7 +86,7 @@ $dado = $usuario->retornaDados("object");
                     <option value="Medico"> Médico </option>    
                     </select>
                 <button type="submit" name="atualizar" class="bt-att">Salvar</button>
-                <button type="button" class="bt-voltar"><a href="../Usuario/TelaUsuarioTable.php">Voltar</a></button>
+                <a href="../Usuario/TelaUsuarioTable.php"><button type="button" class="bt-voltar">Voltar</button></a>
             </form>
         </fieldset>
     </div>

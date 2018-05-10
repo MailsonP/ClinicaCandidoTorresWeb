@@ -198,7 +198,7 @@ while ($dado = $paciente->retornaDados("object")) {
               </div>
 
                     <button type="submit" value="Atualizar" name="btnAtualizar" class="bt-atualizar">Salvar</button>
-                    <button type="button" class="bt-voltar"><a href="../Paciente/TelaPacienteTable.php">Voltar</a></button>
+                    <a href="../Paciente/TelaPacienteTable.php"><button type="button" class="bt-voltar">Voltar</button></a>
 
 
                 </form>
