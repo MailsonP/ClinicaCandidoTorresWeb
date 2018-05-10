@@ -49,12 +49,12 @@ if(isset($_SESSION["tipoUsuario"])){
 			<li><a href="../Telas/Home.php">Inicio</a></li>
 			<li><a href="#">Cadastro</a>
 				<ul>
-                                    <div id="opcaoUser"><li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li></div>
+                    <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
 					<li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>
 					<li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
 				</ul>
 			</li>
-                    <li><a href="../Login/Sair.php">Sair</a></li>
+            <li><a href="../Login/Sair.php">Sair</a></li>
 		</ul>
 	</nav>
 	</header>

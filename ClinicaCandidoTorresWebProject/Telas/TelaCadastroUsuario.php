@@ -27,12 +27,12 @@ protect();
     <header id="topo">
     <input type="checkbox" id="bt_menu">
     <label for="bt_menu">&#9776;</label>
-    <nav class="menu">
+    <nav class="menu" id="menu">
         <ul>
             <li><a href="../Telas/Home.php">Inicio</a></li>
             <li><a href="#">Cadastro</a>
                 <ul>
-                    <li><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
+                    <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
                     <li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
