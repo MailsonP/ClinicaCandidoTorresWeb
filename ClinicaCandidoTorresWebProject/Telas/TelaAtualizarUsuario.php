@@ -6,6 +6,14 @@ require_once '../Usuario/Usuario.php';
 include_once '../Login/ProtectPaginas.php';
 protect();
 
+if(isset($_SESSION["tipoUsuario"])){
+    $tipo_user = $_SESSION["tipoUsuario"];
+    
+    if ($tipo_user != "Administrador"){
+        header("Location: ../Telas/Home.php");
+    }
+}
+
 $usuario = new Usuario();
 
 $metodo = $_GET;

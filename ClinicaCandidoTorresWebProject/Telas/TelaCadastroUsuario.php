@@ -4,6 +4,14 @@ session_start();
 include_once '../Login/ProtectPaginas.php';
 protect();
 
+if(isset($_SESSION["tipoUsuario"])){
+    $tipo_user = $_SESSION["tipoUsuario"];
+    
+    if ($tipo_user != "Administrador"){
+        header("Location: ../Telas/Home.php");
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
