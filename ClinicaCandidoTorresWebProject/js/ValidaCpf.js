@@ -20,7 +20,7 @@ function VerificaCPF() {
             return false;
             break;
         case 3:
-            document.getElementById("error").innerHTML = "Digitos Incompativeis!!!";
+            document.getElementById("error").innerHTML = "CPF Inválido!!!";
             return false;
             break;
         case 4:

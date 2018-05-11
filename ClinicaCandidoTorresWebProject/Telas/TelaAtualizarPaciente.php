@@ -154,11 +154,11 @@ while ($dado = $paciente->retornaDados("object")) {
                   <label for="eCivil">Estado Civil:</label>
                   <select class="form-control" name="cxEstadoCivil" id="eCivil" required>
                                 <option value="">-----</option>
-                                <option value="Casado">Casado</option>
-                                <option value="Solteiro">Solteiro</option>
-                                <option value="Divorciado">Divorciado</option>
-                                <option value="Viuvo">Viúvo</option>
-                                <option value="Separado">Separado</option>
+                                <option value="Casado(a)">Casado(a)</option>
+                                <option value="Solteiro(a)">Solteiro(a)</option>
+                                <option value="Divorciado(a)">Divorciado(a)</option>
+                                <option value="Viúvo(a)">Viúvo(a)</option>
+                                <option value="Separado(a)">Separado(a)</option>
                   </select>
                 </div>
               </div>
