@@ -19,12 +19,6 @@ label{
 	font-size: 15px !important;
 }
 
-/*nav{
-	font-family: 'Raleway', sans-serif;
-	font-weight: 600 !important;
-	max-height: 50px;
-}*/
-
 #right{
 	position: absolute;
 	top: -3px;
@@ -35,8 +29,7 @@ label{
 	max-height: 50px;
 	background-color: #00beaa;
 	font-family: 'Raleway', sans-serif;
-	z-index: 1;
-        
+	z-index: 1;   
 }
 
 .menu ul{
@@ -61,7 +54,7 @@ label{
 	background-color: #00beaa;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600!important;
-	font-size: 15px;
+	font-size: 15px !important;
 }
 
 .menu ul li a:hover{
@@ -86,12 +79,18 @@ label{
 	background-color: #F89D63;
 }
 
+span .obg{
+	color: #A12126; 
+	font-size: 20px; 
+	float: right;
+}
+
 label[for="bt_menu"]{
 	padding: 5px;
 	color: #f3f3f3;
 	font-family: 'Raleway' sans-serif;
 	text-align: left;
-	font-size: 30px;
+	font-size: 30px !important;
 	cursor: pointer;
 	background-color: #00beaa;
 	display: none;
@@ -162,6 +161,7 @@ footer h1:active{
 
 	label[for="bt_menu"]{
 		display: block;
+		font-size: 25px !important;
 		margin-left: 2px;
 		max-width: 50px;
 		max-height: 50px;

@@ -39,6 +39,12 @@ html, body{
 	text-align: center !important;
 }
 
+.menu a{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600!important;
+	font-size: 15px !important;
+}
+
 .menu a, .mid a{
 	text-decoration: none !important;
 }
@@ -55,7 +61,7 @@ html, body{
 	color: #fff !important;
     background: #3B8686;
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
     border: none;

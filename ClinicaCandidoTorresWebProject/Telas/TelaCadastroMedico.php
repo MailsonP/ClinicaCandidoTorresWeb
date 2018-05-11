@@ -15,7 +15,7 @@ if(isset($_SESSION["tipoUsuario"])){
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cadastro Médico</title>
+        <title>Cadastro Profissional</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/CadastraAtualiza.css">
@@ -65,22 +65,25 @@ if(isset($_SESSION["tipoUsuario"])){
 
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="titulo-h2">Cadastro Médico</h2>
+                <h2 class="titulo-h2">Cadastro Profissional</h2>
                 
             <form action="../Medico/RegistraMedico.php" method="POST">
                 <div class="row">
                     <div class="form-group col-sm-6">
                         <label for="nome">Nome:</label>
+                        <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                         <input type="text" class="form-control up" name="nome" required>
                     </div>
 
                     <div class="form-group col-sm-3">
                         <label for="DataNasc">Data de Nascimento:</label>
+                        <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                         <input type="text" class="form-control" name="dtanascimento" id="DataNasc" required>
                     </div>
 
                      <div class="form-group col-sm-3">
                         <label for="conselhoId" >Conselho:</label>
+                        <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                         <input type= "text" class="form-control" name= "conselho" id="conselhoId" required>
                     </div>
                 </div>
@@ -88,11 +91,13 @@ if(isset($_SESSION["tipoUsuario"])){
                 <div class="row">
                     <div class="form-group col-sm-5">
                         <label for="telefoneId">Telefone:</label>
+                        <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                         <input type="text" class="form-control" name="telefone" id="telefoneId" required>
                     </div>
 
                     <div class="form-group col-sm-7">
                         <label for="emailId">Email:</label>
+                        <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                         <input type="text" class="form-control" name="email" id="emailId">
                     </div>
                 </div>
@@ -100,12 +105,14 @@ if(isset($_SESSION["tipoUsuario"])){
                 <div class="row"> 
                     <div class="form-group col-sm-4">
                         <label for="tipoDeAtendimento">Tipo de Atendimento:</label>
+                        <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                         <input type="text" class="form-control up" name="tipodeatendimento" id="tipoDeAtendimento" required>
                         
                     </div>
 
                     <div class="form-group col-sm-4">
                         <label for="funcaoId">Função:</label>
+                        <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                         <input type="text" class="form-control up" name="funcao" id="funcaoId" required>
                     </div>
 
