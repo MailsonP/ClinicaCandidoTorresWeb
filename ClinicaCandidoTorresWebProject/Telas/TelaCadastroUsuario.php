@@ -30,6 +30,21 @@ if(isset($_SESSION["tipoUsuario"])){
     <script src="../js/jquery-3.2.1.js"></script>
     <script src="../js/login.js"></script>
     <script src="../js/check.js"></script>
+    
+    <script type="text/javascript">
+            
+            $(document).ready(function(){
+              
+              var tipo_user = "<?php echo $tipo_user ?>";
+              
+              if(tipo_user != "Administrador"){
+                   document.getElementById("opcaoUser").style.display = "none";
+              }
+                               
+            });
+        
+        </script>
+    
 </head>
 <body ondragstart="return false;">
     <header id="topo">

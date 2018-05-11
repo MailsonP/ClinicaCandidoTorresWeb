@@ -6,6 +6,10 @@ require_once '../Medico/Medico.php';
 include_once '../Login/ProtectPaginas.php';
 protect();
 
+if(isset($_SESSION["tipoUsuario"])){
+    $tipo_user = $_SESSION["tipoUsuario"];
+}
+
 
 $medico = new Medico();
 $metodo = $_GET;
@@ -31,6 +35,23 @@ $dado = $medico->retornaDados("object");
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="estilo.css" rel="stylesheet">
+        <script src="../js/jquery-3.2.1.js"></script>
+	<script src="../js/login.js"></script>
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+              
+              var tipo_user = "<?php echo $tipo_user ?>";
+              
+              if(tipo_user != "Administrador"){
+                   document.getElementById("opcaoUser").style.display = "none";
+              }
+                               
+            });
+        
+        </script>
+        
     </head>
     <body>
         <header id="topo">
