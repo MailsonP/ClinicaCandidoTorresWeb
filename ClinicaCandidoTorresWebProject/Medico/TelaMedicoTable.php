@@ -26,7 +26,7 @@ $medico->retornaTudo($medico);
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:600" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Pesquisar Paciente</title>
+    <title>Pesquisar Profissional</title>
     <script src="../js/jquery-3.2.1.js"></script>
     <script src="../js/login.js"></script>
     
@@ -55,7 +55,7 @@ $medico->retornaTudo($medico);
             <li><a href="#">Cadastro</a>
                 <ul>
                     <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>
+                    <li><a href="../Telas/TelaCadastroMedico.php">Profissional</a></li>
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
             </li>

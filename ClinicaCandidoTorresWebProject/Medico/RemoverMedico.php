@@ -12,7 +12,7 @@ if(isset($metodo["medico"])){
 if($medico->deletar($medico)){
     echo "
 		<script>
-			alert('Médico deletado com sucesso!')
+			alert('Profissional deletado com sucesso!')
 			location.href='TelaMedicoTable.php';
 		</script>";
 }else{

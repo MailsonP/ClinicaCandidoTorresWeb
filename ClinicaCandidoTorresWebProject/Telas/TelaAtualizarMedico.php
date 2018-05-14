@@ -26,7 +26,7 @@ $dado = $medico->retornaDados("object");
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Atualizar Médico</title>
+        <title>Atualizar Profissional</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/CadastraAtualiza.css">
@@ -63,7 +63,7 @@ $dado = $medico->retornaDados("object");
             <li><a href="#">Cadastro</a>
                 <ul>
                     <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="../Telas/TelaCadastroMedico.php">Médico</a></li>
+                    <li><a href="../Telas/TelaCadastroMedico.php">Profissional</a></li>
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                 </ul>
             </li>
@@ -76,7 +76,7 @@ $dado = $medico->retornaDados("object");
 
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="titulo-h2">Atualizar Médico</h2>
+                <h2 class="titulo-h2">Atualizar Profissional</h2>
                 
             <form action="../Medico/AtualizaMedico.php?medico=<?php echo $dado->IDMEDICO ?>"" method="POST">
                 <div class="row">

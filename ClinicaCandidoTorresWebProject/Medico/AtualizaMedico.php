@@ -36,7 +36,7 @@ if(isset($metodo2["nome"])){
     $medico->valorpk = $id;
     
     if($medico->atualizar($medico)){
-        echo  "<script>alert('Médico atualizado com sucesso !');window.location = '../Medico/TelaMedicoTable.php';</script>";
+        echo  "<script>alert('Profissional atualizado com sucesso !');window.location = '../Medico/TelaMedicoTable.php';</script>";
     }else{
         echo "<script>alert('Não foi modificado nada ainda.');window.history.back(1);</script>";
     }
