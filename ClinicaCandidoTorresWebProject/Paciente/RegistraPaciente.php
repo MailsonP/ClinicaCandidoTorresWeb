@@ -22,8 +22,6 @@ if (isset($metodo["txtNome"])) {
     $rg = $metodo["txtRG"];
     $email = $metodo["txtEmail"];
     $profissao = $metodo["txtProfissao"];
-    $tipoAtendimento = $metodo["txtAtendimento"];
-    $acompanhante = $metodo["txtAcompanhante"];
     $telefone = $metodo["txtTelefone"];
     $celular = $metodo["txtCelular"];
     $indicacao = $metodo["txtIndicacao"];
@@ -55,8 +53,6 @@ if (isset($metodo["txtNome"])) {
         $paciente->setValor("RG", $rg);
         $paciente->setValor("EMAIL", $email);
         $paciente->setValor("PROFISSAO", $profissao);
-        $paciente->setValor("TIPOATENDIMENTO", $tipoAtendimento);
-        $paciente->setValor("ACOMPANHANTE", $acompanhante);
         $paciente->setValor("TELEFONE", $telefone);
         $paciente->setValor("CELULAR", $celular);
         $paciente->setValor("INDICACAO", $indicacao);
