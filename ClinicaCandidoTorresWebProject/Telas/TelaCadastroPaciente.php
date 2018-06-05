@@ -119,19 +119,11 @@ if(isset($_SESSION["tipoUsuario"])){
                                 <option value="Feminino">Feminino</option>
                 </select>
               </div>
+              
               </div>
 
               <div class="row">
-                <div class="form-group col-md-4">
-                  <label for="atendimento">Tipo Atendimento:</label>
-                  <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control up" name="txtAtendimento" id="atendimento" required>
-                </div>
 
-                <div class="form-group col-md-3">
-                <label for="acomp">Acompanhante:</label>
-                <input type="text" class="form-control up" name="txtAcompanhante" id="acomp" >
-                </div>
 
                 <div class="form-group col-md-3">
                   <label for="indica">Indicação:</label>
@@ -150,40 +142,42 @@ if(isset($_SESSION["tipoUsuario"])){
                                 <option value="Separado(a)">Separado(a)</option>
                   </select>
                 </div>
-              </div>
-              <div class="row">
-                <div class="form-group col-md-5">
+
+                <div class="form-group col-md-4">
                   <label for="profissao">Profissão:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                   <input type="text" class="form-control up" name="txtProfissao" id="profissao" required>
                 </div>
 
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                   <label for="cidade">Cidade:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                   <input type="text" class="form-control up" name="txtCidade" id="cidade" required>
                 </div>
+                
+              </div>
+
+              <div class="row">
 
                 <div class="form-group col-md-3">
                   <label for="estado">Estado:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                   <input type="text" class="form-control up" name="txtEstado" id="estado" required>
                 </div>
-              </div>
 
-              <div class="row">
-                <div class="form-group col-md-4">
+
+                <div class="form-group col-md-3">
                   <label for="telefone">Telefone:</label>
                   <input type="text" class="form-control" name="txtTelefone" id="telefone">
                 </div>
 
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                   <label for="celular">Celular:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                   <input type="text" class="form-control" name="txtCelular" id="celular" required>
                 </div>
 
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                   <label for="CEP">CEP:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                   <input type="text" class="form-control" name="txtCEP" id="CEP" required>

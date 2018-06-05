@@ -77,8 +77,7 @@ $paciente->retornaTudo($paciente);
             <th class="column2">Nome</th>
             <th class="column3">Num Prontuario</th>
             <th class="column4">Sexo</th>
-            <th class="column5">Tipo Atendimento</th>
-            <th class="column6">Ação</th>
+            <th class="column5">Ação</th>
      
           </tr>
         </thead>
@@ -89,7 +88,6 @@ $paciente->retornaTudo($paciente);
             <td class="up"><?php echo $dado->NOME ?></td>
             <td class="up"><?php echo $dado->NUMEROPRONTUARIO ?></td>
             <td class="up"><?php echo $dado->SEXO ?></td>
-            <td class="up"><?php echo $dado->TIPOATENDIMENTO ?></td>
             <td class="column6"><a href="../Telas/TelaAtualizarPaciente.php?Idpaciente=<?php echo $dado->IDPACIENTE;?>">Editar</a> 
                 <a href="" id="separador">|</a>
                 <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->NOME; ?> ?')) 
