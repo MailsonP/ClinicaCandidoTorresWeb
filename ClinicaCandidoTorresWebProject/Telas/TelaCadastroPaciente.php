@@ -86,7 +86,7 @@ if(isset($_SESSION["tipoUsuario"])){
                     <div class="form-group col-md-3">
                         <label>Número do Prontuário:</label>
                         <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                <input type="text" class="form-control" name="txtNum" id="numPront" required>
+                <input type="text" class="form-control" name="txtNum" id="numPront" >
                     </div>
             </div>
 
@@ -101,19 +101,19 @@ if(isset($_SESSION["tipoUsuario"])){
               <div class="form-group col-md-3">
                 <label>RG:</label>
                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                <input type="text" class="form-control" name="txtRG" id="rg"  required>
+                <input type="text" class="form-control" name="txtRG" id="rg"  >
               </div>
 
               <div class="form-group col-md-4">
                 <label for="email">Email:</label>
                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                <input type="text" class="form-control" name="txtEmail" id="email" required>
+                <input type="text" class="form-control" name="txtEmail" id="email" >
               </div>
 
               <div class="form-group col-md-2">
                 <label for="sexo">Sexo:</label>
                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                <select class="form-control" name="cxSexo" id="sexo" required>
+                <select class="form-control" name="cxSexo" id="sexo" >
                                 <option value="">-----</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Feminino">Feminino</option>
@@ -133,7 +133,7 @@ if(isset($_SESSION["tipoUsuario"])){
                 <div class="form-group col-md-2">
                   <label for="eCivil">Estado Civil:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <select class="form-control" name="cxEstadoCivil" id="eCivil" required>
+                  <select class="form-control" name="cxEstadoCivil" id="eCivil" >
                                 <option value="">-----</option>
                                 <option value="Casado(a)">Casado(a)</option>
                                 <option value="Solteiro(a)">Solteiro(a)</option>
@@ -146,13 +146,13 @@ if(isset($_SESSION["tipoUsuario"])){
                 <div class="form-group col-md-4">
                   <label for="profissao">Profissão:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control up" name="txtProfissao" id="profissao" required>
+                  <input type="text" class="form-control up" name="txtProfissao" id="profissao" >
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="cidade">Cidade:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control up" name="txtCidade" id="cidade" required>
+                  <input type="text" class="form-control up" name="txtCidade" id="cidade" >
                 </div>
                 
               </div>
@@ -162,7 +162,7 @@ if(isset($_SESSION["tipoUsuario"])){
                 <div class="form-group col-md-3">
                   <label for="estado">Estado:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control up" name="txtEstado" id="estado" required>
+                  <input type="text" class="form-control up" name="txtEstado" id="estado" >
                 </div>
 
 
@@ -174,13 +174,13 @@ if(isset($_SESSION["tipoUsuario"])){
                 <div class="form-group col-md-3">
                   <label for="celular">Celular:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control" name="txtCelular" id="celular" required>
+                  <input type="text" class="form-control" name="txtCelular" id="celular" >
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="CEP">CEP:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control" name="txtCEP" id="CEP" required>
+                  <input type="text" class="form-control" name="txtCEP" id="CEP" >
                 </div>
               </div>
 
@@ -188,19 +188,19 @@ if(isset($_SESSION["tipoUsuario"])){
                 <div class="form-group col-md-3">
                   <label for="bairro">Bairro:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control up" name="txtBairro" id="bairro" required>
+                  <input type="text" class="form-control up" name="txtBairro" id="bairro" >
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="endereco">Endereço:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control up" name="txtEndereco" id="endereco" required>
+                  <input type="text" class="form-control up" name="txtEndereco" id="endereco" >
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="numero">Numero:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control" name="txtNumero" id="numero" required>  
+                  <input type="text" class="form-control" name="txtNumero" id="numero" >  
                 </div>
 
                 <div class="form-group col-md-3">

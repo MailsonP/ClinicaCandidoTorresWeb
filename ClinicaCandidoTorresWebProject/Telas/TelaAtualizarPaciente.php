@@ -106,7 +106,7 @@ while ($dado = $paciente->retornaDados("object")) {
                     <div class="form-group col-md-3">
                         <label>Número do Prontuário:</label>
                         <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                <input type="text" class="form-control" name="txtNum" value="<?php echo $dado->NUMEROPRONTUARIO ?>" id="numPront" required>
+                <input type="text" class="form-control" name="txtNum" value="<?php echo $dado->NUMEROPRONTUARIO ?>" id="numPront" >
                     </div>
             </div>
 
@@ -121,19 +121,19 @@ while ($dado = $paciente->retornaDados("object")) {
               <div class="form-group col-md-3">
                 <label>RG:</label>
                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                <input type="text" class="form-control" name="txtRG" value="<?php echo $dado->RG ?>" id="rg"  required>
+                <input type="text" class="form-control" name="txtRG" value="<?php echo $dado->RG ?>" id="rg"  >
               </div>
 
               <div class="form-group col-md-4">
                 <label for="email">Email:</label>
                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                <input type="text" class="form-control" name="txtEmail" value="<?php echo $dado->EMAIL ?>" id="email" required>
+                <input type="text" class="form-control" name="txtEmail" value="<?php echo $dado->EMAIL ?>" id="email" >
               </div>
 
               <div class="form-group col-md-2">
                 <label for="sexo">Sexo:</label>
                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                <select class="form-control" name="cxSexo" id="sexo" required>
+                <select class="form-control" name="cxSexo" id="sexo" >
                                 <option value="">-----</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Feminino">Feminino</option>
@@ -153,7 +153,7 @@ while ($dado = $paciente->retornaDados("object")) {
                 <div class="form-group col-md-2">
                   <label for="eCivil">Estado Civil:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <select class="form-control" name="cxEstadoCivil" id="eCivil" required>
+                  <select class="form-control" name="cxEstadoCivil" id="eCivil" >
                                 <option value="">-----</option>
                                 <option value="Casado(a)">Casado(a)</option>
                                 <option value="Solteiro(a)">Solteiro(a)</option>
@@ -166,13 +166,13 @@ while ($dado = $paciente->retornaDados("object")) {
                 <div class="form-group col-md-4">
                   <label for="profissao">Profissão:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control up" name="txtProfissao" value="<?php echo $dado->PROFISSAO ?>" id="profissao" required>
+                  <input type="text" class="form-control up" name="txtProfissao" value="<?php echo $dado->PROFISSAO ?>" id="profissao" >
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="cidade">Cidade:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control up" name="txtCidade" value="<?php echo $dado->CIDADE ?>" id="cidade" required>
+                  <input type="text" class="form-control up" name="txtCidade" value="<?php echo $dado->CIDADE ?>" id="cidade" >
                 </div>
                 
               </div>
@@ -182,7 +182,7 @@ while ($dado = $paciente->retornaDados("object")) {
                 <div class="form-group col-md-3">
                   <label for="estado">Estado:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control up" name="txtEstado" value="<?php echo $dado->ESTADO ?>" id="estado" required>
+                  <input type="text" class="form-control up" name="txtEstado" value="<?php echo $dado->ESTADO ?>" id="estado" >
                 </div>
 
 
@@ -194,13 +194,13 @@ while ($dado = $paciente->retornaDados("object")) {
                 <div class="form-group col-md-3">
                   <label for="celular">Celular:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control" name="txtCelular" value="<?php echo $dado->CELULAR ?>" id="celular" required>
+                  <input type="text" class="form-control" name="txtCelular" value="<?php echo $dado->CELULAR ?>" id="celular" >
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="CEP">CEP:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control" name="txtCEP" value="<?php echo $dado->CEP ?>" id="CEP" required>
+                  <input type="text" class="form-control" name="txtCEP" value="<?php echo $dado->CEP ?>" id="CEP" >
                 </div>
               </div>
 
@@ -208,19 +208,19 @@ while ($dado = $paciente->retornaDados("object")) {
                 <div class="form-group col-md-3">
                   <label for="bairro">Bairro:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control up" name="txtBairro" value="<?php echo $dado->BAIRRO ?>" id="bairro" required>
+                  <input type="text" class="form-control up" name="txtBairro" value="<?php echo $dado->BAIRRO ?>" id="bairro" >
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="endereco">Endereço:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control up" name="txtEndereco" value="<?php echo $dado->ENDERECO ?>" id="endereco" required>
+                  <input type="text" class="form-control up" name="txtEndereco" value="<?php echo $dado->ENDERECO ?>" id="endereco" >
                 </div>
 
                 <div class="form-group col-md-3">
                   <label for="numero">Numero:</label>
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                  <input type="text" class="form-control" name="txtNumero" value="<?php echo $dado->NUMERO ?>" id="numero" required>  
+                  <input type="text" class="form-control" name="txtNumero" value="<?php echo $dado->NUMERO ?>" id="numero" >  
                 </div>
 
                 <div class="form-group col-md-3">
