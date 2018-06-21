@@ -135,8 +135,8 @@ while ($dado = $paciente->retornaDados("object")) {
                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                 <select class="form-control" name="cxSexo" id="sexo" >
                                 <option value="">-----</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Feminino">Feminino</option>
+                                <option value="Masculino" <?php if($dado->SEXO == "Masculino") echo 'selected';  ?>>Masculino</option>
+                                <option value="Feminino" <?php if($dado->SEXO == "Feminino") echo 'selected';  ?>>Feminino</option>
                 </select>
               </div>
               
@@ -155,11 +155,11 @@ while ($dado = $paciente->retornaDados("object")) {
                   <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                   <select class="form-control" name="cxEstadoCivil" id="eCivil" >
                                 <option value="">-----</option>
-                                <option value="Casado(a)">Casado(a)</option>
-                                <option value="Solteiro(a)">Solteiro(a)</option>
-                                <option value="Divorciado(a)">Divorciado(a)</option>
-                                <option value="Viúvo(a)">Viúvo(a)</option>
-                                <option value="Separado(a)">Separado(a)</option>
+                                <option value="Casado(a)" <?php if($dado->ESTADOCIVIL == "Casado(a)") echo 'selected';  ?>>Casado(a)</option>
+                                <option value="Solteiro(a)" <?php if($dado->ESTADOCIVIL == "Solteiro(a)") echo 'selected';  ?>>Solteiro(a)</option>
+                                <option value="Divorciado(a)" <?php if($dado->ESTADOCIVIL == "Divorciado(a)") echo 'selected';  ?>>Divorciado(a)</option>
+                                <option value="Viúvo(a)" <?php if($dado->ESTADOCIVIL == "Viúvo(a)") echo 'selected';  ?>>Viúvo(a)</option>
+                                <option value="Separado(a)" <?php if($dado->ESTADOCIVIL == "Separado(a)") echo 'selected';  ?>>Separado(a)</option>
                   </select>
                 </div>
 
