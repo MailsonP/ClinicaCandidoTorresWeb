@@ -88,7 +88,7 @@ while ($dado = $paciente->retornaDados("object")) {
         <div class="row">
             <div class="col-sm-12">
                 <h2 class="titulo-h2">Cadastro Paciente</h2>
-            <form action="../Paciente/RegistraPaciente.php" method="POST" onsubmit="return VerificaCPF();">
+            <form action="" method="POST" onsubmit="return VerificaCPF();">
 
             <div class="row">
                     <div class="form-group col-md-6" >
