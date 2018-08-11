@@ -53,6 +53,7 @@ if(isset($_SESSION["tipoUsuario"])){
 					<li><a href="../Telas/TelaCadastroMedico.php">Profissional</a></li>
 					<li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
                                         <li><a href="../Telas/TelaCadastroAgenda.php">Agenda</a></li>
+                                        <li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
 				</ul>
 			</li>
             <li><a href="../Login/Sair.php">Sair</a></li>

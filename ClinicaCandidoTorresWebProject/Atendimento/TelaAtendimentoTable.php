@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../Medico/Medico.php';
+require_once '../Atendimento/Atendimento.php';
 
 include_once '../Login/ProtectPaginas.php';
 protect();
@@ -10,8 +10,8 @@ if(isset($_SESSION["tipoUsuario"])){
 }
 
 
-$medico = new Medico();
-$medico->retornaTudo($medico);
+$atendimento = new Atendimento();
+$atendimento->retornaTudo($atendimento);
 
 ?>
 <html lang="pt-br">
@@ -57,8 +57,8 @@ $medico->retornaTudo($medico);
                     <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
                     <li><a href="../Telas/TelaCadastroMedico.php">Profissional</a></li>
                     <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
-                     <li><a href="../Telas/TelaCadastroAgenda.php">Agenda</a></li>
-                    <li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
+                    <li><a href="../Telas/TelaCadastroAgenda.php">Agenda</a></li>
+                     <li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
                 </ul>
             </li>
             <li><a href="../Login/Sair.php">Sair</a></li>
@@ -73,25 +73,19 @@ $medico->retornaTudo($medico);
           <tr class="titulo-table">
             <th class="column1">Id</th>
             <th class="column2">Nome</th>
-            <th class="column3">Conselho</th>
-            <th class="column4">Especialidade</th>
-            <th class="column5">Telefone</th>
-            <th class="column6">Ação</th>
+            <th class="column3">Ação</th>
      
           </tr>
         </thead>
         <tbody>
-             <?php while ($dado = $medico -> retornaDados("object")){ ?>
+             <?php while ($dado = $atendimento -> retornaDados("object")){ ?>
         <tr class="tabela">
-            <td> <?php echo $dado->IDMEDICO ?> </td>
+            <td> <?php echo $dado->IDATENDIMENTO ?> </td>
             <td class="up"> <?php echo $dado->NOME ?> </td>
-            <td class="up"> <?php echo $dado->CONSELHO ?> </td>        
-            <td class="up"> <?php echo $dado->ESPECIALIDADE ?> </td>
-            <td> <?php echo $dado->TELEFONE ?> </td>
-            <td><a href="../Telas/TelaAtualizarMedico.php?medico=<?php echo $dado->IDMEDICO?>">Editar</a> 
+            <td><a href="../Telas/TelaAtualizarAtendimento.php?atendimento=<?php echo $dado->IDATENDIMENTO?>">Editar</a> 
                 <a href="" id="separador">|</a>
-                <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->NOME; ?> ?')) 
-                    location.href='RemoverMedico.php?medico=<?php echo $dado->IDMEDICO  ?>';">Excluir</a>
+                <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->IDATENDIMENTO; ?> ?')) 
+                    location.href='RemoverAtendimento.php?atendimento=<?php echo $dado->IDATENDIMENTO  ?>';">Excluir</a>
             </td>
         </tr>
         </tbody>

@@ -13,7 +13,7 @@ $metodo = $_GET;
 
 if (isset($metodo["agenda"])){
     $id = $metodo["agenda"];
-    echo 'ENTROU AQUI2<br>';
+    
 }
 
 $metodo3 = $_POST;
