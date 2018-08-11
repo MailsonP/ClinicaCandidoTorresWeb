@@ -11,9 +11,9 @@ if(isset($metodo["agenda"])){
     $agenda->valorpk = $id;
     
     if($agenda->deletar($agenda)){
-        echo "<script>alert('Agenda deletada com sucesso!')</script>";
+        echo "<script>alert('Agenda deletada com sucesso!');location.href='TelaAgendaTable.php';</script>";
     }else{
         
-        echo "<script>alert('Nao foi possivel deletar a agenda.')</script>";
+        echo "<script>alert('Nao foi possivel deletar a agenda.');location.href='TelaAgendaTable.php';</script>";
     }
 }

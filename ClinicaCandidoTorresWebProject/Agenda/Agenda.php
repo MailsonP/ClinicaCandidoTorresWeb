@@ -11,10 +11,10 @@ class Agenda extends baseBD {
             "PACIENTE" => NULL,
             "DATADEATENDIMENTO" => NULL,
             "MEDICO" => NULL,
-            "TIPODEATENDIMENTO" => NULL,
+            "TIPOATENDIMENTO" => NULL,
             "OBSERVACAO" => NULL,
             "VALOR" => NULL,
-            "SITUACAOPAGAMENTO" => NULL
+            "PAGAMENTO" => NULL
             );
             
         }else{
