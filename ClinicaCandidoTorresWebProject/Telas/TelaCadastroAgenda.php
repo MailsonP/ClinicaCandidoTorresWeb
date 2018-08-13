@@ -1,12 +1,37 @@
 <?php
 session_start();
 include_once '../Login/ProtectPaginas.php';
+require_once '../util/daoGenerico.php';
+require_once '../Paciente/Paciente.php';
+require_once '../Atendimento/Atendimento.php';
+require_once '../Medico/Medico.php';
+
 protect();
 
 if (isset($_SESSION["tipoUsuario"])) {
     $tipo_user = $_SESSION["tipoUsuario"];
 }
+$paciente = new Paciente();
+$tipoAten = new Atendimento();
+$medico = new Medico();
+
+//RECUPERANDO ID PASSADO PELA URL
+$Metodo = $_GET;
+    $id = $Metodo["Idpaciente"];
+
+    $paciente->valorpk = $id;
+    $paciente->pesquisarID($paciente);
+
+if (isset($Metodo["Idpaciente"])) {
+
+$dado = $paciente->retornaDados("object");
+
+$tipoAten->retornaTudo($tipoAten);
+
+$medico->retornaTudo($medico);
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -73,7 +98,7 @@ if (isset($_SESSION["tipoUsuario"])) {
                             <div class="form-group col-sm-6">
                                 <label for="paciente">Paciente:</label>
                                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <input type="text" class="form-control up" name="paciente" required>
+                                <input type="text" class="form-control up" value="<?php echo $dado->NOME ?>" id="<?php echo $dado->IDPACIENTE ?>" name="paciente" required>
                             </div>
 
                             <div class="form-group col-sm-3">
@@ -85,16 +110,25 @@ if (isset($_SESSION["tipoUsuario"])) {
                             <div class="form-group col-sm-3">
                                 <label for="medicoId" >Medico:</label>
                                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <input type= "text" class="form-control" name= "medico" id="medicoId" required>
+                                <select class="form-control" name="medico" id="medicoId" >
+                                    <?php while ($medic = $medico->retornaDados("object")) { ?>
+                                        <option value="<?php echo $medic->IDMEDICO?>"><?php echo $medic->NOME; ?></option>
+                                    <?php } ?>
+                                </select>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="form-group col-sm-5">
-                                <label for="tipoId">Tipo de Atendimento:</label>
+                            <div class="form-group col-md-2">
+                                <label for="tipoAtendimento">Tipo Atendimento:</label>
                                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <input type="text" class="form-control" name="tipoAtendimento" id="tipoId" required>
+                                <select class="form-control" name="tipoAtendimento" id="tipoAtendimento" >
+                                    <?php while ($dadoAtendimento = $tipoAten->retornaDados("object")) { ?>
+                                        <option value="<?php echo $dadoAtendimento->IDATENDIMENTO ?>"><?php echo $dadoAtendimento->NOME; ?></option>
+                                    <?php } ?>
+                                </select>
                             </div>
+
 
                             <div class="form-group col-sm-7">
                                 <label for="obsId">Observação:</label>
@@ -144,5 +178,4 @@ if (isset($_SESSION["tipoUsuario"])) {
     </body>
 </html>
 
-
-
+<?php } ?>

@@ -22,8 +22,10 @@ if(isset($Metodo["paciente"])){
     $agenda ->setValor("VALOR", $valor);
     $agenda ->setValor("PAGAMENTO", $pagamento);
     
+    
+    
     if($agenda->inserir($agenda)){
-        echo  "<script>alert('Agenda cadastrada com sucesso !');window.location = '../Telas/TelaCadastroAgenda.php';</script>";
+        echo  "<script>alert('Agenda cadastrada com sucesso !');window.location = '../Agenda/TelaAgendaTable.php';</script>";
     }else{
         echo  "<script>alert('Você esqueceu de preencher algum campo obrigatório :/');window.history.back(1);</script>";
     }
