@@ -13,6 +13,8 @@ if(isset($Metodo["paciente"])){
     $valor = $Metodo['valor'];
     $pagamento = $Metodo['pagamento'];
     
+    $paciente = new Paciente();
+    $medico = new Medico();
     $agenda = new Agenda();
     $agenda ->setValor("PACIENTE", $paciente);
     $agenda ->setValor("DATADEATENDIMENTO", $data);
@@ -21,6 +23,9 @@ if(isset($Metodo["paciente"])){
     $agenda ->setValor("OBSERVACAO", $observacao);
     $agenda ->setValor("VALOR", $valor);
     $agenda ->setValor("PAGAMENTO", $pagamento);
+    $agenda ->setValor("ID_PACIENTE", $pagamento);
+    $agenda ->setValor("ID_MEDICO", $pagamento);
+    $agenda ->setValor("ID_ATENDIMENTP", $pagamento);
     
     
     
