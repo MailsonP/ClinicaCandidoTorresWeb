@@ -31,8 +31,6 @@ $tipoAten->retornaTudo($tipoAten);
 $medico->retornaTudo($medico);
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -93,7 +91,7 @@ $medico->retornaTudo($medico);
                 <div class="col-sm-12">
                     <h2 class="titulo-h2">Cadastro Agenda</h2>
 
-                    <form action="../Agenda/RegistraAgenda.php" method="POST">
+                    <form action="../Agenda/RegistraAgenda.php?idPaciente=<?php echo $id ?>" method="POST">
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 <label for="paciente">Paciente:</label>
