@@ -3,14 +3,11 @@
 session_start();
 
 include_once '../Agenda/Agenda.php';
-include_once '../Paciente/Paciente.php';
 include_once '../Medico/Medico.php';
 include_once '../Atendimento/Atendimento.php';
-include_once '../Paciente/Pesquisar.php';
 include_once '../Medico/Pesquisar.php';
 include_once '../Atendimento/Pesquisar.php';
 
-$paciente = new PesquisarPacientePorID();
 $medico = new PesquisarMedicoPorId();
 $atendimento = new PesquiarAtedimentoPorId();
 
