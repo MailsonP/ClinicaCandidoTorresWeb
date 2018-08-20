@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once '../Agenda/Agenda.php';
 
 include_once '../Login/ProtectPaginas.php';
 protect();
@@ -7,6 +8,9 @@ protect();
 if(isset($_SESSION["tipoUsuario"])){
     $tipo_user = $_SESSION["tipoUsuario"];
 }
+
+$tabela = new Agenda();
+$tabela->retornaTudo($tabela);
 
 ?>﻿
 <!DOCTYPE html>
@@ -52,12 +56,42 @@ if(isset($_SESSION["tipoUsuario"])){
                     <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
 					<li><a href="../Telas/TelaCadastroMedico.php">Profissional</a></li>
 					<li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
-                                        <li><a href="../Telas/TelaCadastroAgenda.php">Agenda</a></li>
-                                        <li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
+                    <li><a href="../Telas/TelaCadastroAgenda.php">Agenda</a></li>
+                    <li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
 				</ul>
 			</li>
             <li><a href="../Login/Sair.php">Sair</a></li>
 		</ul>
+   <div class="centro">
+   	
+	    <div class="conteudo">
+         <table border="1" bordercolor = blue>
+        <thead>
+          <tr class="titulo-table">
+            <th class="column2">Paciente</th>
+            <th class="column3">Médico</th>
+            <th class="column4">Tipo de Atendimento</th>
+            <th class="column5">Data de Atendimento</th>
+            
+     
+          </tr>
+        </thead>
+        <tbody>
+             <?php while ($dado = $tabela -> retornaDados("object")){ ?>
+        <tr class="tabela">
+            <td class="up"> <?php echo $dado->PACIENTE ?> </td>
+            <td class="up"> <?php echo $dado->MEDICO ?> </td>        
+            <td class="up"> <?php echo $dado->TIPOATENDIMENTO ?> </td>
+            <td> <?php echo $dado->DATADEATENDIMENTO ?> </td>
+            </td>
+        </tr>
+        </tbody>
+            <?php } ?>          
+        </table>
+    </div>
+</div>
+
+
 	</nav>
 	</header>
 <footer>
