@@ -24,8 +24,7 @@ if (isset($Metodo["paciente"])) {
     $observacao = $Metodo['observacao'];
     $valor = $Metodo['valor'];
     $pagamento = $Metodo['pagamento'];
-
-    
+  
     //Pesquisar Por id
     $dados_medico = $medico->pesquisarMedicoID($IDmedico);
     $dados_atendimento = $atendimento->pesquisarAtedimentoID($IDtipoAtendimento);
@@ -33,7 +32,6 @@ if (isset($Metodo["paciente"])) {
     //Recuperar os valores dos metodos de pesquisa
     $nomeMedico = mysqli_fetch_array($dados_medico);
     $nomeAtendimento = mysqli_fetch_array($dados_atendimento);
-
 
     $agenda = new Agenda();
     $agenda->setValor("PACIENTE", $Nomepaciente);

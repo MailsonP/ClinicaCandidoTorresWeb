@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once '../Agenda/Agenda.php';
+require_once '../Agenda/ListarAgenda.php';
+require_once '../Paciente/Paciente.php';
 
 include_once '../Login/ProtectPaginas.php';
 protect();
@@ -8,9 +10,9 @@ protect();
 if(isset($_SESSION["tipoUsuario"])){
     $tipo_user = $_SESSION["tipoUsuario"];
 }
-
-$tabela = new Agenda();
-$tabela->retornaTudo($tabela);
+ 
+$listaAgenda = new ListarAgenda();
+$con = $listaAgenda->ListarDadosNaHome($listaAgenda);
 
 ?>﻿
 <!DOCTYPE html>
@@ -77,7 +79,7 @@ $tabela->retornaTudo($tabela);
           </tr>
         </thead>
         <tbody>
-             <?php while ($dado = $tabela -> retornaDados("object")){ ?>
+             <?php while ($dado = $con->fetch_array()){ ?>
         <tr class="tabela">
             <td class="up"> <?php echo $dado->PACIENTE ?> </td>
             <td class="up"> <?php echo $dado->MEDICO ?> </td>        

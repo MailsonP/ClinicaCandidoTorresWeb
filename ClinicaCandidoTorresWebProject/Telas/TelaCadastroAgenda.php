@@ -17,7 +17,7 @@ $medico = new Medico();
 
 //RECUPERANDO ID PASSADO PELA URL
 $Metodo = $_GET;
-    $id = $Metodo["Idpaciente"];
+$id = $Metodo["Idpaciente"];
 
     $paciente->valorpk = $id;
     $paciente->pesquisarID($paciente);
