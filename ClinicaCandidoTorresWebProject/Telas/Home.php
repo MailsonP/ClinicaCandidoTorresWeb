@@ -2,8 +2,6 @@
 session_start();
 require_once '../Agenda/Agenda.php';
 require_once '../Agenda/ListarAgenda.php';
-require_once '../Paciente/Paciente.php';
-
 include_once '../Login/ProtectPaginas.php';
 protect();
 
@@ -12,7 +10,7 @@ if(isset($_SESSION["tipoUsuario"])){
 }
  
 $listaAgenda = new ListarAgenda();
-$con = $listaAgenda->ListarDadosNaHome($listaAgenda);
+$con = $listaAgenda->ListarDadosNaHome();
 
 ?>﻿
 <!DOCTYPE html>
@@ -81,10 +79,10 @@ $con = $listaAgenda->ListarDadosNaHome($listaAgenda);
         <tbody>
              <?php while ($dado = $con->fetch_array()){ ?>
         <tr class="tabela">
-            <td class="up"> <?php echo $dado->PACIENTE ?> </td>
-            <td class="up"> <?php echo $dado->MEDICO ?> </td>        
-            <td class="up"> <?php echo $dado->TIPOATENDIMENTO ?> </td>
-            <td> <?php echo $dado->DATADEATENDIMENTO ?> </td>
+            <td class="up"> <?php echo $dado["Paciente"]; ?> </td>
+            <td class="up"> <?php echo $dado["Médico"]; ?> </td>        
+            <td class="up"> <?php echo $dado["Atendimento"]; ?> </td>
+            <td> <?php echo date("d/m/Y", strtotime($dado["DataAtendimento"])); ?> </td>
             </td>
         </tr>
         </tbody>

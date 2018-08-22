@@ -9,7 +9,7 @@ class ListarAgenda extends ConexaoDB {
         
         $dao = new daoGenerico();
        
-        $sql = "SELECT P.NOME AS 'Paciente' ,M.NOME AS 'Médico',A.NOME AS 'Atendimento' FROM agenda AS G INNER JOIN paciente AS P ON IDPACIENTE = ID_PACIENTE INNER JOIN medico AS M ON IDMEDICO = ID_MEDICO INNER JOIN ATENDIMENTO AS A ON IDATENDIMENTO = ID_ATENDIMENTO WHERE G.DATADEATENDIMENTO BETWEEN CURRENT_DATE() AND CURRENT_DATE()+6";
+        $sql = "SELECT G.DATADEATENDIMENTO AS 'DataAtendimento', P.NOME AS 'Paciente' ,M.NOME AS 'Médico',A.NOME AS 'Atendimento' FROM agenda AS G INNER JOIN paciente AS P ON IDPACIENTE = ID_PACIENTE INNER JOIN medico AS M ON IDMEDICO = ID_MEDICO INNER JOIN ATENDIMENTO AS A ON IDATENDIMENTO = ID_ATENDIMENTO WHERE G.DATADEATENDIMENTO BETWEEN CURRENT_DATE() AND CURRENT_DATE()+6";
         
         $resultado = mysqli_query($this->conexao, $sql);
         
