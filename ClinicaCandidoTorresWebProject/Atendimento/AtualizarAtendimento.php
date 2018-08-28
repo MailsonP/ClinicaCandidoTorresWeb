@@ -21,7 +21,7 @@ if(isset($metodo3["nome"])){
     $nome = $metodo3["nome"];
    
     
-    $atendimento ->setValor("NOME", $nome);
+    $atendimento ->setValor("TIPOATENDIMENTO", $nome);
    
     $atendimento->valorpk = $id;
     

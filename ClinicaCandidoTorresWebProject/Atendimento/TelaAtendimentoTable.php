@@ -81,7 +81,7 @@ $atendimento->retornaTudo($atendimento);
              <?php while ($dado = $atendimento -> retornaDados("object")){ ?>
         <tr class="tabela">
             <td> <?php echo $dado->IDATENDIMENTO ?> </td>
-            <td class="up"> <?php echo $dado->NOME ?> </td>
+            <td class="up"> <?php echo $dado->TIPOATENDIMENTO ?> </td>
             <td><a href="../Telas/TelaAtualizarAtendimento.php?atendimento=<?php echo $dado->IDATENDIMENTO?>">Editar</a> 
                 <a href="" id="separador">|</a>
                 <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->IDATENDIMENTO; ?> ?')) 

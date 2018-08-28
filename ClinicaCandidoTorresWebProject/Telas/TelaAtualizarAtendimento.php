@@ -90,7 +90,7 @@ $dado = $atendimento->retornaDados("object");
                     <label for="nome">Nome</label> 
                     
                 </p>
-                <input type="text" name="nome" value="<?php echo $dado->NOME ?>" id="nomeId" required>
+                <input type="text" name="nome" value="<?php echo $dado->TIPOATENDIMENTO ?>" id="nomeId" required>
                 
             
                 <button type="submit" name="atualizar" class="bt-att">Salvar</button>

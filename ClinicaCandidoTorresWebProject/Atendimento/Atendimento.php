@@ -8,7 +8,7 @@ class Atendimento extends baseBD {
         $this->tabela = "atendimento";
         if(sizeof($campos)<=0){
             $this->campos_valores = array(
-            "NOME" => NULL,
+            "TIPOATENDIMENTO" => NULL,
             
             );
             
