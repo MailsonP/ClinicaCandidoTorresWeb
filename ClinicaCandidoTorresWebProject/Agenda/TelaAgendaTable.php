@@ -87,7 +87,7 @@ $agenda->retornaTudo($agenda);
             <td class="up"> <?php echo $dado->VALOR ?> </td>        
             <td class="up"> <?php echo $dado->TIPOATENDIMENTO ?> </td>
             <td> <?php echo $dado->OBSERVACAO ?> </td>
-            <td><a href="../Telas/TelaAtualizarAgenda.php?agenda=<?php echo $dado->IDAGENDA?>">Editar</a> 
+            <td><a href="../Telas/TelaAtualizarAgenda.php?agenda=<?php echo $dado->IDAGENDA?>&idmedico=<?php echo $dado->ID_MEDICO?>&idatendimento=<?php echo $dado->ID_ATENDIMENTO?>&idpaciente=<?php echo $dado->ID_PACIENTE?>">Editar</a> 
                 <a href="" id="separador">|</a>
                 <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->IDAGENDA; ?> ?')) 
                     location.href='RemoverAgenda.php?agenda=<?php echo $dado->IDAGENDA  ?>';">Excluir</a>

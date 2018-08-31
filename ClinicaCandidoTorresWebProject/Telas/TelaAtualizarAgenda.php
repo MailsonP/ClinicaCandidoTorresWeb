@@ -81,7 +81,7 @@ $dado = $agenda->retornaDados("object");
                 <div class="col-sm-12">
                     <h2 class="titulo-h2">Atualizar Agenda</h2>
 
-                    <form action="../Agenda/AtualizarAgenda.php?agenda=<?php echo $dado->IDAGENDA ?>" method="POST">
+                    <form action="../Agenda/AtualizarAgenda.php?agenda=<?php echo $dado->IDAGENDA ?>&idmedico=<?php echo $dado->ID_MEDICO?>&idatendimento=<?php echo $dado->ID_ATENDIMENTO?>&idpaciente=<?php echo $dado->ID_PACIENTE?>" method="POST">
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 <label for="nome">Paciente:</label>

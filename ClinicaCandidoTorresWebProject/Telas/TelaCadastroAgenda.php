@@ -122,7 +122,7 @@ $medico->retornaTudo($medico);
                                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                                 <select class="form-control" name="tipoAtendimento" id="tipoAtendimento" >
                                     <?php while ($dadoAtendimento = $tipoAten->retornaDados("object")) { ?>
-                                        <option value="<?php echo $dadoAtendimento->IDATENDIMENTO ?>"><?php echo $dadoAtendimento->NOME; ?></option>
+                                        <option value="<?php echo $dadoAtendimento->IDATENDIMENTO ?>"><?php echo $dadoAtendimento->TIPOATENDIMENTO; ?></option>
                                     <?php } ?>
                                 </select>
                             </div>

@@ -18,21 +18,22 @@ if (isset($metodo["agenda"])){
 
 $metodo3 = $_POST;
 if(isset($metodo3["paciente"])){
-    $paciente = $metodo3["paciente"];
+    $paciente = $metodo["idpaciente"];
     $data = $metodo3["datadeatendimento"];
-    $medico = $metodo3["medico"];
-    $tipoAtendimento = $metodo3["tipoatendimento"];
-    $observacao = $metodo3["observacao"];
-    $valor = $metodo3["valor"];
-    $pagamento = $metodo3["pagamento"];
+    $IDmedico = $metodo["idmedico"];
+    $IDtipoAtendimento = $metodo['idatendimento'];
+    $observacao = $metodo3['observacao'];
+    $valor = $metodo3['valor'];
+    $pagamento = $metodo3['pagamento'];
     
     $agenda ->setValor("PACIENTE", $paciente);
     $agenda ->setValor("DATADEATENDIMENTO", $data);
-    $agenda ->setValor("MEDICO", $medico);
-    $agenda ->setValor("TIPOATENDIMENTO", $tipoAtendimento);
     $agenda ->setValor("OBSERVACAO", $observacao);
     $agenda ->setValor("VALOR", $valor);
     $agenda ->setValor("PAGAMENTO", $pagamento);
+    $agenda->setValor("ID_PACIENTE",$paciente);
+    $agenda->setValor("ID_MEDICO", $IDmedico);
+    $agenda->setValor("ID_ATENDIMENTO", $IDtipoAtendimento);
     
     $agenda->valorpk = $id;
     

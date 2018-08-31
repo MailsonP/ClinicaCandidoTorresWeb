@@ -48,7 +48,7 @@ class daoGenerico extends ConexaoDB {
         }
         $sql .= "WHERE ".$objeto->campopk."=";
         $sql .= is_numeric($objeto->valorpk) ? $objeto->valorpk : "'".$objeto->valorpk."'";
-
+        
            return $this->executaSQL($sql);
    }
    

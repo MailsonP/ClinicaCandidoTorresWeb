@@ -33,11 +33,13 @@ if (isset($Metodo["paciente"])) {
     $nomeMedico = mysqli_fetch_array($dados_medico);
     $nomeAtendimento = mysqli_fetch_array($dados_atendimento);
 
+
+       //Mudando nomes
     $agenda = new Agenda();
     $agenda->setValor("PACIENTE", $Nomepaciente);
     $agenda->setValor("DATADEATENDIMENTO", $data);
     $agenda->setValor("MEDICO", $nomeMedico["NOME"]);
-    $agenda->setValor("TIPOATENDIMENTO", $nomeAtendimento["NOME"]);
+    $agenda->setValor("TIPOATENDIMENTO", $nomeAtendimento["TIPOATENDIMENTO"]);
     $agenda->setValor("OBSERVACAO", $observacao);
     $agenda->setValor("VALOR", $valor);
     $agenda->setValor("PAGAMENTO", $pagamento);
