@@ -93,8 +93,6 @@ $paciente->retornaTudo($paciente);
                                     <a href="" id="separador">|</a>
                                     <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->NOME; ?> ?')) 
                                        location.href='RemovePaciente.php?Idpaciente=<?php echo $dado->IDPACIENTE; ?>';">Excluir</a>
-                                    <a href="" id="separador">|</a>
-                                    <a href="../Telas/TelaCadastroAgenda.php?Idpaciente=<?php echo $dado->IDPACIENTE; ?>">Agendar</a>
                                 </td>
                             </tr> 
                         </tbody>

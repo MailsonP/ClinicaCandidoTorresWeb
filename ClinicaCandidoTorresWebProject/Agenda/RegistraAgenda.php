@@ -8,52 +8,39 @@ include_once '../Atendimento/Atendimento.php';
 include_once '../Medico/Pesquisar.php';
 include_once '../Atendimento/Pesquisar.php';
 
-$medico = new PesquisarMedicoPorId();
-$atendimento = new PesquiarAtedimentoPorId();
-
-$Metodo2 = $_GET;
-$idPaciente = $Metodo2["idPaciente"];
-
 
 $Metodo = $_POST;
-if (isset($Metodo["paciente"])) {
-    $Nomepaciente = $Metodo["paciente"];
+if (isset($_POST["Idpaciente"]) && $_POST["Idpaciente"] != null) {
+
     $data = $Metodo["datadeatendimento"];
-    $IDmedico = $Metodo["medico"];
-    $IDtipoAtendimento = $Metodo['tipoAtendimento'];
     $observacao = $Metodo['observacao'];
     $valor = $Metodo['valor'];
     $pagamento = $Metodo['pagamento'];
+    $IdPaci = $Metodo['Idpaciente'];
+    $IdMedico = $Metodo["medico"];
+    $IdTipoAtendimento = $Metodo['TipoAtendimento'];
   
-    //Pesquisar Por id
-    $dados_medico = $medico->pesquisarMedicoID($IDmedico);
-    $dados_atendimento = $atendimento->pesquisarAtedimentoID($IDtipoAtendimento);
-
-    //Recuperar os valores dos metodos de pesquisa
-    $nomeMedico = mysqli_fetch_array($dados_medico);
-    $nomeAtendimento = mysqli_fetch_array($dados_atendimento);
-
-
-       //Mudando nomes
+  
+     //SETANDO VALORES
     $agenda = new Agenda();
-    $agenda->setValor("PACIENTE", $Nomepaciente);
-    $agenda->setValor("DATADEATENDIMENTO", $data);
-    $agenda->setValor("MEDICO", $nomeMedico["NOME"]);
-    $agenda->setValor("TIPOATENDIMENTO", $nomeAtendimento["TIPOATENDIMENTO"]);
+    $agenda->setValor("DATADEATENDIMENTO", date("Y-d-m",strtotime($data)));
     $agenda->setValor("OBSERVACAO", $observacao);
     $agenda->setValor("VALOR", $valor);
     $agenda->setValor("PAGAMENTO", $pagamento);
-    $agenda->setValor("ID_PACIENTE",$idPaciente);
-    $agenda->setValor("ID_MEDICO", $IDmedico);
-    $agenda->setValor("ID_ATENDIMENTO", $IDtipoAtendimento);
+    $agenda->setValor("ID_PACIENTE",$IdPaci);
+    $agenda->setValor("ID_MEDICO", $IdMedico);
+    $agenda->setValor("ID_ATENDIMENTO", $IdTipoAtendimento);
 
-
-    if ($agenda->inserir($agenda)) {
-        echo "<script>alert('Agenda cadastrada com sucesso !');window.location = '../Agenda/TelaAgendaTable.php';</script>";
+   if ($agenda->inserir($agenda)) {
+        echo "<script>alert('AGENDA CADASTRADA COM SUCESSO!!');window.location = '../Agenda/TelaAgendaTable.php';</script>";
     } else {
-        echo "<script>alert('Você esqueceu de preencher algum campo obrigatório :/');window.history.back(1);</script>";
+        echo "<script>alert('VOÇÊ ESQUECEU DE ALGUM CAMPO OBRIGATÓRIO!! :/');window.history.back(1);</script>";
     }
+
+}else {
+         echo "<script>alert('ESCOLHA UM PACIENTE...CLIQUE EM PESQUISAR!! :/');window.history.back(1);</script>";
 }
+
 
 
 

@@ -1,34 +1,30 @@
 <?php
 session_start();
 include_once '../Login/ProtectPaginas.php';
-require_once '../util/daoGenerico.php';
-require_once '../Paciente/Paciente.php';
-require_once '../Atendimento/Atendimento.php';
-require_once '../Medico/Medico.php';
+include_once '../util/daoGenerico.php';
+include_once '../Paciente/Paciente.php';
+include_once '../Atendimento/Atendimento.php';
+include_once '../Medico/Medico.php';
 
 protect();
+
+
+$medic = new Medico();
+$tipoAten = new Atendimento();
+$paciente = new Paciente();
 
 if (isset($_SESSION["tipoUsuario"])) {
     $tipo_user = $_SESSION["tipoUsuario"];
 }
-$paciente = new Paciente();
-$tipoAten = new Atendimento();
-$medico = new Medico();
 
-//RECUPERANDO ID PASSADO PELA URL
-$Metodo = $_GET;
-$id = $Metodo["Idpaciente"];
+   //PARA LISTAR NOS COMBOBOX
+   $tipoAten->retornaTudo($tipoAten);
+   $medic->retornaTudo($medic);
 
-    $paciente->valorpk = $id;
-    $paciente->pesquisarID($paciente);
+   //PARA LISTAR JANELA MODAL
+   $paciente->retornaTudo($paciente);
 
-if (isset($Metodo["Idpaciente"])) {
 
-$dado = $paciente->retornaDados("object");
-
-$tipoAten->retornaTudo($tipoAten);
-
-$medico->retornaTudo($medico);
 ?>
 
 <!DOCTYPE html>
@@ -41,26 +37,29 @@ $medico->retornaTudo($medico);
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/CadastraAtualiza.css">
+       
         <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nunito:600" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="estilo.css" rel="stylesheet">
         <script src="../js/jquery-3.2.1.js"></script>
         <script src="../js/login.js"></script>
-
         <script type="text/javascript">
 
-            $(document).ready(function () {
+            $(document).ready( function () {
 
                 var tipo_user = "<?php echo $tipo_user ?>";
+                var id = "<?php echo $id ?>";
+                
 
                 if (tipo_user != "Administrador") {
                     document.getElementById("opcaoUser").style.display = "none";
                 }
-
-            });
-
+                
+            });                 
+    
         </script>
 
     </head>
@@ -91,13 +90,15 @@ $medico->retornaTudo($medico);
                 <div class="col-sm-12">
                     <h2 class="titulo-h2">Cadastro Agenda</h2>
 
-                    <form action="../Agenda/RegistraAgenda.php?idPaciente=<?php echo $id ?>" method="POST">
+            <!-- FORMULARO DE CADASTRO AGENDA -->    
+                <form id="form" action="../Agenda/RegistraAgenda.php" method="POST">
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 <label for="paciente">Paciente:</label>
-                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <input type="text" class="form-control up" value="<?php echo $dado->NOME ?>" id="<?php echo $dado->IDPACIENTE ?>" name="paciente" required>
-                            </div>
+                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>  
+                           <input type="text" class="form-control up" id="paciente" name="paciente" disabled="true" required>
+                           <input type="hidden" id="CampoId" name="Idpaciente">
+                           </div>
 
                             <div class="form-group col-sm-3">
                                 <label for="DataAtendId">Data de Atendimento:</label>
@@ -106,32 +107,32 @@ $medico->retornaTudo($medico);
                             </div>
 
                             <div class="form-group col-sm-3">
-                                <label for="medicoId" >Medico:</label>
+                                <label for="IdMedic" >Medico:</label>
                                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <select class="form-control" name="medico" id="medicoId" >
-                                    <?php while ($medic = $medico->retornaDados("object")) { ?>
-                                        <option value="<?php echo $medic->IDMEDICO?>"><?php echo $medic->NOME; ?></option>
-                                    <?php } ?>
+                                <select class="form-control" name="medico" id="IdMedic" >  
+                                <?php while ($dadoMedic = $medic->retornaDados("object")) { ?>  
+                                    <option value="<?php echo $dadoMedic->IDMEDICO; ?>"><?php echo $dadoMedic->NOME; ?></option>
+                                <?php } ?>
                                 </select>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="form-group col-md-2">
-                                <label for="tipoAtendimento">Tipo Atendimento:</label>
+                            <div class="form-group col-md-5">
+                                <label for="IdTipoAtend">Tipo Atendimento:</label>
                                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <select class="form-control" name="tipoAtendimento" id="tipoAtendimento" >
+                                <select class="form-control" name="TipoAtendimento" id="IdTipoAtend" >
                                     <?php while ($dadoAtendimento = $tipoAten->retornaDados("object")) { ?>
-                                        <option value="<?php echo $dadoAtendimento->IDATENDIMENTO ?>"><?php echo $dadoAtendimento->TIPOATENDIMENTO; ?></option>
+                                    <option value="<?php echo $dadoAtendimento->IDATENDIMENTO; ?>"><?php echo $dadoAtendimento->TIPOATENDIMENTO; ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
 
 
-                            <div class="form-group col-sm-7">
+                         <div class="form-group col-sm-7">
                                 <label for="obsId">Observação:</label>
                                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <input type="text" class="form-control" name="observacao" id="obsId">
+                                <input type="text" class="form-control" name="observacao" id="obsId" required>
                             </div>
                         </div>
 
@@ -153,8 +154,49 @@ $medico->retornaTudo($medico);
 
                         <button type="submit" class="bt-salvar">Salvar</button>
                         <a href="../Agenda/TelaAgendaTable.php"><button type="button" class="bt-buscar">Buscar</button></a>
-                    </form>
+                        <button type="button" class="bt-salvar" data-toggle="modal" data-target="#exampleModal">Pesquisar</button></a>
 
+                        <div class="row">
+       
+                </form>
+            <!-- FIM DO FORMULARO -->  
+
+            <!-- MODAL DE ESCOLHA DE PACIENTE -->
+                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">SELECIONE UM ITEM..</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="conteudo">
+                            <table>
+                                  <thead>
+                                          <tr class="titulo-table">
+                                            <th class="column1">PACIENTES CADASTRADOS</th>
+                                            <th class="column2"></th> 
+                                          </tr>
+                                  </thead> 
+                                  <tbody>                                
+                                      <?php while ($dadosPac = $paciente->retornaDados("object")) { ?> 
+                                      <tr class="linhas_tabela">
+                                         <td colspan="2"><?php echo $dadosPac->NOME ?></td>
+                                         <td><a><button onclick="Clique('<?php echo $dadosPac->NOME ?>','<?php echo $dadosPac->IDPACIENTE ?>');" type="button" id="btn_add" data-dismiss="modal"><img src="../img/add3.png"></button></a></td>
+                                      </tr>
+                                      <?php } ?>
+                                  </tbody>            
+                            </table>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -162,18 +204,25 @@ $medico->retornaTudo($medico);
         <footer>
             <h1>Copyright &copy 2018 - Fábrica de Software</h1>
         </footer>
+        <script type="">
 
+              //FUNÇÃO DE CLIQUE DO BOTÃO MODAL PACIENTE        
+                 function Clique($Nome,$id){
+                    document.getElementById("paciente").value = $Nome;
+                    document.getElementById("CampoId").value = $id; 
+                 }  
+                      
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/modal.css">
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
         <script src="../js/jquery-3.2.1.js"></script>
         <script src="../js/jquery.mask.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                $('#DataNasc').mask('00/00/0000');
-                $('#telefoneId').mask('(00) 00000-0000');
+                $('#DataAtendId').mask('00/00/0000');
             });
         </script>
     </body>
 </html>
 
-<?php } ?>

@@ -72,17 +72,16 @@ $con = $listaAgenda->ListarDadosNaHome();
             <th class="column3">Médico</th>
             <th class="column4">Tipo de Atendimento</th>
             <th class="column5">Data de Atendimento</th>
-            
-     
+ 
           </tr>
         </thead>
         <tbody>
              <?php while ($dado = $con->fetch_array()){ ?>
         <tr class="tabela">
-            <td class="up"> <?php echo $dado["Paciente"]; ?> </td>
-            <td class="up"> <?php echo $dado["Médico"]; ?> </td>        
-            <td class="up"> <?php echo $dado["Atendimento"]; ?> </td>
-            <td> <?php echo date("d/m/Y", strtotime($dado["DataAtendimento"])); ?> </td>
+            <td class="up">  <?php echo $dado['NOMEDOPACIENTE']; ?> </td>
+            <td class="up"> <?php echo $dado['NOMEDOMEDICO']; ?>  </td>        
+            <td class="up"> <?php echo $dado["TIPODEATENDIMENTO"]; ?> </td>
+            <td> <?php echo date("d/m/Y", strtotime($dado["DATADEATENDIMENTO"])); ?> </td>
             </td>
         </tr>
         </tbody>

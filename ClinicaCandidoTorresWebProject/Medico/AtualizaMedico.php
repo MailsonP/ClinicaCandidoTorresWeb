@@ -2,8 +2,8 @@
 session_start();
 require_once '../util/daoGenerico.php';
 require_once './Medico.php';
-
 include_once '../Login/ProtectPaginas.php';
+
 protect();
 
 $medico = new Medico();
@@ -27,7 +27,7 @@ if(isset($metodo2["nome"])){
     $medico->setValor("NOME", $nome);
     $medico->setValor("TELEFONE", $telefone);
     $medico->setValor("EMAIL", $email);
-    $medico->setValor("DTANASCIMENTO", $dtanascimento);
+    $medico->setValor("DTANASCIMENTO", date("Y-d-m",strtotime($dtanascimento)));
     $medico->setValor("CONSELHO", $conselho);
     $medico->setValor("ESPECIALIDADE", $especialidade);
     $medico->setValor("FUNCAO", $funcao);

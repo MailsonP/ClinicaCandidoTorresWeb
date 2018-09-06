@@ -48,7 +48,7 @@ if (isset($metodo["txtNome"])) {
         $paciente->setValor("NOME", $nome);
         $paciente->setValor("NUMEROPRONTUARIO", $numeroProntuario);
         $paciente->setValor("SEXO", $sexo);
-        $paciente->setValor("DATANASC", $datanasc);
+        $paciente->setValor("DATANASC", date("Y-d-m", strtotime($datanasc)));
         $paciente->setValor("CPF", $cpf);
         $paciente->setValor("RG", $rg);
         $paciente->setValor("EMAIL", $email);

@@ -124,4 +124,25 @@ class daoGenerico extends ConexaoDB {
                break;
        }
    }
+
+   
+   public function ListarAgendas(){
+     $sql = "SELECT A.IDAGENDA AS 'ID', A.DATADEATENDIMENTO AS 'DATADEATENDIMENTO', P.NOME AS 'NOMEDOPACIENTE', M.NOME AS 'NOMEDOMEDICO', 
+        T.TIPOATENDIMENTO AS 'TIPODEATENDIMENTO'
+        FROM AGENDA A
+        INNER JOIN PACIENTE P
+        ON P.IDPACIENTE = A.ID_PACIENTE
+        INNER JOIN MEDICO M
+        ON M.IDMEDICO = A.ID_MEDICO
+        INNER JOIN ATENDIMENTO T
+        ON T.IDATENDIMENTO= A.ID_ATENDIMENTO";
+
+        return $this->executaSQL($sql);
+   }
+
+   public function retornarPorData($dataInicial,$dataFinal){
+     $sql = "SELECT G.DATADEATENDIMENTO AS 'DATADEATENDIMENTO', P.NOME AS 'NOMEDOPACIENTE' ,M.NOME AS 'NOMEDOMEDICO',A.TIPOATENDIMENTO AS 'TIPODEATENDIMENTO' FROM agenda AS G INNER JOIN paciente AS P ON IDPACIENTE = ID_PACIENTE INNER JOIN medico AS M ON IDMEDICO = ID_MEDICO INNER JOIN ATENDIMENTO AS A ON IDATENDIMENTO = ID_ATENDIMENTO WHERE G.DATADEATENDIMENTO BETWEEN '$dataInicial' AND '$dataFinal'";
+
+      return $this->executaSQL($sql);
+   }
 }

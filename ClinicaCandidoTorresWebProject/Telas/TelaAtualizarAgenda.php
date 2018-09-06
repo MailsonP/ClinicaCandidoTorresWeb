@@ -1,26 +1,42 @@
 <?php
 session_start();
+include_once '../Medico/Medico.php';
+include_once '../Paciente/Paciente.php';
+include_once '../Atendimento/Atendimento.php';
 require_once '../util/daoGenerico.php';
 require_once '../Agenda/Agenda.php';
-
 include_once '../Login/ProtectPaginas.php';
+
 protect();
 
 if (isset($_SESSION["tipoUsuario"])) {
     $tipo_user = $_SESSION["tipoUsuario"];
 }
 
-
+$paci = new Paciente();
+$medic = new Medico();
+$tipoAten = new Atendimento();
 $agenda = new Agenda();
 
-$metodo = $_GET;
+if (isset($_GET["Idagenda"]) &&  $_GET["Idagenda"] != null){
 
-if (isset($metodo["agenda"])) {
-    $id = $metodo["agenda"];
-    $agenda->valorpk = $id;
+    $id_agenda = $_GET["Idagenda"];
+    $agenda->valorpk = $id_agenda;
     $agenda->pesquisarID($agenda);
+
+    $dados_agenda = $agenda->retornaDados("object");
+
+    $paci->valorpk = $dados_agenda->ID_PACIENTE;
+    $paci->pesquisarID($paci);
+
+    $dados_paci = $paci->retornaDados("object");
+
 }
-$dado = $agenda->retornaDados("object");
+
+   $tipoAten->retornaTudo($tipoAten);
+   $medic->retornaTudo($medic);
+
+
 ?>
 
 <html lang="pt-br">
@@ -49,7 +65,6 @@ $dado = $agenda->retornaDados("object");
                 if (tipo_user != "Administrador") {
                     document.getElementById("opcaoUser").style.display = "none";
                 }
-
             });
 
         </script>
@@ -81,46 +96,62 @@ $dado = $agenda->retornaDados("object");
                 <div class="col-sm-12">
                     <h2 class="titulo-h2">Atualizar Agenda</h2>
 
-                    <form action="../Agenda/AtualizarAgenda.php?agenda=<?php echo $dado->IDAGENDA ?>&idmedico=<?php echo $dado->ID_MEDICO?>&idatendimento=<?php echo $dado->ID_ATENDIMENTO?>&idpaciente=<?php echo $dado->ID_PACIENTE?>" method="POST">
+                    <form action="../Agenda/AtualizarAgenda.php?IdAgenda=<?php echo $dados_agenda->IDAGENDA ?>" method="POST">
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 <label for="nome">Paciente:</label>
-                                <input type="text" class="form-control up" value="<?php echo $dado->PACIENTE ?>" name="paciente" id="paciente" required>
+                                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>  
+                                <input type="text" class="form-control up" value="<?php echo $dados_paci->NOME ?>" name="paciente" id="paciente"  required>
+                                <input type="hidden" id="CampoId" value="<?php echo $dados_agenda->ID_PACIENTE ?>"  name="Idpaciente">
                             </div>
 
                             <div class="form-group col-sm-3">
                                 <label for="DataAtendId">Data de Atendimento:</label>
-                                <input type="text" class="form-control" value="<?php echo $dado->DATADEATENDIMENTO ?>" name="datadeatendimento" id="DataAtendId" required>
+                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
+                                <input type="text" class="form-control" value="<?php echo date("d/m/Y", strtotime($dados_agenda->DATADEATENDIMENTO)); ?>" name="datadeatendimento" id="DataAtendId" required>
                             </div>
 
                             <div class="form-group col-sm-3">
-                                <label for="conselhoId" >Medico:</label>
-                                <input type= "text" class="form-control" value="<?php echo $dado->MEDICO ?>" name="medico" id="medicoIdId" required>
+                                <label for="IdMedic" >Medico:</label>
+                                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
+                                <select class="form-control" name="medico" id="IdMedic" >  
+                                <?php while ($dadoMedic = $medic->retornaDados("object")) { ?>  
+                                    <option value="<?php echo $dadoMedic->IDMEDICO; ?>"><?php echo $dadoMedic->NOME; ?></option>
+                                <?php } ?>
+                                </select>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="form-group col-sm-5">
                                 <label for="telefoneId">Tipo de Atendimento:</label>
-                                <input type="text" class="form-control" value="<?php echo $dado->TIPOATENDIMENTO ?>" name="tipoatendimento" id="tipoIdId" required>
+                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
+                                <select class="form-control" name="tipoatendimento" id="IdTipoAtend" >
+                                    <?php while ($dadoAtendimento = $tipoAten->retornaDados("object")) { ?>
+                                    <option value="<?php echo $dadoAtendimento->IDATENDIMENTO; ?>"><?php echo $dadoAtendimento->TIPOATENDIMENTO; ?></option>
+                                    <?php } ?>
+                                </select>
                             </div>
 
                             <div class="form-group col-sm-7">
                                 <label for="obsId">Obervação:</label>
-                                <input type="text" class="form-control" value="<?php echo $dado->OBSERVACAO ?>" name="observacao" id="obsId">
+                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
+                                <input type="text" class="form-control" value="<?php echo $dados_agenda->OBSERVACAO ?>" name="observacao" id="obsId">
                             </div>
                         </div>
 
                         <div class="row"> 
                             <div class="form-group col-sm-4">
                                 <label for="valorId">Valor:</label>
-                                <input type="text" class="form-control up" value="<?php echo $dado->VALOR ?>" name="valor" id="valorId" required>
+                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
+                                <input type="text" class="form-control up" value="<?php echo $dados_agenda->VALOR ?>" name="valor" id="valorId" required>
 
                             </div>
 
                             <div class="form-group col-sm-4">
                                 <label for="pagarId">Pagamento:</label>
-                                <input type="text" class="form-control up" value="<?php echo $dado->PAGAMENTO ?>" name="pagamento" id="pagarIdId" required>
+                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
+                                <input type="text" class="form-control up" value="<?php echo $dados_agenda->PAGAMENTO ?>" name="pagamento" id="pagarIdId" required>
                             </div>
 
                         </div>
@@ -143,8 +174,7 @@ $dado = $agenda->retornaDados("object");
         <script src="../js/jquery.mask.js"></script>
         <script type="text/javascript">
                 $(document).ready(function () {
-                    $('#DataNasc').mask('00/00/0000');
-                    $('#telefoneId').mask('(00) 00000-0000');
+                    $('#DataAtendId').mask('00/00/0000');
                 });
         </script>
     </body>

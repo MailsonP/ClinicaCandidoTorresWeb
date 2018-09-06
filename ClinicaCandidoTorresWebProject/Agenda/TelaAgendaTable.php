@@ -11,7 +11,7 @@ if(isset($_SESSION["tipoUsuario"])){
 
 
 $agenda = new Agenda();
-$agenda->retornaTudo($agenda);
+$dados = $agenda->ListarAgendas();
 
 ?>
 <html lang="pt-br">
@@ -70,27 +70,26 @@ $agenda->retornaTudo($agenda);
       <table>
         <thead>
           <tr class="titulo-table">
-            <th class="column1">Id</th>
-            <th class="column2">Paciente</th>
-            <th class="column3">Valor</th>
-            <th class="column4">Tipo de Atendimento</th>
-            <th class="column5">Observação</th>
-            <th class="column6">Ação</th>
-     
+           <th class="column1">ID</th>
+            <th class="column2">PACIENTE</th>
+            <th class="column3">DATA ATEND</th>
+            <th class="column4">MEDICO</th>
+            <th class="column5">TIPO ATEND</th>
+            <th class="column6">Ação</th>  
           </tr>
         </thead>
         <tbody>
-             <?php while ($dado = $agenda -> retornaDados("object")){ ?>
+             <?php while ($dado = mysqli_fetch_assoc($dados)){ ?>
         <tr class="tabela">
-            <td> <?php echo $dado->IDAGENDA ?> </td>
-            <td class="up"> <?php echo $dado->PACIENTE ?> </td>
-            <td class="up"> <?php echo $dado->VALOR ?> </td>        
-            <td class="up"> <?php echo $dado->TIPOATENDIMENTO ?> </td>
-            <td> <?php echo $dado->OBSERVACAO ?> </td>
-            <td><a href="../Telas/TelaAtualizarAgenda.php?agenda=<?php echo $dado->IDAGENDA?>&idmedico=<?php echo $dado->ID_MEDICO?>&idatendimento=<?php echo $dado->ID_ATENDIMENTO?>&idpaciente=<?php echo $dado->ID_PACIENTE?>">Editar</a> 
+            <td> <?php echo $dado['ID'] ?> </td>
+            <td class="up"> <?php echo $dado['NOMEDOPACIENTE'] ?></td>
+            <td class="up"> <?php echo date("d/m/Y", strtotime($dado['DATADEATENDIMENTO'])); ?> </td>        
+            <td class="up"> <?php echo $dado['NOMEDOMEDICO'] ?></td>
+            <td> <?php echo $dado['TIPODEATENDIMENTO'] ?>  </td>
+            <td><a href="../Telas/TelaAtualizarAgenda.php?Idagenda=<?php echo $dado['ID'] ?>">Editar</a> 
                 <a href="" id="separador">|</a>
-                <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->IDAGENDA; ?> ?')) 
-                    location.href='RemoverAgenda.php?agenda=<?php echo $dado->IDAGENDA  ?>';">Excluir</a>
+                <a href="javascript: if(confirm('Tem certeza que deseja deletar o agendamento de <?php echo $dado['NOMEDOPACIENTE'] ?> ?')) 
+                    location.href='RemoverAgenda.php?agenda=<?php echo $dado['ID']?>';">Excluir</a>
             </td>
         </tr>
         </tbody>
