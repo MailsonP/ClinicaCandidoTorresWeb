@@ -22,6 +22,7 @@ $con = $listaAgenda->ListarDadosNaHome();
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
+  <link rel="stylesheet" type="text/css" href="../css/tabela.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="../js/jquery-3.2.1.js"></script>
@@ -53,28 +54,30 @@ $con = $listaAgenda->ListarDadosNaHome();
 			<li><a href="../Telas/Home.php">Inicio</a></li>
 			<li><a href="#">Cadastro</a>
 				<ul>
-                    <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
+          <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
 					<li><a href="../Telas/TelaCadastroMedico.php">Profissional</a></li>
 					<li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
-                    <li><a href="../Telas/TelaCadastroAgenda.php">Agenda</a></li>
-                    <li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
+          <li><a href="../Telas/TelaCadastroAgenda.php">Agenda</a></li>
+          <li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
 				</ul>
 			</li>
-            <li><a href="../Login/Sair.php">Sair</a></li>
+          <li><a href="../Login/Sair.php">Sair</a></li>
 		</ul>
+    </nav>
+  </header>
+
    <div class="centro">
-   	
 	    <div class="conteudo">
-         <table border="1" bordercolor = blue>
-        <thead>
-          <tr class="titulo-table">
-            <th class="column2">Paciente</th>
-            <th class="column3">Médico</th>
-            <th class="column4">Tipo de Atendimento</th>
-            <th class="column5">Data de Atendimento</th>
- 
-          </tr>
-        </thead>
+        <table>
+          <thead>
+            <tr class="titulo-table">
+              <th width="15%">Paciente</th>
+              <th width="15%">Médico</th>
+              <th width="25%">Tipo de Atendimento</th>
+              <th width="25%">Data de Atendimento</th>
+            </tr>
+          </thead>
+
         <tbody>
              <?php while ($dado = $con->fetch_array()){ ?>
         <tr class="tabela">
@@ -84,15 +87,13 @@ $con = $listaAgenda->ListarDadosNaHome();
             <td> <?php echo date("d/m/Y", strtotime($dado["DATADEATENDIMENTO"])); ?> </td>
             </td>
         </tr>
-        </tbody>
+      </tbody>
             <?php } ?>          
-        </table>
+      </table>
     </div>
-</div>
+  </div>
 
-
-	</nav>
-	</header>
+	
 <footer>
   	<h1>Copyright &copy 2018 - Fábrica de Software</h1>
 </footer>

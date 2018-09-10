@@ -104,4 +104,5 @@ $paciente->retornaTudo($paciente);
         <footer>
             <h1>Copyright &copy 2018 - Fábrica de Software</h1>
         </footer>
+    </body>
 </html>
