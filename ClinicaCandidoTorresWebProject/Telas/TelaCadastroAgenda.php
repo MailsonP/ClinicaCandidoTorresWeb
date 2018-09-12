@@ -109,7 +109,7 @@ if (isset($_SESSION["tipoUsuario"])) {
                             <div class="form-group col-sm-3">
                                 <label for="IdMedic" >Medico:</label>
                                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <select class="form-control" name="medico" id="IdMedic" >  
+                                <select class="form-control" name="medico" id="IdMedic" style="text-transform: uppercase;">  
                                 <?php while ($dadoMedic = $medic->retornaDados("object")) { ?>  
                                     <option value="<?php echo $dadoMedic->IDMEDICO; ?>"><?php echo $dadoMedic->NOME; ?></option>
                                 <?php } ?>
