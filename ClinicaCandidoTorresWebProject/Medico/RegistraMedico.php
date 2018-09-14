@@ -12,7 +12,6 @@ if(isset($Metodo["nome"])){
     $conselho = $Metodo["conselho"];
     $especialidade = $Metodo["especialidade"];
     $funcao = $Metodo["funcao"];
-    $tipodeatendimento = $Metodo["tipodeatendimento"];
     
     $medico = new Medico();
     $medico->setValor("NOME", $nome);
@@ -22,7 +21,6 @@ if(isset($Metodo["nome"])){
     $medico->setValor("CONSELHO", $conselho);
     $medico->setValor("ESPECIALIDADE", $especialidade);
     $medico->setValor("FUNCAO", $funcao);
-    $medico->setValor("TIPODEATENDIMENTO", $tipodeatendimento);
     
     if($medico ->inserir($medico)){
          echo  "<script>alert('Profissional cadastrado com sucesso !');window.location = '../Telas/TelaCadastroMedico.php';</script>";

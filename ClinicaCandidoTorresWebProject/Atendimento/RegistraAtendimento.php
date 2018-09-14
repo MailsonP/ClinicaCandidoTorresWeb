@@ -12,7 +12,7 @@ if(isset($Metodo["nome"])){
     $atendimento ->setValor("TIPOATENDIMENTO", $nome);
     
     if($atendimento->inserir($atendimento)){
-        echo  "<script>alert('Tipo de Atendimento cadastrado com sucesso !');window.location = '../Telas/';</script>";
+        echo  "<script>alert('Tipo de Atendimento cadastrado com sucesso !');window.location = '../Telas/TelaCadastroAtendimento.php';</script>";
     }else{
         echo  "<script>alert('Você esqueceu de preencher algum campo obrigatório :/');window.history.back(1);</script>";
     }

@@ -28,6 +28,7 @@ $dado = $medico->retornaDados("object");
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Atualizar Profissional</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/CadastraAtualiza.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
@@ -36,7 +37,7 @@ $dado = $medico->retornaDados("object");
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="estilo.css" rel="stylesheet">
         <script src="../js/jquery-3.2.1.js"></script>
-	<script src="../js/login.js"></script>
+	    <script src="../js/login.js"></script>
         
         <script type="text/javascript">
             
@@ -54,22 +55,23 @@ $dado = $medico->retornaDados("object");
         
     </head>
     <body>
-        <header id="topo">
-            <input type="checkbox" id="bt_menu">
-            <label for="bt_menu">&#9776;</label>
+    <header id="topo">
+    <input type="checkbox" id="bt_menu">
+    <label for="bt_menu">&#9776;</label>
+    <div id="right"><img src="../img/cct.png"></div>
     <nav class="menu" id="menu">
         <ul>
             <li><a href="../Telas/Home.php">Inicio</a></li>
             <li><a href="#">Cadastro</a>
-                <ul>
-                    <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
-                    <li><a href="../Telas/TelaCadastroMedico.php">Profissional</a></li>
-                    <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
-                     <li><a href="../Telas/TelaCadastroAgenda.php">Agenda</a></li>
-                    <li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
-                </ul>
+            <ul>
+                <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
+                <li><a href="../Telas/TelaCadastroMedico.php">Profissional</a></li>
+                <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
+                <li><a href="../Telas/TelaCadastroAgenda.php">Agenda</a></li>
+                <li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
+            </ul>
             </li>
-            <li><a href="../Login/Sair.php">Sair</a></li>
+          <li><a href="../Login/Sair.php">Sair</a></li>
         </ul>
     </nav>
     </header>
@@ -111,18 +113,12 @@ $dado = $medico->retornaDados("object");
                 </div>
 
                 <div class="row"> 
-                    <div class="form-group col-sm-4">
-                        <label for="tipoDeAtendimento">Tipo de Atendimento:</label>
-                        <input type="text" class="form-control up" value="<?php echo $dado->TIPODEATENDIMENTO ?>" name="tipodeatendimento" id="tipoDeAtendimento" required>
-                        
-                    </div>
-
-                    <div class="form-group col-sm-4">
+                    <div class="form-group col-sm-6">
                         <label for="funcaoId">Função:</label>
                         <input type="text" class="form-control up" value="<?php echo $dado->FUNCAO ?>" name="funcao" id="funcaoId" required>
                     </div>
 
-                    <div class="form-group col-sm-4">
+                    <div class="form-group col-sm-6">
                         <label for="especialidadeId">Especialidade:</label>
                         <input type="text" class="form-control up" value="<?php echo $dado->ESPECIALIDADE ?>" name="especialidade" id="especialidadeId" required>
                     </div>
@@ -137,7 +133,7 @@ $dado = $medico->retornaDados("object");
 </div>
 
 <footer>
-    <h1>Copyright &copy 2018 - Fábrica de Software</h1>
+    <h1 style="font-family: 'Raleway', sans-serif !important;"><strong>Copyright &copy 2018 - Fábrica de Software</strong></h1>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -22,7 +22,6 @@ if(isset($metodo2["nome"])){
     $conselho = $metodo2["conselho"];
     $especialidade = $metodo2["especialidade"];
     $funcao = $metodo2["funcao"];
-    $tipodeatendimento = $metodo2["tipodeatendimento"];
     
     $medico->setValor("NOME", $nome);
     $medico->setValor("TELEFONE", $telefone);
@@ -31,7 +30,6 @@ if(isset($metodo2["nome"])){
     $medico->setValor("CONSELHO", $conselho);
     $medico->setValor("ESPECIALIDADE", $especialidade);
     $medico->setValor("FUNCAO", $funcao);
-    $medico->setValor("TIPODEATENDIMENTO", $tipodeatendimento);
     
     $medico->valorpk = $id;
     

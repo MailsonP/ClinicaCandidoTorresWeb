@@ -27,7 +27,7 @@ $metodo = $_GET;
            
            //PESQUISAR MEDICO E ATENDIMENTO PELO ID PARA ATUALIZAR
             
-            $agenda->setValor("DATADEATENDIMENTO", date("Y-d-m",strtotime($dataAtend)));
+            $agenda->setValor("DATADEATENDIMENTO", date("Y-m-d",strtotime(str_replace('/','-',$dataAtend))));
             $agenda->setValor("OBSERVACAO", $observacao);
             $agenda->setValor("VALOR", $valor);
             $agenda->setValor("PAGAMENTO", $pagamento);

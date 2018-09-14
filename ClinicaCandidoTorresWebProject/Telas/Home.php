@@ -17,9 +17,10 @@ $con = $listaAgenda->ListarDadosNaHome();
 <html>
 <head>
 	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Clinica Cândido Torres</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
@@ -92,7 +93,7 @@ $con = $listaAgenda->ListarDadosNaHome();
 
 	
 <footer>
-  	<h1><strong>Copyright &copy 2018 - Fábrica de Software</strong></h1>
+  	<h1 style="font-family: 'Raleway' sans-serif !important;"><strong>Copyright &copy 2018 - Fábrica de Software</strong></h1>
 </footer>
 </body>
 </html>

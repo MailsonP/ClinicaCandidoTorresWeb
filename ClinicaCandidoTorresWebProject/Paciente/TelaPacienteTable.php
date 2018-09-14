@@ -49,25 +49,26 @@ $paciente->retornaTudo($paciente);
 
     </head>
     <body ondragstart="return false;">
-        <header id="topo">
-            <input type="checkbox" id="bt_menu">
-            <label for="bt_menu">&#9776;</label>
-            <nav class="menu">
-                <ul>
-                    <li><a href="../Telas/Home.php">Inicio</a></li>
-                    <li><a href="#">Cadastro</a>
-                        <ul>
-                            <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
-                            <li><a href="../Telas/TelaCadastroMedico.php">Profissional</a></li>
-                            <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
-                            <li><a href="../Telas/TelaCadastroAgenda.php">Agenda</a></li>
-                            <li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../Login/Sair.php">Sair</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header id="topo">
+    <input type="checkbox" id="bt_menu">
+    <label for="bt_menu">&#9776;</label>
+    <div id="right"><img src="../img/cct.png"></div>
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="../Telas/Home.php">Inicio</a></li>
+            <li><a href="#">Cadastro</a>
+            <ul>
+                <li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
+                <li><a href="../Telas/TelaCadastroMedico.php">Profissional</a></li>
+                <li><a href="../Telas/TelaCadastroPaciente.php">Paciente</a></li>
+                <li><a href="../Telas/TelaCadastroAgenda.php">Agenda</a></li>
+                <li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
+            </ul>
+            </li>
+          <li><a href="../Login/Sair.php">Sair</a></li>
+        </ul>
+    </nav>
+    </header>
 
         <div class="centro">
             <div class="conteudo">
@@ -102,7 +103,7 @@ $paciente->retornaTudo($paciente);
         </div>
 
         <footer>
-            <h1>Copyright &copy 2018 - Fábrica de Software</h1>
+            <h1><strong>Copyright &copy 2018 - Fábrica de Software</strong></h1>
         </footer>
     </body>
 </html>

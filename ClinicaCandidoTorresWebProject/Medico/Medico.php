@@ -14,8 +14,7 @@ class Medico extends baseBD {
                 "DTANASCIMENTO" =>NULL,
                 "CONSELHO" => NULL,
                 "ESPECIALIDADE" => NULL,
-                "FUNCAO" => NULL,
-                "TIPODEATENDIMENTO" => NULL
+                "FUNCAO" => NULL
             );
         }else{
             $this->campos_valores = $campos;
