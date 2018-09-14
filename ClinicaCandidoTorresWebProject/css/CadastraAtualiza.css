@@ -77,3 +77,7 @@ html, body{
 .up{
 	text-transform: uppercase;
 }
+
+button:focus{
+  outline-style: none;
+}

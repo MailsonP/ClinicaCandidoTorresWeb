@@ -78,12 +78,25 @@ if (isset($_SESSION["tipoUsuario"])) {
             <!-- FORMULARO DE CADASTRO AGENDA -->    
                 <form id="form" action="../Agenda/RegistraAgenda.php" method="POST">
                         <div class="row">
-                            <div class="form-group col-sm-6">
-                                <label for="paciente">Paciente:</label>
-                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>  
-                           <input type="text" class="form-control up" id="paciente" name="paciente" disabled="true" required>
-                           <input type="hidden" id="CampoId" name="Idpaciente">
-                           </div>
+                          <div class="form-group col-sm-5">
+                            <label for="paciente">Paciente:</label>
+                            <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>  
+                            <input type="text" class="form-control up" id="paciente" name="paciente" disabled="true" required>
+                            <button type="button" data-toggle="modal" data-target="#exampleModal" style="width: 25px; height: 25px; border-radius: 50%; background: #00beaa; border: none; position: relative; top: -27px; left: -3px; float: right;">
+                              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                            <input type="hidden" id="CampoId" name="Idpaciente">
+                          </div>
+
+                          <div class="form-group col-sm-4">
+                            <label for="IdMedic" >Medico:</label>
+                            <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
+                            <select class="form-control" name="medico" id="IdMedic" style="text-transform: uppercase;">  
+                              <?php while ($dadoMedic = $medic->retornaDados("object")) { ?>  
+                                  <option value="<?php echo $dadoMedic->IDMEDICO; ?>"><?php echo $dadoMedic->NOME; ?></option>
+                              <?php } ?>
+                            </select>
+                          </div>
 
                             <div class="form-group col-sm-3">
                                 <label for="DataAtendId">Data de Atendimento:</label>
@@ -91,18 +104,11 @@ if (isset($_SESSION["tipoUsuario"])) {
                                 <input type="text" class="form-control" name="datadeatendimento" id="DataAtendId" required>
                             </div>
 
-                            <div class="form-group col-sm-3">
-                                <label for="IdMedic" >Medico:</label>
-                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <select class="form-control" name="medico" id="IdMedic" style="text-transform: uppercase;">  
-                                <?php while ($dadoMedic = $medic->retornaDados("object")) { ?>  
-                                    <option value="<?php echo $dadoMedic->IDMEDICO; ?>"><?php echo $dadoMedic->NOME; ?></option>
-                                <?php } ?>
-                                </select>
-                            </div>
+                            
                         </div>
 
                         <div class="row">
+                          
                             <div class="form-group col-md-5">
                                 <label for="IdTipoAtend">Tipo Atendimento:</label>
                                 <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
@@ -116,32 +122,13 @@ if (isset($_SESSION["tipoUsuario"])) {
 
                          <div class="form-group col-sm-7">
                                 <label for="obsId">Observação:</label>
-                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <input type="text" class="form-control" name="observacao" id="obsId" required>
+                                <input type="text" class="form-control" name="observacao" id="obsId">
                             </div>
-                        </div>
-
-                        <div class="row"> 
-                            <div class="form-group col-sm-4">
-                                <label for="valorId">Valor:</label>
-                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <input type="text" class="form-control up" name="valor" id="valorId" required>
-
-                            </div>
-
-                            <div class="form-group col-sm-4">
-                                <label for="pagarId">Pagamento:</label>
-                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <input type="text" class="form-control up" name="pagamento" id="pagarId" required>
-                            </div>
-
                         </div>
 
                         <button type="submit" class="bt-salvar">Salvar</button>
                         <a href="../Agenda/TelaAgendaTable.php"><button type="button" class="bt-buscar">Buscar</button></a>
-                        <button type="button" class="bt-salvar" data-toggle="modal" data-target="#exampleModal">Pesquisar</button></a>
 
-                        <div class="row">
        
                 </form>
             <!-- FIM DO FORMULARO -->  
@@ -151,7 +138,7 @@ if (isset($_SESSION["tipoUsuario"])) {
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">SELECIONE UM ITEM..</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">SELECIONE UM ITEM</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>

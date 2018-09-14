@@ -57,6 +57,7 @@ $con = $listaAgenda->ListarDadosNaHome();
             <th>Médico</th>
             <th>Tipo de Atendimento</th>
             <th>Data de Atendimento</th>
+            <th></th>
           </tr>
         </thead>
         <tbody class="tbody-light">
@@ -66,6 +67,9 @@ $con = $listaAgenda->ListarDadosNaHome();
             <td><?php echo $dado['NOMEDOMEDICO']; ?></td>
             <td><?php echo $dado["TIPODEATENDIMENTO"]; ?></td>
             <td><?php echo date("d/m/Y", strtotime($dado["DATADEATENDIMENTO"])); ?></td>
+            <td>
+              <a href="">$</a>
+            </td>
           </tr>
           <?php } ?> 
         </tbody>

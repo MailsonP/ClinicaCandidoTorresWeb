@@ -10,8 +10,6 @@ class Agenda extends baseBD {
             $this->campos_valores = array(
             "DATADEATENDIMENTO" => NULL,
             "OBSERVACAO" => NULL,
-            "VALOR" => NULL,
-            "PAGAMENTO" => NULL,
             "ID_PACIENTE" => NULL,
             "ID_MEDICO" => NULL,
             "ID_ATENDIMENTO" => NULL

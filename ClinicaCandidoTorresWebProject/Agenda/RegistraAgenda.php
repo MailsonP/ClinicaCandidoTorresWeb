@@ -14,8 +14,6 @@ if (isset($_POST["Idpaciente"]) && $_POST["Idpaciente"] != null) {
 
     $data = $Metodo["datadeatendimento"];
     $observacao = $Metodo['observacao'];
-    $valor = $Metodo['valor'];
-    $pagamento = $Metodo['pagamento'];
     $IdPaci = $Metodo['Idpaciente'];
     $IdMedico = $Metodo["medico"];
     $IdTipoAtendimento = $Metodo['TipoAtendimento'];
@@ -24,8 +22,6 @@ if (isset($_POST["Idpaciente"]) && $_POST["Idpaciente"] != null) {
     $agenda = new Agenda();
     $agenda->setValor("DATADEATENDIMENTO", date("Y-m-d",strtotime(str_replace('/','-',$data))));
     $agenda->setValor("OBSERVACAO", $observacao);
-    $agenda->setValor("VALOR", $valor);
-    $agenda->setValor("PAGAMENTO", $pagamento);
     $agenda->setValor("ID_PACIENTE",$IdPaci);
     $agenda->setValor("ID_MEDICO", $IdMedico);
     $agenda->setValor("ID_ATENDIMENTO", $IdTipoAtendimento);

@@ -19,8 +19,6 @@ $metodo = $_GET;
         
             $dataAtend = $_POST['datadeatendimento'];
             $observacao = $_POST['observacao'];
-            $valor = $_POST['valor'];
-            $pagamento = $_POST['pagamento'];
             $IDpaciente = $_POST['Idpaciente'];
             $IDmedico = $_POST["medico"];
             $IDtipo_Atendi = $_POST["tipoatendimento"];
@@ -29,8 +27,6 @@ $metodo = $_GET;
             
             $agenda->setValor("DATADEATENDIMENTO", date("Y-m-d",strtotime(str_replace('/','-',$dataAtend))));
             $agenda->setValor("OBSERVACAO", $observacao);
-            $agenda->setValor("VALOR", $valor);
-            $agenda->setValor("PAGAMENTO", $pagamento);
             $agenda->setValor("ID_PACIENTE",$IDpaciente);
             $agenda->setValor("ID_MEDICO", $IDmedico);
             $agenda->setValor("ID_ATENDIMENTO", $IDtipo_Atendi);

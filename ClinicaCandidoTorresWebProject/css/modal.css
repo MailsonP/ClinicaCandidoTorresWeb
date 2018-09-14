@@ -25,11 +25,22 @@
    transaction:opacity 2s linear;
    }
 
+ .close{
+ 	position: relative;
+ 	top: -30px;
+ 	right: 0;
+ }
+
+ .close:hover{
+ 	background: transparent !important;
+ 	color: #000;
+ }
 
  /*ESTILIZAÇÃO DA TABELA MODAL PACIENTE*/
 table{
 	border-collapse: separate; 
 	border-spacing: 10px;
+	text-transform: uppercase;
 }
 
 .column1 {
@@ -52,13 +63,12 @@ table{
 
 .conteudo tr td{
 	padding: 2px 0;
-	border-bottom: 1px solid black;
 }
 
 #btn_add{
 	  cursor: pointer;
 	  padding: 1px 1px;
-	  border-radius: 7px;
+	  border-radius: 50%;
 	  border: none;
 	  font-size: 10px;
 	  background-color: #004840;
@@ -68,3 +78,9 @@ table{
 #btn_add:hover{
        background-color: orange;
 }
+
+.modal-body::-webkit-scrollbar { width:2px; background: #00beaa;}
+.modal-body::-webkit-scrollbar-track { background: #4e4e4e; }
+.modal-body::-webkit-scrollbar-thumb { border-radius:20px; background: #00beaa;}
+.modal-body::-webkit-scrollbar-corner { visibility: hidden;} 
+.modal-body::-webkit-resizer { visibility: hidden; }
