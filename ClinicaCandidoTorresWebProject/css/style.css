@@ -6,12 +6,20 @@
 body,html{
 	width: 100%;
     height: 100%;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     background-image: url(../img/fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+a{
+	text-decoration: none !important;
+}
+
+a:hover{
+	color: #181818 !important;
 }
 
 label{
@@ -113,6 +121,29 @@ label[for="bt_menu"]{
 	position: absolute;
 	top: 1px;
 	box-shadow: none;
+}
+
+.main {
+    height: 450px !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.linha{
+	height: 450px !important;
+	overflow-y: scroll;
+}
+
+.linha::-webkit-scrollbar { width:2px; background: #00beaa;}
+.linha::-webkit-scrollbar-track { background: #4e4e4e; }
+.linha::-webkit-scrollbar-thumb { border-radius:20px; background: #00beaa;}
+.linha::-webkit-scrollbar-corner { visibility: hidden;} 
+.linha::-webkit-resizer { visibility: hidden; }
+
+.tbody-light{
+	background: #f3f3f3;
 }
 
 footer {

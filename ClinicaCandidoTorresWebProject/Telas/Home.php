@@ -22,26 +22,25 @@ $con = $listaAgenda->ListarDadosNaHome();
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
-  <link rel="stylesheet" type="text/css" href="../css/tabela.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="../js/jquery-3.2.1.js"></script>
-	<script src="../js/login.js"></script>
         
         
-        <script type="text/javascript">
+  <script type="text/javascript">
             
-            $(document).ready(function(){
+       $(document).ready(function(){
               
-              var tipo_user = "<?php echo $tipo_user ?>";
+        var tipo_user = "<?php echo $tipo_user ?>";
               
-              if(tipo_user != "Administrador"){
-                   document.getElementById("opcaoUser").style.display = "none";
-              }
+        f(tipo_user != "Administrador"){
+              document.getElementById("opcaoUser").style.display = "none";
+        }
                                
-            });
+      });
         
-        </script>
+   </script>
         
 </head>
 <body ondragstart="return false;">
@@ -66,36 +65,34 @@ $con = $listaAgenda->ListarDadosNaHome();
     </nav>
   </header>
 
-   <div class="centro">
-	    <div class="conteudo">
-        <table>
-          <thead>
-            <tr class="titulo-table">
-              <th width="15%">Paciente</th>
-              <th width="15%">Médico</th>
-              <th width="25%">Tipo de Atendimento</th>
-              <th width="25%">Data de Atendimento</th>
-            </tr>
-          </thead>
-
-        <tbody>
-             <?php while ($dado = $con->fetch_array()){ ?>
-        <tr class="tabela">
-            <td class="up"> <?php echo $dado['NOMEDOPACIENTE']; ?> </td>
-            <td class="up"> <?php echo $dado['NOMEDOMEDICO']; ?>  </td>        
-            <td class="up"> <?php echo $dado["TIPODEATENDIMENTO"]; ?> </td>
-            <td> <?php echo date("d/m/Y", strtotime($dado["DATADEATENDIMENTO"])); ?> </td>
-            </td>
-        </tr>
-      </tbody>
-            <?php } ?>          
-      </table>
-    </div>
-  </div>
+   <div class="container main">
+     <div class="row linha col-sm-10 offset-md-1">
+      <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>Paciente</th>
+            <th>Médico</th>
+            <th>Tipo de Atendimento</th>
+            <th>Data de Atendimento</th>
+          </tr>
+        </thead>
+        <tbody class="tbody-light">
+          <?php while ($dado = $con->fetch_array()){ ?>
+          <tr>
+            <td><?php echo $dado['NOMEDOPACIENTE']; ?></td>
+            <td><?php echo $dado['NOMEDOMEDICO']; ?></td>
+            <td><?php echo $dado["TIPODEATENDIMENTO"]; ?></td>
+            <td><?php echo date("d/m/Y", strtotime($dado["DATADEATENDIMENTO"])); ?></td>
+          </tr>
+          <?php } ?> 
+        </tbody>
+      </table> 
+     </div>
+   </div>
 
 	
 <footer>
-  	<h1>Copyright &copy 2018 - Fábrica de Software</h1>
+  	<h1><strong>Copyright &copy 2018 - Fábrica de Software</strong></h1>
 </footer>
 </body>
 </html>
