@@ -18,7 +18,7 @@ if (isset($metodo["atendimento"])){
 }
 
 $metodo3 = $_POST;
-if(isset($metodo3["nome"])){
+if(isset(addslashes($metodo3["nome"]))){
     $nome = addslashes($metodo3["nome"]);
    
     

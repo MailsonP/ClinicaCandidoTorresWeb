@@ -253,25 +253,26 @@ $metodo = $_POST;
 
 //PEGANDO VALORES DOS CAMPOS PARA ATUALIZAR
 if (isset($metodo["txtNome"])) {
-    $nome = $metodo["txtNome"];
-    $numeroProntuario = $metodo["txtNum"];
-    $sexo = $metodo["cxSexo"];
-    $datanasc = $metodo["txtDataNasc"];
-    $cpf = $metodo["txtCPF"];
-    $rg = $metodo["txtRG"];
+    $nome = addslashes($metodo["txtNome"]);
+    $numeroProntuario = addslashes($metodo["txtNum"]);
+    $sexo = addslashes($metodo["cxSexo"]);
+    $datanasc = addslashes($metodo["txtDataNasc"]);
+    $cpf = addslashes($metodo["txtCPF"]);
+    $rg = addslashes($metodo["txtRG"]);
     $email = $metodo["txtEmail"];
-    $profissao = $metodo["txtProfissao"];
-    $telefone = $metodo["txtTelefone"];
-    $celular = $metodo["txtCelular"];
-    $indicacao = $metodo["txtIndicacao"];
-    $estadocivil = $metodo["cxEstadoCivil"];
-    $endereco = $metodo["txtEndereco"];
-    $bairro = $metodo["txtBairro"];
-    $numero = $metodo["txtNumero"];
-    $cidade = $metodo["txtCidade"];
-    $estado = $metodo["txtEstado"];
-    $complemento = $metodo["txtComplemento"];
-    $cep = $metodo["txtCEP"];
+    $email = preg_replace('/[^[:alnum:]@.]/','', $email);
+    $profissao = addslashes($metodo["txtProfissao"]);
+    $telefone = addslashes($metodo["txtTelefone"]);
+    $celular = addslashes($metodo["txtCelular"]);
+    $indicacao = addslashes($metodo["txtIndicacao"]);
+    $estadocivil = addslashes($metodo["cxEstadoCivil"]);
+    $endereco = addslashes($metodo["txtEndereco"]);
+    $bairro = addslashes($metodo["txtBairro"]);
+    $numero = addslashes($metodo["txtNumero"]);
+    $cidade = addslashes($metodo["txtCidade"]);
+    $estado = addslashes($metodo["txtEstado"]);
+    $complemento = addslashes($metodo["txtComplemento"]);
+    $cep = addslashes($metodo["txtCEP"]);
 
     //SETANDO VALORES PARA ATUALIZAR
     $paciente->setValor("NOME", $nome);
