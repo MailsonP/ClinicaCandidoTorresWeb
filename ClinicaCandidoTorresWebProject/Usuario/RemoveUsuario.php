@@ -8,6 +8,7 @@ require_once './Usuario.php';
 $Metodo = $_GET;
 if(isset($Metodo["usuario"])){
     $id = $Metodo["usuario"];
+    $id = preg_replace('/[^[:alnum:]]/','', $id);
     
     $usuario = new Usuario();
     $usuario->valorpk = $id;

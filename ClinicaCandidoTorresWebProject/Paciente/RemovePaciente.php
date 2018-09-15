@@ -12,6 +12,7 @@ require_once '../Paciente/Paciente.php';
 $pegarId = $_GET;
 if(isset($pegarId["Idpaciente"])){
     $id = $pegarId["Idpaciente"];
+    $id = preg_replace('/[^[:alnum:]]/','', $id);
     
     $paciente = new Paciente();
     $paciente->valorpk = $id;

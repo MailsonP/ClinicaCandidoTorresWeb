@@ -15,6 +15,7 @@ $medico = new Medico();
 $metodo = $_GET;
 if(isset($metodo["medico"])){
     $id = $metodo["medico"];
+    $id = preg_replace('/[^[:alnum:]]/','', $id);
     $medico->valorpk = $id;
     $medico->pesquisarID($medico);
 }

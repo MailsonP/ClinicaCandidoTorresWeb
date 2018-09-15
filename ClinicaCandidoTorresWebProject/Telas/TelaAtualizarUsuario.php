@@ -19,7 +19,7 @@ $usuario = new Usuario();
 $metodo = $_GET;
 if(isset($metodo["usuario"])){
     $id = $metodo["usuario"];
-    
+    $id = preg_replace('/[^[:alnum:]]/','', $id);
 $usuario->valorpk=$id;
 $usuario->pesquisarID($usuario);
 }

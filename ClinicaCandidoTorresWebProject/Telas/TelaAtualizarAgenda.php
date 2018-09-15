@@ -21,6 +21,7 @@ $agenda = new Agenda();
 if (isset($_GET["Idagenda"]) &&  $_GET["Idagenda"] != null){
 
     $id_agenda = $_GET["Idagenda"];
+    $id_agenda = preg_replace('/[^[:alnum:]]/','', $id_agenda);
     $agenda->valorpk = $id_agenda;
     $agenda->pesquisarID($agenda);
 

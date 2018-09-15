@@ -19,7 +19,7 @@ $atendimento = new Atendimento();
 $metodo = $_GET;
 if(isset($metodo["atendimento"])){
     $id = $metodo["atendimento"];
-    
+    $id = preg_replace('/[^[:alnum:]]/','', $id);
 $atendimento->valorpk=$id;
 $atendimento->pesquisarID($atendimento);
 }

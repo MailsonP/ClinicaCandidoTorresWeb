@@ -11,7 +11,7 @@ $valida = new ValidarLogin();
 $metodo = $_POST;
 //Recuperando dados dos campos
 if(isset($metodo["username"])){
-    $login = $metodo["username"];
+    $login = addslashes($metodo["username"]);
     $senha = md5($metodo["password"]);
 }
 

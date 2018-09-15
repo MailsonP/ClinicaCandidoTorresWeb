@@ -6,7 +6,8 @@ require_once '../Medico/Medico.php';
 
 $metodo = $_GET;
 if(isset($metodo["medico"])){
-    $id = $metodo["medico"];
+   $id = $metodo["medico"];
+   $id = preg_replace('/[^[:alnum:]]/','', $id);
    $medico = new Medico();
    $medico->valorpk = $id;
 if($medico->deletar($medico)){

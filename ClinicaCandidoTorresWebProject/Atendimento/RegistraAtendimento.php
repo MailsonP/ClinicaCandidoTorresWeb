@@ -6,7 +6,7 @@ include_once '../Atendimento/Atendimento.php';
 $Metodo = $_POST;
 if(isset($Metodo["nome"])){
     $nome = $Metodo["nome"];
-   
+    $nome = preg_replace('/[^[:alnum:]]/','', $nome);
     
     $atendimento = new Atendimento();
     $atendimento ->setValor("TIPOATENDIMENTO", $nome);

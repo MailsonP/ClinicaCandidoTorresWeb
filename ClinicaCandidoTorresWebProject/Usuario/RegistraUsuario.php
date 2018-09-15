@@ -12,9 +12,11 @@ $metodo = $_POST;
 //Recuperando valores do campo
 if(isset($metodo["login"])){
 $nome = $metodo["nome"];
-$login =$metodo["login"];
+$nome = preg_replace('/[^[:alnum:]]/','', $nome);
+$login = $metodo["login"];
+$login = preg_replace('/[^[:alnum:]]/','', $login);
 $senha = md5($metodo["senha"]);
-$tipo =$metodo["tipoUsuario"];
+$tipo = addslashes($metodo["tipoUsuario"]);
 
 
 $resultado = $valida->validarCadastro($login);

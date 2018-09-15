@@ -16,12 +16,12 @@ $metodo = $_GET;
         if (isset($metodo["IdAgenda"]) && $metodo["IdAgenda"] != null){
            
             $id = $metodo["IdAgenda"];
-        
-            $dataAtend = $_POST['datadeatendimento'];
-            $observacao = $_POST['observacao'];
-            $IDpaciente = $_POST['Idpaciente'];
-            $IDmedico = $_POST["medico"];
-            $IDtipo_Atendi = $_POST["tipoatendimento"];
+            $id = preg_replace('/[^[:alnum:]]/','', $id);
+            $dataAtend = addslashes($_POST['datadeatendimento']);
+            $observacao = addslashes($_POST['observacao']);
+            $IDpaciente = addslashes($_POST['Idpaciente']);
+            $IDmedico = addslashes($_POST["medico"]);
+            $IDtipo_Atendi = addslashes($_POST["tipoatendimento"]);
            
            //PESQUISAR MEDICO E ATENDIMENTO PELO ID PARA ATUALIZAR
             

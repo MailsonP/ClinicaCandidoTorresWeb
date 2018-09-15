@@ -12,11 +12,11 @@ include_once '../Atendimento/Pesquisar.php';
 $Metodo = $_POST;
 if (isset($_POST["Idpaciente"]) && $_POST["Idpaciente"] != null) {
 
-    $data = $Metodo["datadeatendimento"];
-    $observacao = $Metodo['observacao'];
-    $IdPaci = $Metodo['Idpaciente'];
-    $IdMedico = $Metodo["medico"];
-    $IdTipoAtendimento = $Metodo['TipoAtendimento'];
+    $data = addslashes($Metodo["datadeatendimento"]);
+    $observacao = addslashes($Metodo['observacao']);
+    $IdPaci = addslashes($Metodo['Idpaciente']);
+    $IdMedico = addslashes($Metodo["medico"]);
+    $IdTipoAtendimento = addslashes($Metodo['TipoAtendimento']);
 
     //SETANDO VALORES
     $agenda = new Agenda();

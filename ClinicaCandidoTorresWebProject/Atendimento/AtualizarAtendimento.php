@@ -13,12 +13,13 @@ $metodo = $_GET;
 
 if (isset($metodo["atendimento"])){
     $id = $metodo["atendimento"];
+    $id = preg_replace('/[^[:alnum:]]/','', $id);
     
 }
 
 $metodo3 = $_POST;
 if(isset($metodo3["nome"])){
-    $nome = $metodo3["nome"];
+    $nome = addslashes($metodo3["nome"]);
    
     
     $atendimento ->setValor("TIPOATENDIMENTO", $nome);

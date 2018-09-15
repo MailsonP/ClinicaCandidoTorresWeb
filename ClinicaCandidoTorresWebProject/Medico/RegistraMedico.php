@@ -5,13 +5,14 @@ include_once '../Medico/Medico.php';
 
 $Metodo = $_POST;
 if(isset($Metodo["nome"])){    
-    $nome = $Metodo["nome"];
-    $telefone = $Metodo["telefone"];
+    $nome = addslashes($Metodo["nome"]);
+    $telefone = addslashes($Metodo["telefone"]);
     $email = $Metodo["email"];
-    $dtanascimento = $Metodo["dtanascimento"];
-    $conselho = $Metodo["conselho"];
-    $especialidade = $Metodo["especialidade"];
-    $funcao = $Metodo["funcao"];
+    $email = preg_replace('/[^[:alnum:]@.]/','', $email);
+    $dtanascimento = addslashes($Metodo["dtanascimento"]);
+    $conselho = addslashes($Metodo["conselho"]);
+    $especialidade = addslashes($Metodo["especialidade"]);
+    $funcao = addslashes($Metodo["funcao"]);
     
     $medico = new Medico();
     $medico->setValor("NOME", $nome);

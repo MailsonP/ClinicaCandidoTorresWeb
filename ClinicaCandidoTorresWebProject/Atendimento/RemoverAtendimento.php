@@ -7,6 +7,7 @@ require_once '../Atendimento/Atendimento.php';
 $metodo = $_GET;
 if(isset($metodo["atendimento"])){
     $id = $metodo["atendimento"];
+    $id = preg_replace('/[^[:alnum:]]/','', $id);
     $atendimento = new Atendimento();
     $atendimento->valorpk = $id;
     

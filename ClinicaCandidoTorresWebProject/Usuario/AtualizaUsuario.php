@@ -9,16 +9,16 @@ $usuario = new Usuario();
 $Metodo = $_GET;
 if(isset($Metodo["usuario"])){
     $id = $Metodo["usuario"];
-    
+    $id = preg_replace('/[^[:alnum:]]/','', $id);
 }
 
 $txtTitulo = $_POST;
 //Recuperando valores do campo
 if(isset($txtTitulo["nome"])){
-$nome = $txtTitulo["nome"];
-$login =$txtTitulo["login"];
-$senha = $txtTitulo["senha"];
-$tipo =$txtTitulo["tipoUsuario"];
+$nome = addslashes($txtTitulo["nome"]);
+$login = addslashes($txtTitulo["login"]);
+$senha = addslashes($txtTitulo["senha"]);
+$tipo = addslashes($txtTitulo["tipoUsuario"]);
 
 $usuario->setValor("NOME", $nome);
 $usuario->setValor("LOGIN", $login);

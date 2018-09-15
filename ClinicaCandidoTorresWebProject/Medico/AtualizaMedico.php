@@ -11,17 +11,19 @@ $metodo = $_GET;
 
 if (isset($metodo["medico"])) {
     $id = $metodo["medico"];
+    $id = preg_replace('/[^[:alnum:]]/','', $id);
 }
 
 $metodo2 = $_POST;
 if(isset($metodo2["nome"])){
-    $nome = $metodo2["nome"];
-    $telefone = $metodo2["telefone"];
+    $nome = addslashes($metodo2["nome"]);
+    $telefone = addslashes($metodo2["telefone"]);
     $email = $metodo2["email"];
-    $dtanascimento = $metodo2["dtanascimento"];
-    $conselho = $metodo2["conselho"];
-    $especialidade = $metodo2["especialidade"];
-    $funcao = $metodo2["funcao"];
+    $email = preg_replace('/[^[:alnum:]@.]/','', $email);
+    $dtanascimento = addslashes($metodo2["dtanascimento"]);
+    $conselho = addslashes($metodo2["conselho"]);
+    $especialidade = addslashes($metodo2["especialidade"]);
+    $funcao = addslashes($metodo2["funcao"]);
     
     $medico->setValor("NOME", $nome);
     $medico->setValor("TELEFONE", $telefone);
