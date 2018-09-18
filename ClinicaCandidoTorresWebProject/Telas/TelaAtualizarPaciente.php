@@ -78,7 +78,7 @@ while ($dado = $paciente->retornaDados("object")) {
             <form action="" method="POST" onsubmit="return VerificaCPF();">
 
             <div class="row">
-                    <div class="form-group col-md-6" >
+                    <div class="form-group col-md-9" >
               <label for="nome">Nome:</label>
               <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
               <input type="text" class="form-control up" name="txtNome" value="<?php echo $dado->NOME?>" id="nome" required>
@@ -87,14 +87,9 @@ while ($dado = $paciente->retornaDados("object")) {
             <div class="form-group col-md-3">
               <label for="dataNasc">Data de Nasc:</label>
               <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                <input type="text" class="form-control" name="txtDataNasc" value="<?php echo $dado->DATANASC ?>" id="dataNasc" required>
+                <input type="text" class="form-control" name="txtDataNasc" value="<?php echo date("d/m/Y", strtotime($dado->DATANASC)); ?>" id="dataNasc" required>
             </div>
 
-                    <div class="form-group col-md-3">
-                        <label>Número do Prontuário:</label>
-                        <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                <input type="text" class="form-control" name="txtNum" value="<?php echo $dado->NUMEROPRONTUARIO ?>" id="numPront" >
-                    </div>
             </div>
 
             <div class="row">
@@ -134,7 +129,8 @@ while ($dado = $paciente->retornaDados("object")) {
 
                 <div class="form-group col-md-3">
                   <label for="indica">Indicação:</label>
-                <input type="text" class="form-control up" name="txtIndicacao" value="<?php echo $dado->INDICACAO ?>" id="indica"> 
+                  <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
+                  <input type="text" class="form-control up" name="txtIndicacao" value="<?php echo $dado->INDICACAO ?>" id="indica" required> 
                 </div>
           
                 <div class="form-group col-md-2">

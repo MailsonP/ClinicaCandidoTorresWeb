@@ -2,7 +2,7 @@
 
 session_start();
 require_once '../Paciente/Paciente.php';
-include_once '../Paciente/ValidarProntuario.php';
+//include_once '../Paciente/ValidarProntuario.php';
 /**
  * Description of Paciente
  *
@@ -10,13 +10,11 @@ include_once '../Paciente/ValidarProntuario.php';
  */
 $metodo = $_POST;
 
-$valida = new ValidarProntuario();
+//$valida = new ValidarProntuario();
 
 //PEGANDO VALORES DOS CAMPOS
 if (isset($metodo["txtNome"])) {
     $nome = addslashes($metodo["txtNome"]);
-    $numeroProntuario = $metodo["txtNum"];
-    $numeroProntuario = preg_replace('/[^[:alnum:]]/','', $numeroProntuario);
     $sexo = addslashes($metodo["cxSexo"]);
     $datanasc = addslashes($metodo["txtDataNasc"]);
     $cpf = addslashes($metodo["txtCPF"]);
@@ -36,21 +34,12 @@ if (isset($metodo["txtNome"])) {
     $complemento = addslashes($metodo["txtComplemento"]);
     $cep = addslashes($metodo["txtCEP"]);
 
-    //Chamando o metodo de validar Prontuario  
-    $resultado = $valida->validaProntuario($numeroProntuario);
-
-    //Recuperando o valor do Prontuario.
-    $dados_prontuario = mysqli_fetch_array($resultado);
-
-    if (!isset($dados_prontuario['NUMEROPRONTUARIO'])) {
-
         //SETANDO OS VALORES NO OBJETO
         $paciente = new Paciente();
 
         $paciente->setValor("NOME", $nome);
-        $paciente->setValor("NUMEROPRONTUARIO", $numeroProntuario);
         $paciente->setValor("SEXO", $sexo);
-        $paciente->setValor("DATANASC", date("Y-d-m", strtotime($datanasc)));
+        $paciente->setValor("DATANASC", date("Y-m-d",strtotime(str_replace('/','-',$datanasc))));
         $paciente->setValor("CPF", $cpf);
         $paciente->setValor("RG", $rg);
         $paciente->setValor("EMAIL", $email);
@@ -72,8 +61,6 @@ if (isset($metodo["txtNome"])) {
         } else {
             echo "<script>alert('Você esqueceu de preencher algum campo obrigatório :/');window.history.back(1);</script>";
         }
-    } else {
-        echo "<script>alert('O numero de prontuario ja existe.!');window.location = '../Telas/TelaCadastroPaciente.php';</script>";
     }
-}
+
 ?>

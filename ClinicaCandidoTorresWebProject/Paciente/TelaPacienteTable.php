@@ -59,9 +59,8 @@ $paciente->retornaTudo($paciente);
                         <tr class="titulo-table">
                             <th class="column1">Id</th>
                             <th class="column2">Nome</th>
-                            <th class="column3">Num Prontuario</th>
-                            <th class="column4">Sexo</th>
-                            <th class="column5">Ação</th>
+                            <th class="column3">Sexo</th>
+                            <th class="column4">Ação</th>
 
                         </tr>
                     </thead>
@@ -70,9 +69,8 @@ $paciente->retornaTudo($paciente);
                             <tr class="tabela">
                                 <td><?php echo $dado->IDPACIENTE ?></td>
                                 <td class="up"><?php echo $dado->NOME ?></td>
-                                <td class="up"><?php echo $dado->NUMEROPRONTUARIO ?></td>
                                 <td class="up"><?php echo $dado->SEXO ?></td>
-                                <td class="column6"><a href="../Telas/TelaAtualizarPaciente.php?Idpaciente=<?php echo $dado->IDPACIENTE; ?>">Editar</a> 
+                                <td class="column4"><a href="../Telas/TelaAtualizarPaciente.php?Idpaciente=<?php echo $dado->IDPACIENTE; ?>">Editar</a> 
                                     <a href="" id="separador">|</a>
                                     <a href="javascript: if(confirm('Tem certeza que quer deletar o usuário <?php echo $dado->NOME; ?> ?')) 
                                        location.href='RemovePaciente.php?Idpaciente=<?php echo $dado->IDPACIENTE; ?>';">Excluir</a>

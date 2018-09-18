@@ -57,7 +57,7 @@ if(isset($_SESSION["tipoUsuario"])){
             <form action="../Paciente/RegistraPaciente.php" method="POST" onsubmit="return VerificaCPF();">
 
             <div class="row">
-                    <div class="form-group col-md-6" >
+                    <div class="form-group col-md-9" >
               <label for="nome">Nome:</label>
               <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
               <input type="text" class="form-control up" name="txtNome" id="nome" required>
@@ -69,11 +69,6 @@ if(isset($_SESSION["tipoUsuario"])){
                 <input type="text" class="form-control" name="txtDataNasc" id="dataNasc" required>
             </div>
 
-                    <div class="form-group col-md-3">
-                        <label>Número do Prontuário:</label>
-                        <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                <input type="text" class="form-control" name="txtNum" id="numPront" >
-                    </div>
             </div>
 
             <div class="row">
@@ -113,7 +108,8 @@ if(isset($_SESSION["tipoUsuario"])){
 
                 <div class="form-group col-md-3">
                   <label for="indica">Indicação:</label>
-                <input type="text" class="form-control up" name="txtIndicacao" id="indica"> 
+                  <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
+                  <input type="text" class="form-control up" name="txtIndicacao" id="indica" required> 
                 </div>
           
                 <div class="form-group col-md-2">
