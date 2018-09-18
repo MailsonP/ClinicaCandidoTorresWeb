@@ -4,7 +4,7 @@ session_start();
 include_once '../Medico/Medico.php';
 
 $Metodo = $_POST;
-if(isset(addslashes($Metodo["nome"]))){    
+if(addslashes($Metodo["nome"])){    
     $nome = addslashes($Metodo["nome"]);
     $telefone = addslashes($Metodo["telefone"]);
     $email = $Metodo["email"];
