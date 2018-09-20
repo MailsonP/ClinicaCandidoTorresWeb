@@ -168,7 +168,7 @@ if (isset($_SESSION["tipoUsuario"])) {
                           </div>
                         </div>
                       </div>
-                    </div>
+                  </div>
                 </div>
             </div>
         </div>

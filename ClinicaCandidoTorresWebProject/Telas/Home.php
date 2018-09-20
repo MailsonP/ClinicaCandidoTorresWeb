@@ -3,12 +3,18 @@ session_start();
 require_once '../Agenda/Agenda.php';
 require_once '../Agenda/ListarAgenda.php';
 include_once '../Login/ProtectPaginas.php';
+include_once '../Medico/Medico.php';
 protect();
 
 if(isset($_SESSION["tipoUsuario"])){
     $tipo_user = $_SESSION["tipoUsuario"];
 }
+
+$medic = new Medico();
 $listaAgenda = new ListarAgenda();
+
+//* LISTAR MEDICOS NO COMBOBOX
+$medic->retornaTudo($medic);
 
 ?>﻿
 <!DOCTYPE html>
@@ -38,29 +44,33 @@ $listaAgenda = new ListarAgenda();
         }
                                
       });
-        
-   </script>
-        
+  </script>      
 </head>
 <body ondragstart="return false;">
 	
-  <?php include '../util/nav.php' ?>
-<form action="Home.php" method="POST">
+<?php include '../util/nav.php' ?>
+<form action="Home.php" method="POST" style="text-transform: uppercase;">
    <div class="container main">
-    <div class="form-group col-sm-5">
-          <input type="text" name="nomeMedico" placeholder="busca" class="form-control">
+      <div class="row input-group col-sm-10 offset-md-1 SearchMed">
+          <select name="nomeMedico" class="form-control" style="text-transform: uppercase;">
+            <option value="">Selecione um Médico</option>
+             <?php while ($dadoMedic = $medic->retornaDados("object")) { ?>  
+             <option value="<?php echo $dadoMedic->NOME; ?>"><?php echo $dadoMedic->NOME; ?></option>
+             <?php } ?>
+          </select>
           <input type="submit" name="submit" class="btn btn-default">
-    </div>
+      </div>
 
      <div class="row linha col-sm-10 offset-md-1">
 </form>
       <table class="table table-striped table-hover">
         <thead class="thead-dark">
           <tr>
-            <th>Paciente</th>
-            <th>Médico</th>
-            <th>Tipo de Atendimento</th>
-            <th>Data de Atendimento</th>
+            <th>PACIENTE</th>
+            <th>MÉDICO</th>
+            <th>ATENDIMENTO</th>
+            <th>DATA</th>
+            <th>TELEFONE</th>
             <th></th>
           </tr>
         </thead>
@@ -80,8 +90,9 @@ $listaAgenda = new ListarAgenda();
             <td><?php echo $dado['NOMEDOMEDICO']; ?></td>
             <td><?php echo $dado["TIPODEATENDIMENTO"]; ?></td>
             <td><?php echo date("d/m/Y", strtotime($dado["DATADEATENDIMENTO"])); ?></td>
+            <td><?php echo $dado["CELULAR"]; ?></td>
             <td>
-              <a href="">$</a>
+              <a href="" data-toggle="modal" data-target="example" >$</a>
             </td>
           </tr>
           <?php } ?> 
@@ -89,6 +100,7 @@ $listaAgenda = new ListarAgenda();
       </table> 
      </div>
    </div>
+   
    <?php include '../util/footer.php' ?>
 </body>
 </html>

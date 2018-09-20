@@ -128,22 +128,6 @@ if (isset($_GET["Idagenda"]) &&  $_GET["Idagenda"] != null){
                             </div>
                         </div>
 
-                        <div class="row"> 
-                            <div class="form-group col-sm-4">
-                                <label for="valorId">Valor:</label>
-                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <input type="text" class="form-control up" value="<?php echo $dados_agenda->VALOR ?>" name="valor" id="valorId" required>
-
-                            </div>
-
-                            <div class="form-group col-sm-4">
-                                <label for="pagarId">Pagamento:</label>
-                                <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
-                                <input type="text" class="form-control up" value="<?php echo $dados_agenda->PAGAMENTO ?>" name="pagamento" id="pagarIdId" required>
-                            </div>
-
-                        </div>
-
                         <button type="submit" class="bt-salvar">Salvar</button>
                         <a href="../Agenda/TelaAgendaTable.php"><button type="button" class="bt-buscar">Voltar</button></a>
                     </form>

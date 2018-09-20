@@ -134,6 +134,10 @@ label[for="bt_menu"]{
     transform: translate(-50%, -50%);
 }
 
+.SearchMed{
+	margin: 10px 0;
+}
+
 .linha{
 	height: 450px !important;
 	overflow-y: auto;

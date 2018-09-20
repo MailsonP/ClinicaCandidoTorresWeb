@@ -54,7 +54,7 @@ if(isset($_SESSION["tipoUsuario"])){
             <div class="col-sm-12">
                 <h2 class="titulo-h2">Cadastro Profissional</h2>
                 
-            <form action="../Medico/RegistraMedico.php" method="POST">
+            <form action="../Medico/RegistraMedico.php" method="POST" autocomplete="off">
                 <div class="row">
                     <div class="form-group col-sm-6">
                         <label for="nome">Nome:</label>
