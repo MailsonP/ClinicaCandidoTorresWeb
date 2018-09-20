@@ -145,4 +145,9 @@ class daoGenerico extends ConexaoDB {
 
       return $this->executaSQL($sql);
    }
+   public function ListarPorFiltro($nomeM){
+    $sql = "SELECT G.DATADEATENDIMENTO AS 'DATADEATENDIMENTO', P.NOME AS 'NOMEDOPACIENTE' ,M.NOME AS 'NOMEDOMEDICO',A.TIPOATENDIMENTO AS 'TIPODEATENDIMENTO' FROM agenda AS G INNER JOIN paciente AS P ON IDPACIENTE = ID_PACIENTE INNER JOIN medico AS M ON IDMEDICO = ID_MEDICO INNER JOIN ATENDIMENTO AS A ON IDATENDIMENTO = ID_ATENDIMENTO WHERE M.NOME LIKE '%$nomeM%'";
+
+    return $this->executaSQL($sql);
+   }
 }

@@ -44,5 +44,16 @@ class ListarAgenda extends ConexaoDB {
         }
         
     }
+    public function ListarPorFiltro2($nomeMedico){
+        $dao = new daoGenerico();
+       //Mudança de dados no banco
+        $resultado = $dao->ListarPorFiltro($nomeMedico);
+        
+        if($resultado){
+            return $resultado;
+        }else{
+            echo "<script>alert('Erro ao tentar buscar medico no banco!');window.location = '../Telas/TelaCadastroUsuario.php';</script>";
+        }
+    }
    
 }

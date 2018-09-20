@@ -8,9 +8,7 @@ protect();
 if(isset($_SESSION["tipoUsuario"])){
     $tipo_user = $_SESSION["tipoUsuario"];
 }
- 
 $listaAgenda = new ListarAgenda();
-$con = $listaAgenda->ListarDadosNaHome();
 
 ?>﻿
 <!DOCTYPE html>
@@ -47,9 +45,15 @@ $con = $listaAgenda->ListarDadosNaHome();
 <body ondragstart="return false;">
 	
   <?php include '../util/nav.php' ?>
-
+<form action="Home.php" method="POST">
    <div class="container main">
+    <div class="form-group col-sm-5">
+          <input type="text" name="nomeMedico" placeholder="busca" class="form-control">
+          <input type="submit" name="submit" class="btn btn-default">
+    </div>
+
      <div class="row linha col-sm-10 offset-md-1">
+</form>
       <table class="table table-striped table-hover">
         <thead class="thead-dark">
           <tr>
@@ -61,7 +65,16 @@ $con = $listaAgenda->ListarDadosNaHome();
           </tr>
         </thead>
         <tbody class="tbody-light">
-          <?php while ($dado = $con->fetch_array()){ ?>
+          <?php 
+          
+          if($_POST){   
+            $nMedico = $_POST['nomeMedico'];     
+            $con = $listaAgenda->ListarPorFiltro2($nMedico);
+          }else{
+            $con = $listaAgenda->ListarDadosNaHome();    
+          }
+
+          while ($dado = $con->fetch_array()){ ?>
           <tr>
             <td><?php echo $dado['NOMEDOPACIENTE']; ?></td>
             <td><?php echo $dado['NOMEDOMEDICO']; ?></td>
@@ -76,8 +89,6 @@ $con = $listaAgenda->ListarDadosNaHome();
       </table> 
      </div>
    </div>
-
    <?php include '../util/footer.php' ?>
-
 </body>
 </html>
