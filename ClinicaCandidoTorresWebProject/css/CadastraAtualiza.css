@@ -5,8 +5,8 @@ html, body{
 .mid{
 	background-color: #00beaa !important;
 	padding: 10px !important;
-	margin-top: 16px;
-	margin-bottom: 8px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	overflow-y: auto !important;
 	overflow-x: hidden !important;
 	border-radius: 5px;
@@ -82,6 +82,10 @@ button:focus{
   outline-style: none;
 }
 
-@media screen and (max-width: 840px){
+@media screen and (max-width: 992px){
+
+.mid{
+	margin: 20px 20px 100px 20px;
+}
 
 }

@@ -22,7 +22,7 @@
 	max-width: 90%;
 	height: 90%;
 	overflow-y: auto;
-	overflow-x: hidden;
+	overflow-x: auto;
 	line-height: 0;
 }
 

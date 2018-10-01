@@ -32,7 +32,6 @@ $medic->retornaTudo($medic);
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="../js/jquery-3.2.1.js"></script>
         
-        
   <script type="text/javascript">
             
        $(document).ready(function(){
@@ -51,7 +50,7 @@ $medic->retornaTudo($medic);
 <?php include '../util/nav.php' ?>
 <form action="Home.php" method="POST" style="text-transform: uppercase;">
    <div class="container main">
-      <div class="row input-group col-sm-10 offset-md-1 SearchMed">
+      <div class="row input-group col-md-10 offset-md-1 SearchMed grid">
           <select name="nomeMedico" class="form-control" style="text-transform: uppercase;">
             <option value="">Selecione um Médico</option>
              <?php while ($dadoMedic = $medic->retornaDados("object")) { ?>  
@@ -61,9 +60,9 @@ $medic->retornaTudo($medic);
           <input type="submit" name="submit" class="btn btn-default">
       </div>
 
-     <div class="row linha col-sm-10 offset-md-1">
+     <div class="row linha col-md-10 offset-md-1">
 </form>
-      <table class="table table-striped table-hover">
+      <table class="table table-striped table-hover grid">
         <thead class="thead-dark">
           <tr>
             <th>PACIENTE</th>
