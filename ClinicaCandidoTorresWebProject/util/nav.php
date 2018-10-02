@@ -14,15 +14,8 @@
             	<li><a href="../Telas/TelaCadastroAtendimento.php">Atendimento</a></li>
 			</ul>
 			</li>
-			<li><a href="#">Relatório</a>
-			<ul>
-				<li><a href="">Profissional</a></li>
-				<li><a href="">Paciente</a></li>
-            	<li><a href="../Relatorio/Agenda/TelaRelatorioAgenda.php" target="_blank">Agenda</a></li>
-            	<li><a href="">Atendimento</a></li>
-			</ul>
-			</li>
-          <li><a href="../Login/Sair.php">Sair</a></li>
+			<li><a href="../Telas/TelaRelatorio.php">Relatório</a></li>
+          	<li><a href="../Login/Sair.php">Sair</a></li>
 		</ul>
 	</nav>
 </header>
