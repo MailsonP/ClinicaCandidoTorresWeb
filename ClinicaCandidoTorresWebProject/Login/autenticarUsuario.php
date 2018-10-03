@@ -12,7 +12,7 @@ $metodo = $_POST;
 //Recuperando dados dos campos
 if(isset($metodo["username"])){
     $login = addslashes($metodo["username"]);
-    $senha = $metodo["password"];
+    $senha = md5($metodo["password"]);
 }
 
 //Chamando o metodo valida e passando por paramentro o login e a senha
