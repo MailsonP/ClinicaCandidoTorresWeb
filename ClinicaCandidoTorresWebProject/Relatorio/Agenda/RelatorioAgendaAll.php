@@ -7,9 +7,9 @@
 	$html .= '<tr>';
 	$html .= '<th style="width: 5%; text-align: left;">ID</th>';
 	$html .= '<th style="width: 30%; text-align: left;">Paciente</th>';
-	$html .= '<th style="width: 20%; text-align: left;">Telefone</th>';
-	$html .= '<th style="width: 30%; text-align: left;">Médico</th>';
-	$html .= '<th style="width: 15%; text-align: left;">Atendimento</th>';
+	$html .= '<th style="width: 15%; text-align: left;">Telefone</th>';
+	$html .= '<th style="width: 20%; text-align: left;">Médico</th>';
+	$html .= '<th style="width: 20%; text-align: left;">Atendimento</th>';
 	$html .= '<th style="width: 10%; text-align: left;">Data</th>';
 	$html .= '</tr>';
 	$html .= '</thead>';
@@ -22,8 +22,8 @@
 		$html .= '<tr><td style="font-weight: 600; width: 5%;">'.$row_transacoes['IDAGENDA'] . "</td>";
 		$html .= '<td style="width: 30%;">'.$row_transacoes['NOMEDOPACIENTE'] . "</td>";
 		$html .= '<td style="width: 15%;">'.$row_transacoes['CELULAR'] . "</td>";
-		$html .= '<td style="width: 30%;">'.$row_transacoes['NOMEDOMEDICO'] . "</td>";
-		$html .= '<td style="width: 10%;">'.$row_transacoes['TIPODEATENDIMENTO'] . "</td>";
+		$html .= '<td style="width: 20%;">'.$row_transacoes['NOMEDOMEDICO'] . "</td>";
+		$html .= '<td style="width: 20%;">'.$row_transacoes['TIPODEATENDIMENTO'] . "</td>";
 		$html .= '<td style="width: 10%;">'.date("d/m/Y", strtotime($row_transacoes['DATADEATENDIMENTO'])) . "</td></tr>";		
 	}
 	

@@ -169,6 +169,8 @@ if (isset($_SESSION["tipoUsuario"])) {
                         </div>
                       </div>
                   </div>
+                  <!-- F I M  M O D A L -->
+                  
                 </div>
             </div>
         </div>
