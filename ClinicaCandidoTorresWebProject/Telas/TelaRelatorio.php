@@ -1,11 +1,16 @@
 <?php
 session_start();
 include_once '../Login/ProtectPaginas.php';
+include_once '../Medico/Medico.php';
 protect();
 
 if(isset($_SESSION["tipoUsuario"])){
     $tipo_user = $_SESSION["tipoUsuario"];
 }
+   
+   //PARA LISTAR NO COMBOBOX DO MODAL
+   $medic = new Medico();
+   $medic->retornaTudo($medic);
 
 ?>
 <!DOCTYPE html>
@@ -46,7 +51,7 @@ if(isset($_SESSION["tipoUsuario"])){
 		</div>
 	</div>
 
-	<!-- MODAL DE ESCOLHA DE PACIENTE -->
+	<!-- MODAL DE ESCOLHA DE MEDICO -->
                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -57,20 +62,24 @@ if(isset($_SESSION["tipoUsuario"])){
                             </button>
                           </div>
                           <div class="modal-body">
-                            <div class="conteudo">                      
-              								<select class="custom-select">
-              									<option>Zezim</option>
-              									<option>João</option>
+                            <div class="conteudo">
+                            <form action="../Relatorio/Agenda/RelatorioAgendaProfissional.php" method="POST">              
+              					     	<select class="custom-select" style="text-transform: uppercase;" name="medico">
+                                <?php while ($dadoMedic = $medic->retornaDados("object")) { ?>  
+              									<option value="<?php echo $dadoMedic->IDMEDICO; ?>"><?php echo $dadoMedic->NOME; ?></option>
+                                <?php  }  ?>
               								</select>
+                              <input type="submit" value="ENVIAR">
+                            </form>
                             </div>
                           </div>
                           <div class="modal-footer">
-                          	<button type="button" class="btn btn-success" data-dismiss="modal" style="margin: 0 auto;">GERAR RELATÓRIO</button>
+                          	<button type="submit" class="btn btn-success" data-dismiss="modal" style="margin: 0 auto;">GERAR RELATÓRIO</button>
                           </div>
                         </div>
                       </div>
                   </div>
-                  <!-- F I M  M O D A L -->
+ <!-- F I M  M O D A L -->
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
