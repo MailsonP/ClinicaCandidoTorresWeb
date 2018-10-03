@@ -61,21 +61,20 @@ if(isset($_SESSION["tipoUsuario"])){
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
+                          <form action="../Relatorio/Agenda/RelatorioAgendaProfissional.php" method="POST">
                           <div class="modal-body">
-                            <div class="conteudo">
-                            <form action="../Relatorio/Agenda/RelatorioAgendaProfissional.php" method="POST">              
+                            <div class="conteudo">              
               					     	<select class="custom-select" style="text-transform: uppercase;" name="medico">
                                 <?php while ($dadoMedic = $medic->retornaDados("object")) { ?>  
               									<option value="<?php echo $dadoMedic->IDMEDICO; ?>"><?php echo $dadoMedic->NOME; ?></option>
                                 <?php  }  ?>
               								</select>
-                              <input type="submit" value="ENVIAR">
-                            </form>
                             </div>
                           </div>
                           <div class="modal-footer">
-                          	<button type="submit" class="btn btn-success" data-dismiss="modal" style="margin: 0 auto;">GERAR RELATÓRIO</button>
+                          	<button type="submit" class="btn btn-success" style="margin: 0 auto;">GERAR RELATÓRIO</button>
                           </div>
+                        </form>
                         </div>
                       </div>
                   </div>
