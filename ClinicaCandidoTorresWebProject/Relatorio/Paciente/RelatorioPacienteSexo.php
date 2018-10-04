@@ -20,7 +20,7 @@
 	$resultado_trasacoes = mysqli_query($conn, $result_transacoes);
 	while($row_transacoes = mysqli_fetch_assoc($resultado_trasacoes)){
 		$html .= '<tr style="border-bottom: 1px solid black"><td style="font-weight: 600; width: 20%;">'.$row_transacoes['NOME'] . "</td>";
-		$html .= '<td style="width: 10%;">'.$row_transacoes['DATANASC'] . "</td>";
+		$html .= '<td style="width: 10%;">'.date("d/m/Y", strtotime($row_transacoes['DATANASC'])) . "</td>";
 		$html .= '<td style="width: 15%;">'.$row_transacoes['CPF'] . "</td>";
 		$html .= '<td style="width: 10%;">'.$row_transacoes['CELULAR'] . "</td>";
 		$html .= '<td style="width: 10%;">'.$row_transacoes['EMAIL'] . "</td></tr>";		
