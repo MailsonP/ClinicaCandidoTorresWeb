@@ -47,7 +47,7 @@
 	$dompdf->load_html('
 			<div align="center"><img src="../../img/logo.png"></div>
 			<h3 style="text-align: center; font-family: sans-serif; padding: -15px; margin: 0;">Clinica Cândido Torres</h3>
-			<h4 style="text-align: center; font-family: sans-serif;">Relatório de Agenda</h4>
+			<h4 style="text-align: center; font-family: sans-serif;">Relatório de Paciente</h4>
 			'. $html .'
 		');
 

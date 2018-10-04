@@ -61,7 +61,7 @@ if(isset($_SESSION["tipoUsuario"])){
         <a data-toggle="modal" data-target="#ModalData">AGENDA POR DATA</a>
       </div>
       <div class="col-sm-3" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#">PACIENTE POR DIA</a>
+        <a href="../Relatorio/Paciente/RelatorioPacienteDia.php" target="_blank">PACIENTE POR DIA</a>
       </div>
       <div class="col-sm-3" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
         <a data-toggle="modal" data-target="#">ATENDIMENTO</a>
