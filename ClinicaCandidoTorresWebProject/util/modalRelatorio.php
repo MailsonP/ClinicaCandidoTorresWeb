@@ -112,3 +112,37 @@
                       </div>
                   </div>
  <!-- F I M  M O D A L -->
+
+   <!-- MODAL DE ESCOLHA DE SEXO -->
+                 <div class="modal fade" id="ModalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">SELECIONE O PERIODO</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <form action="../Relatorio/Paciente/RelatorioPacienteSexo.php" method="POST" target="_blank">
+                          <div class="modal-body">
+                            <div class="conteudo">
+                            <div class="row">             
+                              <div class="form-group col-sm-6">
+                                <label for="diaIni">Data Inicial:</label>
+                                <input class="form-control" type="date" name="" id="diaIni">
+                              </div>
+                              <div class="form-group col-sm-6">
+                                <label for="diaFim">Data Final:</label>
+                                <input class="form-control" type="date" name="" id="diaFim">
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-success" style="margin: 0 auto;">GERAR RELATÓRIO</button>
+                          </div>
+                        </form>
+                        </div>
+                      </div>
+                  </div>
+ <!-- F I M  M O D A L -->
