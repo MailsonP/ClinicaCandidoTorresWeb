@@ -7,10 +7,10 @@
 	$html = '<table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width:100%; white-space: nowrap; z-index: 1;">';	
 	$html .= '<thead style="border-bottom: 1px solid black; font-size: 14px;">';
 	$html .= '<tr>';
-	$html .= '<th style="width: 5%; text-align: left;">Paciente</th>';
-	$html .= '<th style="width: 30%; text-align: left;">Data Nascimento</th>';
+	$html .= '<th style="width: 20%; text-align: left;">Paciente</th>';
+	$html .= '<th style="width: 10%; text-align: left;">Data Nascimento</th>';
 	$html .= '<th style="width: 15%; text-align: left;">CPF</th>';
-	$html .= '<th style="width: 20%; text-align: left;">Celular</th>';
+	$html .= '<th style="width: 10%; text-align: left;">Celular</th>';
 	$html .= '<th style="width: 10%; text-align: left;">Email</th>';
 	$html .= '</tr>';
 	$html .= '</thead>';
@@ -19,10 +19,10 @@
 	$result_transacoes = "SELECT * FROM PACIENTE WHERE SEXO = '$Sexo'";
 	$resultado_trasacoes = mysqli_query($conn, $result_transacoes);
 	while($row_transacoes = mysqli_fetch_assoc($resultado_trasacoes)){
-		$html .= '<tr style="border-bottom: 1px solid black"><td style="font-weight: 600; width: 5%;">'.$row_transacoes['NOME'] . "</td>";
-		$html .= '<td style="width: 30%;">'.$row_transacoes['DATANASC'] . "</td>";
+		$html .= '<tr style="border-bottom: 1px solid black"><td style="font-weight: 600; width: 20%;">'.$row_transacoes['NOME'] . "</td>";
+		$html .= '<td style="width: 10%;">'.$row_transacoes['DATANASC'] . "</td>";
 		$html .= '<td style="width: 15%;">'.$row_transacoes['CPF'] . "</td>";
-		$html .= '<td style="width: 20%;">'.$row_transacoes['CELULAR'] . "</td>";
+		$html .= '<td style="width: 10%;">'.$row_transacoes['CELULAR'] . "</td>";
 		$html .= '<td style="width: 10%;">'.$row_transacoes['EMAIL'] . "</td></tr>";		
 	}
    
