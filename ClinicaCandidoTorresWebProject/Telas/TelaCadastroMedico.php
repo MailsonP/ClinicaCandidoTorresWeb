@@ -98,6 +98,7 @@ if(isset($_SESSION["tipoUsuario"])){
 
                     <div class="form-group col-sm-6">
                         <label for="especialidadeId">Especialidade:</label>
+                        <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                         <input type="text" class="form-control up" name="especialidade" id="especialidadeId" required >
                     </div>
                 </div>

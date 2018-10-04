@@ -44,24 +44,24 @@ if(isset($_SESSION["tipoUsuario"])){
 	<div class="container">
 		<div class="row" style="text-align: center; cursor: pointer;">
 			<div class="col-sm-3" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
-				<a data-toggle="modal" data-target="#ModalMedico">PROFISSIONAL</a>
+				<a data-toggle="modal" data-target="#ModalMedico">AGENDA POR PROFISSIONAL</a>
 			</div>
 			<div class="col-sm-3" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
-				<a data-toggle="modal" data-target="#ModalPaciente">PACIENTE</a>
+				<a data-toggle="modal" data-target="#ModalPaciente">AGENDA POR PACIENTE</a>
 			</div>
 			<div class="col-sm-3" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
-				<a data-toggle="modal" data-target="#ModalAtendimento">ATENDIMENTO</a>
+				<a data-toggle="modal" data-target="#ModalAtendimento">AGENDA POR ATENDIMENTO</a>
 			</div>
 			<div class="col-sm-3" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
-				<a data-toggle="modal" data-target="#ModalSexo">SEXO</a>
+				<a data-toggle="modal" data-target="#ModalSexo">PACIENTE POR SEXO</a>
 			</div>
 		</div>
     <div class="row" style="text-align: center; cursor: pointer;">
       <div class="col-sm-3" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#ModalData">DIA</a>
+        <a data-toggle="modal" data-target="#ModalData">AGENDA POR DATA</a>
       </div>
       <div class="col-sm-3" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#">PACIENTE</a>
+        <a data-toggle="modal" data-target="#">PACIENTE POR DIA</a>
       </div>
       <div class="col-sm-3" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
         <a data-toggle="modal" data-target="#">ATENDIMENTO</a>

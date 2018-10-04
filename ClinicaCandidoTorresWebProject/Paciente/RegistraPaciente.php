@@ -1,5 +1,8 @@
 <?php
 
+    $datacadastro = new DateTime();
+    $datacadastro->format('Y-m-d'); 
+
 session_start();
 require_once '../Paciente/Paciente.php';
 //include_once '../Paciente/ValidarProntuario.php';
@@ -55,6 +58,7 @@ if (isset($metodo["txtNome"])) {
         $paciente->setValor("ESTADO", $estado);
         $paciente->setValor("COMPLEMENTO", $complemento);
         $paciente->setValor("CEP", $cep);
+        $paciente->setValor("DATACADASTRO", $datacadastro);
 
         if ($paciente->inserir($paciente)) {
             echo "<script>alert('Paciente cadastrado com sucesso!!');window.location = '../Telas/TelaCadastroPaciente.php';</script>";
