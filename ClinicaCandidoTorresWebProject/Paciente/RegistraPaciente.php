@@ -1,7 +1,7 @@
 <?php
 
-    $datacadastro = new DateTime();
-    $datacadastro->format('Y-m-d'); 
+//DATA DE CADASTRO DE CADA PACIENTE
+$data_cadastro = date('d-m-Y');
 
 session_start();
 require_once '../Paciente/Paciente.php';
@@ -43,6 +43,7 @@ if (isset($metodo["txtNome"])) {
         $paciente->setValor("NOME", $nome);
         $paciente->setValor("SEXO", $sexo);
         $paciente->setValor("DATANASC", date("Y-m-d",strtotime(str_replace('/','-',$datanasc))));
+        $paciente->setValor("DATACADASTRO",date("Y-m-d",strtotime($data_cadastro)));
         $paciente->setValor("CPF", $cpf);
         $paciente->setValor("RG", $rg);
         $paciente->setValor("EMAIL", $email);
@@ -58,7 +59,6 @@ if (isset($metodo["txtNome"])) {
         $paciente->setValor("ESTADO", $estado);
         $paciente->setValor("COMPLEMENTO", $complemento);
         $paciente->setValor("CEP", $cep);
-        $paciente->setValor("DATACADASTRO", $datacadastro);
 
         if ($paciente->inserir($paciente)) {
             echo "<script>alert('Paciente cadastrado com sucesso!!');window.location = '../Telas/TelaCadastroPaciente.php';</script>";

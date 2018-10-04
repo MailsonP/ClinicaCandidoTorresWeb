@@ -2,6 +2,7 @@
 
 	include_once("../../BancoDeDados/conexao.php");
 
+	//RELATORIO POR TIPO DE ATENDIMENTO
 	$ID_Atendimento = $_POST['atendimento'];
 
 	$html = '<table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width:100%; white-space: nowrap; z-index: 1;">';	

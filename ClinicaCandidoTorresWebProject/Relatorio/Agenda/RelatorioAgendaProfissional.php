@@ -2,6 +2,7 @@
 
 	include_once("../../BancoDeDados/conexao.php");
 
+	//RELATORIO POR MEDICO
 	$ID_medic = $_POST['medico'];
 
 	$html = '<table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width:100%; white-space: nowrap; z-index: 1;">';	

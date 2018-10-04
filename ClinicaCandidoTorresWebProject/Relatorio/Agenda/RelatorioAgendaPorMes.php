@@ -2,9 +2,11 @@
 
 	include_once("../../BancoDeDados/conexao.php");
 
+    //RELATORIO ENTRE DATAS DE UM MES
 	$d1 = $_POST['DataInicial'];
 	$d2 = $_POST['DataFinal'];
 
+	//CONVERSAO DATA AMERICANA
 	$data_inicial = date("Y-m-d", strtotime($d1));
 	$data_final =   date("Y-m-d", strtotime($d2));
 
