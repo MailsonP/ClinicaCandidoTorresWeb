@@ -2,7 +2,9 @@
 
 	include_once("../../BancoDeDados/conexao.php");
 
-	$datacadastro = date('Y-m-d');
+	//DATA DE CADASTRO DOS PACIENTES
+	$data = $_POST['data_registro_paciente'];
+	$data_amer = date("Y-m-d",strtotime($data));
 
 	$html = '<table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width:100%; white-space: nowrap; z-index: 1;">';	
 	$html .= '<thead style="border-bottom: 1px solid black; font-size: 14px;">';
@@ -16,17 +18,22 @@
 	$html .= '</thead>';
 	$html .= '<tbody style="height: 5px; line-height: 5px; font-size: 12px;">';
 
-	$result_transacoes = "SELECT * FROM PACIENTE WHERE DATACADASTRO = '$datacadastro'";
-	$resultado_trasacoes = mysqli_query($conn, $result_transacoes);
-	while($row_transacoes = mysqli_fetch_assoc($resultado_trasacoes)){
+	$result_transacoes = "SELECT * FROM PACIENTE WHERE DATACADASTRO = '$data_amer'";
+	$resultado = mysqli_query($conn, $result_transacoes);
+
+	if(mysqli_num_rows($resultado) > 0 ){
+		while($row_transacoes = mysqli_fetch_assoc($resultado)){
 		$html .= '<tr style="border-bottom: 1px solid black"><td style="width: 30%;">'.$row_transacoes['NOME'] . "</td>";
 		$html .= '<td style="width: 10%;">'.date("d/m/Y", strtotime($row_transacoes['DATANASC'])) . "</td>";
 		$html .= '<td style="width: 15%;">'.$row_transacoes['CPF'] . "</td>";
 		$html .= '<td style="width: 10%;">'.$row_transacoes['CELULAR'] . "</td>";
 		$html .= '<td style="width: 35%;">'.$row_transacoes['EMAIL'] . "</td></tr>";		
 	}
+   }else{
+   	     $html .= '<tr style="border-bottom: 1px solid black"><td style="font-weight: 600; width: 5%; text-align: center;" colspan="5">NENHUM RESULTADO ENCONTRADO</td></tr>';
+   }
    
-	
+   
 	$html .= '</tbody>';
 	$html .= '</table>';
 	$html .= '<div style="position: absolute; bottom: 0;"><h6 style="font-family: sans-serif; text-align: center; padding-bottom: 10px;">

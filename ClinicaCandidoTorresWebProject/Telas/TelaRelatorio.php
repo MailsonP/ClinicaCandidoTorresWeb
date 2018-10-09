@@ -10,10 +10,11 @@ if(isset($_SESSION["tipoUsuario"])){
     $tipo_user = $_SESSION["tipoUsuario"];
 }
    
-   //PARA LISTAR NO COMBOBOX DO MODAL
+   //INSTANCIAS DA CLASSE
    $medic = new Medico();
    $pac = new Paciente();
    $tipoAten = new Atendimento();
+   //LISTAR NO COMBOBOX DO MODAL
    $medic->retornaTudo($medic);
    $pac->retornaTudo($pac);
    $tipoAten->retornaTudo($tipoAten);
@@ -58,16 +59,16 @@ if(isset($_SESSION["tipoUsuario"])){
 		</div>
     <div class="row" style="text-align: center; cursor: pointer;">
       <div class="col-sm-3" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#ModalData">AGENDA POR DATA</a>
+        <a data-toggle="modal" data-target="#ModalAgendaData">AGENDA POR DATA</a>
       </div>
       <div class="col-sm-3" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
-        <a href="../Relatorio/Paciente/RelatorioPacienteDia.php" target="_blank">PACIENTE POR DIA</a>
+        <a data-toggle="modal" data-target="#ModalPacienteData">PACIENTES POR DIA</a>
       </div>
       <div class="col-sm-3" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#">ATENDIMENTO</a>
+        <a data-toggle="modal" data-target="#">...</a>
       </div>
       <div class="col-sm-3" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#">SEXO</a>
+        <a data-toggle="modal" data-target="#">...</a>
       </div>
     </div>
 	</div>

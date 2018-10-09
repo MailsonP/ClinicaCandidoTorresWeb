@@ -20,8 +20,11 @@
 
 	
 	$result_transacoes = "SELECT G.IDAGENDA AS 'IDAGENDA', G.DATADEATENDIMENTO AS 'DATADEATENDIMENTO', P.NOME AS 'NOMEDOPACIENTE' ,M.NOME AS 'NOMEDOMEDICO',A.TIPOATENDIMENTO AS 'TIPODEATENDIMENTO', P.CELULAR AS 'CELULAR' FROM AGENDA AS G INNER JOIN PACIENTE AS P ON IDPACIENTE = ID_PACIENTE INNER JOIN MEDICO AS M ON IDMEDICO = ID_MEDICO INNER JOIN ATENDIMENTO AS A ON IDATENDIMENTO = ID_ATENDIMENTO WHERE ID_ATENDIMENTO = $ID_Atendimento";
-	$resultado_trasacoes = mysqli_query($conn, $result_transacoes);
-	while($row_transacoes = mysqli_fetch_assoc($resultado_trasacoes)){
+	$resultado = mysqli_query($conn, $result_transacoes);
+
+	if(mysqli_num_rows($resultado) > 0 ){
+
+	while($row_transacoes = mysqli_fetch_assoc($resultado)){
 		$html .= '<tr style="border-bottom: 1px solid black"><td style="font-weight: 600; width: 5%;">'.$row_transacoes['IDAGENDA'] . "</td>";
 		$html .= '<td style="width: 30%;">'.$row_transacoes['NOMEDOPACIENTE'] . "</td>";
 		$html .= '<td style="width: 15%;">'.$row_transacoes['CELULAR'] . "</td>";
@@ -29,6 +32,9 @@
 		$html .= '<td style="width: 20%;">'.$row_transacoes['TIPODEATENDIMENTO'] . "</td>";
 		$html .= '<td style="width: 10%;">'.date("d/m/Y", strtotime($row_transacoes['DATADEATENDIMENTO'])) . "</td></tr>";		
 	}
+   }else{
+   	   $html .= '<tr style="border-bottom: 1px solid black"><td style="font-weight: 600; width: 5%; text-align: center;" colspan="6">NENHUM RESULTADO ENCONTRADO</td></tr>';
+   }
 	
 	$html .= '</tbody>';
 	$html .= '</table>';

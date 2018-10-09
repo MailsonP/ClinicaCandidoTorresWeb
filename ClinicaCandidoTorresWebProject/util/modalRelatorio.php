@@ -113,8 +113,8 @@
                   </div>
  <!-- F I M  M O D A L -->
 
-   <!-- MODAL DE ESCOLHA DO MES -->
-                 <div class="modal fade" id="ModalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <!-- MODAL DE AGENDAMENTOS POR DATA -->
+                 <div class="modal fade" id="ModalAgendaData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -134,6 +134,35 @@
                               <div class="form-group col-sm-6">
                                 <label for="diaFim">Data Final:</label>
                                 <input class="form-control" type="date" name="DataFinal" id="diaFim" required>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-success" style="margin: 0 auto;">GERAR RELATÓRIO</button>
+                          </div>
+                        </form>
+                        </div>
+                      </div>
+                  </div>
+ <!-- F I M  M O D A L -->
+   <!-- MODAL DE PACIENTES POR DATA -->
+                 <div class="modal fade" id="ModalPacienteData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">SELECIONE DATA</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <form action="../Relatorio/Paciente/RelatorioPacienteDia.php" method="POST" target="_blank">
+                          <div class="modal-body">
+                            <div class="conteudo">
+                            <div class="row">             
+                              <div class="form-group col-sm-6" style="margin: 0 auto; ">
+                                <label for="diaFim">DATA DE CADASTRO:</label>
+                                <input class="form-control" type="date" name="data_registro_paciente" id="date" value="<?php echo date("Y-m-d"); ?>" required>
                               </div>
                             </div>
                             </div>
