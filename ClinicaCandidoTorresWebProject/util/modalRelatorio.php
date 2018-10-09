@@ -146,8 +146,8 @@
                       </div>
                   </div>
  <!-- F I M  M O D A L -->
-   <!-- MODAL DE PACIENTES POR DATA -->
-                 <div class="modal fade" id="ModalPacienteData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <!-- MODAL DE PACIENTES CADASTRADOS POR DIA -->
+                 <div class="modal fade" id="ModalPacienteDia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -161,10 +161,48 @@
                             <div class="conteudo">
                             <div class="row">             
                               <div class="form-group col-sm-6" style="margin: 0 auto; ">
-                                <label for="diaFim">DATA DE CADASTRO:</label>
+                                <label for="date">DATA DE CADASTRO:</label>
                                 <input class="form-control" type="date" name="data_registro_paciente" id="date" value="<?php echo date("Y-m-d"); ?>" required>
                               </div>
                             </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-success" style="margin: 0 auto;">GERAR RELATÓRIO</button>
+                          </div>
+                        </form>
+                        </div>
+                      </div>
+                  </div>
+ <!-- F I M  M O D A L -->
+  <!-- MODAL DE PACIENTES CADASTRADOS POR MES -->
+                 <div class="modal fade" id="ModalPacienteMes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">SELECIONE O MÊS</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <form action="../Relatorio/Paciente/RelatorioPacienteMes.php" method="POST" target="_blank">
+                          <div class="modal-body">
+                            <div class="conteudo">
+                            <label for="mes_registro_paciente">MÊS DE CADASTRO:</label>
+                            <select class="custom-select" style="text-transform: uppercase;" name="mes_registro_paciente">
+                                <option value="Janeiro">JANEIRO</option>
+                                <option value="Fevereiro">FEVEREIRO</option>
+                                <option value="Marco">MARÇO</option>
+                                <option value="Abril">ABRIL</option>
+                                <option value="Maio">MAIO</option>
+                                <option value="Junho">JUNHO</option>
+                                <option value="Julho">JULHO</option>
+                                <option value="Agosto">AGOSTO</option>
+                                <option value="Setembro">SETEMBRO</option>
+                                <option value="Outubro">OUTUBRO</option>
+                                <option value="Novembro">NOVEMBRO</option>
+                                <option value="Dezembro">DEZEMBRO</option>
+                            </select>
                             </div>
                           </div>
                           <div class="modal-footer">

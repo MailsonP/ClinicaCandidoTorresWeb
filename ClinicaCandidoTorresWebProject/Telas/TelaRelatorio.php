@@ -62,10 +62,10 @@ if(isset($_SESSION["tipoUsuario"])){
         <a data-toggle="modal" data-target="#ModalAgendaData">AGENDA POR DATA</a>
       </div>
       <div class="col-sm-3" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#ModalPacienteData">PACIENTES POR DIA</a>
+        <a data-toggle="modal" data-target="#ModalPacienteDia">PACIENTES POR DIA</a>
       </div>
       <div class="col-sm-3" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#">...</a>
+        <a data-toggle="modal" data-target="#ModalPacienteMes">PACIENTES POR MES</a>
       </div>
       <div class="col-sm-3" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
         <a data-toggle="modal" data-target="#">...</a>
