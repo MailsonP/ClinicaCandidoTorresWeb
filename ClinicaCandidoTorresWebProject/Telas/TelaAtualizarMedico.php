@@ -75,7 +75,7 @@ $dado = $medico->retornaDados("object");
 
                     <div class="form-group col-sm-3">
                         <label for="DataNasc">Data de Nascimento</label>
-                        <input type="text" class="form-control" value="<?php echo $dado->DTANASCIMENTO ?>" name="dtanascimento" id="DataNasc" required>
+                 <input type="text" class="form-control" value="<?php echo date("d/m/Y",strtotime($dado->DTANASCIMENTO)); ?>" name="dtanascimento" id="DataNasc" required>
                     </div>
 
                      <div class="form-group col-sm-3">

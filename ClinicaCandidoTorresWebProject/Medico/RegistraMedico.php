@@ -18,7 +18,7 @@ if(addslashes($Metodo["nome"])){
     $medico->setValor("NOME", $nome);
     $medico->setValor("TELEFONE", $telefone);
     $medico->setValor("EMAIL", $email);
-    $medico->setValor("DTANASCIMENTO", date("Y/m/d", strtotime($dtanascimento)));
+    $medico->setValor("DTANASCIMENTO",date("Y-m-d",strtotime(str_replace('/','-',$dtanascimento))));
     $medico->setValor("CONSELHO", $conselho);
     $medico->setValor("ESPECIALIDADE", $especialidade);
     $medico->setValor("FUNCAO", $funcao);

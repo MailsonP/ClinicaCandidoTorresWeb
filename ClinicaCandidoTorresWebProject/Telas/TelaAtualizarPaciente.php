@@ -88,6 +88,7 @@ while ($dado = $paciente->retornaDados("object")) {
               <label for="dataNasc">Data de Nasc:</label>
               <span class="obg" style="color: #A12126; font-size: 20px; float: right;">*</span>
                 <input type="text" class="form-control" name="txtDataNasc" value="<?php echo date("d/m/Y", strtotime($dado->DATANASC)); ?>" id="dataNasc" required>
+                <input type="hidden" name="txtDataCadastro" value="<?php echo date("d/m/Y", strtotime($dado->DATACADASTRO)); ?>">
             </div>
 
             </div>
@@ -250,9 +251,9 @@ $metodo = $_POST;
 //PEGANDO VALORES DOS CAMPOS PARA ATUALIZAR
 if (isset($metodo["txtNome"])) {
     $nome = addslashes($metodo["txtNome"]);
-    $numeroProntuario = addslashes($metodo["txtNum"]);
     $sexo = addslashes($metodo["cxSexo"]);
     $datanasc = addslashes($metodo["txtDataNasc"]);
+    $data_cadastro = addslashes($metodo["txtDataCadastro"]);
     $cpf = addslashes($metodo["txtCPF"]);
     $rg = addslashes($metodo["txtRG"]);
     $email = $metodo["txtEmail"];
@@ -272,9 +273,9 @@ if (isset($metodo["txtNome"])) {
 
     //SETANDO VALORES PARA ATUALIZAR
     $paciente->setValor("NOME", $nome);
-    $paciente->setValor("NUMEROPRONTUARIO", $numeroProntuario);
     $paciente->setValor("SEXO", $sexo);
-    $paciente->setValor("DATANASC", date("Y-d-m",strtotime($datanasc)));
+    $paciente->setValor("DATANASC",  date("Y-m-d",strtotime(str_replace('/','-',$datanasc))));
+    $paciente->setValor("DATACADASTRO",  date("Y-m-d",strtotime(str_replace('/','-',$data_cadastro))));
     $paciente->setValor("CPF", $cpf);
     $paciente->setValor("RG", $rg);
     $paciente->setValor("EMAIL", $email);
