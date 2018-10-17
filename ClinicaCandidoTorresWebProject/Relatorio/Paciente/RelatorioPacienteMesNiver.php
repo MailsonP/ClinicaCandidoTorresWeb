@@ -1,10 +1,11 @@
 <?php	
 
 	include_once("../../BancoDeDados/conexao.php");
+    include_once("../../util/calculo_mes.php");
 
-	//DATA DE CADASTRO DOS PACIENTES
-	$data = $_POST['data_registro_paciente'];
-	$data_amer = date("Y-m-d",strtotime($data));
+	//MES DE CADASTRO DOS PACIENTES
+	$mes = $_POST['dataMesNiver'];
+	$mes_num = calculoMes($mes);
 
 	$html = '<table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width:100%; white-space: nowrap; z-index: 1;">';	
 	$html .= '<thead style="border-bottom: 1px solid black; font-size: 14px;">';
@@ -18,7 +19,7 @@
 	$html .= '</thead>';
 	$html .= '<tbody style="height: 5px; line-height: 5px; font-size: 12px;">';
 
-	$result_transacoes = "SELECT * FROM PACIENTE WHERE DATACADASTRO = '$data_amer'";
+	$result_transacoes = "SELECT * FROM PACIENTE WHERE MONTH(DATANASC) = $mes_num";
 	$resultado = mysqli_query($conn, $result_transacoes);
 
 	if(mysqli_num_rows($resultado) > 0 ){

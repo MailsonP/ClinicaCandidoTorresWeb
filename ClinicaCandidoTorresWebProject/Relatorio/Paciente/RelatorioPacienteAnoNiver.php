@@ -3,7 +3,7 @@
 	include_once("../../BancoDeDados/conexao.php");
 
 	//DATA DE CADASTRO DOS PACIENTES
-	$data = $_POST['data_registro_paciente'];
+	$data = $_POST['dataAnoNiver'];
 	$data_amer = date("Y-m-d",strtotime($data));
 
 	$html = '<table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width:100%; white-space: nowrap; z-index: 1;">';	
@@ -18,7 +18,7 @@
 	$html .= '</thead>';
 	$html .= '<tbody style="height: 5px; line-height: 5px; font-size: 12px;">';
 
-	$result_transacoes = "SELECT * FROM PACIENTE WHERE DATACADASTRO = '$data_amer'";
+	$result_transacoes = "SELECT * FROM PACIENTE WHERE YEAR(DATANASC) = '$data_amer'";
 	$resultado = mysqli_query($conn, $result_transacoes);
 
 	if(mysqli_num_rows($resultado) > 0 ){

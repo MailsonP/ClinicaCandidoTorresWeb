@@ -38,8 +38,8 @@
 	$html .= '</tbody>';
 	$html .= '</table>';
 	$html .= '<div style="position: absolute; bottom: 0;"><h6 style="font-family: sans-serif; text-align: center; padding-bottom: 10px;">
-	<h6 style="font-family: sans-serif; text-align: center; padding-bottom: -20px;">Campos Monteiro 1141 Centro, Av. Josefa Nogueira Monteiro,</h6>';
-	$html .= '<h6 style="font-family: sans-serif; text-align: center; padding-bottom: -20px;">Icó - CE, 63430-000</h6>';
+	<h6 style="font-family: sans-serif; text-align: center; padding-bottom: -15px;">Campos Monteiro 1141 Centro, Av. Josefa Nogueira Monteiro,</h6>';
+	$html .= '<h6 style="font-family: sans-serif; text-align: center; padding-bottom: -15px;">Icó - CE, 63430-000</h6>';
 	$html .= '<h6 style="font-family: sans-serif; text-align: center;">(88) 99915-1098</h6></div>';
 
 	

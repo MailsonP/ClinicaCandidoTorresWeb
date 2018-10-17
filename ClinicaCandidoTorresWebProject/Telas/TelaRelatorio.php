@@ -54,21 +54,27 @@ if(isset($_SESSION["tipoUsuario"])){
 				<a data-toggle="modal" data-target="#ModalAtendimento">AGENDA POR ATENDIMENTO</a>
 			</div>
 			<div class="col-sm-3" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
-				<a data-toggle="modal" data-target="#ModalSexo">PACIENTE POR SEXO</a>
+        <a data-toggle="modal" data-target="#ModalAgendaData">AGENDA POR DATA</a>
 			</div>
 		</div>
     <div class="row" style="text-align: center; cursor: pointer;">
-      <div class="col-sm-3" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#ModalAgendaData">AGENDA POR DATA</a>
+      <div class="col-sm-2" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
+        <a data-toggle="modal" data-target="#ModalSexo">PACIENTE POR SEXO</a>
       </div>
-      <div class="col-sm-3" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#ModalPacienteDia">PACIENTES POR DIA</a>
+      <div class="col-sm-2" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
+        <a data-toggle="modal" data-target="#ModalPacienteDia">PACIENTE POR DIA</a>
       </div>
-      <div class="col-sm-3" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#ModalPacienteMes">PACIENTES POR MES</a>
+      <div class="col-sm-2" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
+        <a data-toggle="modal" data-target="#ModalPacienteMes">PACIENTE POR MES</a>
       </div>
-      <div class="col-sm-3" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
-        <a data-toggle="modal" data-target="#">...</a>
+      <div class="col-sm-2" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
+        <a data-toggle="modal" data-target="#ModalPacienteAno">PACIENTE POR ANO</a>
+      </div>
+      <div class="col-sm-2" style="background: #f23355; height: 50px; line-height: 50px; font-weight: 600;">
+        <a data-toggle="modal" data-target="#ModalPacienteMesNiver">MES NASCIMENTO</a>
+      </div>
+      <div class="col-sm-2" style="background: cyan; height: 50px; line-height: 50px; font-weight: 600;">
+        <a data-toggle="modal" data-target="#ModalPacienteAnoNiver">ANO NASCIMENTO</a>
       </div>
     </div>
 	</div>
