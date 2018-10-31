@@ -17,7 +17,7 @@ $listaAgenda = new ListarAgenda();
 $medic->retornaTudo($medic);
 
 ?>﻿
-<!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="utf-8">
@@ -27,6 +27,7 @@ $medic->retornaTudo($medic);
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
+  <link rel="stylesheet" type="text/css" href="../css/menu.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -48,20 +49,21 @@ $medic->retornaTudo($medic);
 <body ondragstart="return false;">
 	
 <?php include '../util/nav.php' ?>
-<form action="Home.php" method="POST" style="text-transform: uppercase;">
-   <div class="container main">
-      <div class="row input-group col-md-10 offset-md-1 SearchMed grid">
-          <select name="nomeMedico" class="form-control" style="text-transform: uppercase;">
-            <option value="">Selecione um Médico</option>
-             <?php while ($dadoMedic = $medic->retornaDados("object")) { ?>  
-             <option value="<?php echo $dadoMedic->NOME; ?>"><?php echo $dadoMedic->NOME; ?></option>
-             <?php } ?>
-          </select>
-          <input type="submit" name="submit" class="btn btn-default">
-      </div>
 
-     <div class="row linha col-md-10 offset-md-1">
-</form>
+<div class="container-modal">
+  <div class="container main">
+    <form action="Home.php" method="POST" style="text-transform: uppercase;">
+      <div class="row input-group col-md-10 offset-md-1 SearchMed grid">
+        <select name="nomeMedico" class="form-control" style="text-transform: uppercase;">
+          <option value="">Selecione um Médico</option>
+            <?php while ($dadoMedic = $medic->retornaDados("object")) { ?>  
+            <option value="<?php echo $dadoMedic->NOME; ?>"><?php echo $dadoMedic->NOME; ?></option>
+            <?php } ?>
+        </select>
+        <input type="submit" name="submit" class="btn btn-default">   
+      </div> 
+    </form>
+<div class="row linha col-md-10 offset-md-1">
       <table class="table table-striped table-hover grid">
         <thead class="thead-dark">
           <tr>
@@ -99,6 +101,7 @@ $medic->retornaTudo($medic);
       </table> 
      </div>
    </div>
+</div>
    
    <?php include '../util/footer.php' ?>
 </body>

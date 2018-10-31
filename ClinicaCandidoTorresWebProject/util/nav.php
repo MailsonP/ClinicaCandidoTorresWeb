@@ -5,7 +5,7 @@
 	<nav class="menu" id="menu">
 		<ul>
 			<li><a href="../Telas/Home.php">Inicio</a></li>
-			<li><a href="#">Cadastro</a>
+			<li><a class="submenu">Cadastro</a>
 			<ul>
             	<li id="opcaoUser"><a href="../Telas/TelaCadastroUsuario.php">Usuário</a></li>
 				<li><a href="../Telas/TelaCadastroMedico.php">Profissional</a></li>

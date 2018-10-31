@@ -30,12 +30,24 @@ if(isset($_SESSION["tipoUsuario"])){
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates">
     <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   	<style type="text/css">
-		*{
-			box-sizing: border-box;
-		}
+    .center{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .meio{
+      position: absolute;
+    }
 
     h2{
       text-align: center;
@@ -45,7 +57,6 @@ if(isset($_SESSION["tipoUsuario"])){
     }
 
     .cor-row{
-      margin-top: 50px;
       padding: 10px;
       background: #202020;
       font-family: "raleway", sans-serif;
@@ -60,7 +71,8 @@ if(isset($_SESSION["tipoUsuario"])){
 <body>
   <?php include '../util/nav.php' ?>
 
-	<div class="container">
+<div class="center">
+	<div class="container meio">
 		<div class="row cor-row">
       <div class="form-group col-sm-6 c1">
         <h2>Agenda</h2>
@@ -82,6 +94,7 @@ if(isset($_SESSION["tipoUsuario"])){
 
     </div>
 	</div>
+</div>
 
   <?php include '../util/modalRelatorio.php' ?>
 

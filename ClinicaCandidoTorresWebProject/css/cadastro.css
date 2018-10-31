@@ -107,9 +107,9 @@
 	padding: 10px 0;
 	width: 90px;
 	position: absolute;
-	top: 85%;
+	top: 90%;
 	left: 10%;
-	margin: 5px 5px;
+	margin: 15px 5px;
 	cursor: pointer;
 	text-decoration: none;
 	border-radius: 35px;
@@ -127,9 +127,9 @@
 	padding: 10px 0;
 	width: 90px;
 	position: absolute;
-	top: 85%;
+	top: 90%;
 	left: 56%;
-	margin: 5px 5px;
+	margin: 15px 5px;
 	cursor: pointer;
 	text-decoration: none;
 	border-radius: 35px;
@@ -138,5 +138,7 @@
 .conteudo button:hover {
   background: rgba(248,157,99,0.9);
 }
+
+
 
 

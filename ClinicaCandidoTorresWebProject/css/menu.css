@@ -1,0 +1,194 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+a{
+	text-decoration: none !important;
+}
+
+header nav li{
+	cursor: pointer;
+}
+
+.submenu{
+	color: #f3f3f3 !important;
+}
+
+nav a:hover{
+	color: #181818 !important;
+}
+
+nav a:active, nav a:link{
+	color: #f3f3f3 !important;
+}
+
+label{
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px !important;
+}
+
+#right{
+	position: fixed;
+	top: -4px;
+	left: 0;
+	z-index: 2;
+}
+
+.menu {
+	width: 100% !important;
+	height: 48px !important;
+	background-color: #00beaa;
+	z-index: 1;   
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	backface-visibility: hidden;
+}
+
+.menu ul{
+	height: 48px;
+	z-index: 1;
+	list-style: none;
+	position: relative;
+	text-align: center;
+}
+
+.menu ul li{
+	width: 150px;
+	display: inline-block;
+}
+
+.menu a{
+	padding: 15px;
+	display: block;
+	max-height: 48px;
+	text-decoration: none;
+	text-align: center;
+	color: #f3f3f3;
+	background: #00beaa;
+	font-family: 'Raleway', sans-serif !important;
+	font-weight: 600!important;
+	font-size: 15px !important;
+}
+
+
+.menu ul ul li a:hover{
+	background: #F89D63;
+	color: #181818;
+}
+
+.menu ul ul{
+	position: absolute;
+	visibility: hidden;
+}
+
+.menu ul li:hover ul{
+	visibility: visible;
+}
+
+.menu ul ul li a{
+	background-color: #F89D63;
+}
+
+label[for="bt_menu"]{
+	padding: 5px;
+	color: #f3f3f3;
+	font-family: 'Raleway' sans-serif;
+	text-align: left;
+	font-size: 30px !important;
+	cursor: pointer;
+	background-color: #00beaa;
+	display: none;
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#bt_menu {
+	display: none;
+}
+
+.menu ul li ul li{
+   display: block;
+}
+
+#topo .opcoes-direita .btn:hover{
+	background: rgba(248,157,99,0.9);
+}
+
+#topo .opcoes-direita .btn:active{
+	position: absolute;
+	top: 1px;
+	box-shadow: none;
+}
+
+@media screen and (min-width: 1000px){ /*Mais de 1k*/
+	.menu ul li a:hover{
+    	background: rgba(255,255,255,0.2);
+     } 
+}
+
+@media (max-width: 1000px){/* Menos de 1K*/
+
+	#right{
+		display: none;
+	}
+
+	#topo .opcoes-direita .btn{
+		display: none;
+	}
+
+	label[for="bt_menu"]{
+		display: block;
+		font-size: 25px !important;
+		margin-left: 2px;
+		max-width: 50px;
+		max-height: 48px;
+	}
+
+
+	#bt_menu:checked ~ .menu>ul{
+		margin-left: 0;
+		transition: all 1s ease;
+	}
+
+	.menu>ul{
+		z-index: 1;
+		width: 100%;
+		margin-left: -100%;
+		top: 48px;
+	}
+
+	.menu ul li{
+		width: 100%;
+		text-align: center;
+	}
+
+	.menu ul li a{
+		height: 100px;
+	}
+
+	.menu ul li ul{
+		position: static;
+		overflow: hidden;
+		max-height: 0;
+		transition: all 2s ease;
+	}
+
+	.menu ul li:hover ul{
+		height: auto;
+		max-height: 300px;
+	}
+
+	.menu ul{
+		border: none;
+	}
+
+	.menu ul ul{
+		margin-bottom: -6px;
+	}
+
+}
